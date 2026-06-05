@@ -12,6 +12,9 @@ from app.core.logging import logger
 try:
     from google.oauth2 import service_account
     from googleapiclient.discovery import build
+    from google.auth.transport.requests import Request
+    from google.oauth2.credentials import Credentials
+    from google_auth_oauthlib.flow import InstalledAppFlow
     GOOGLE_LIBS_AVAILABLE = True
 except ImportError:
     GOOGLE_LIBS_AVAILABLE = False
@@ -25,23 +28,60 @@ class CalendarService:
         self.use_real_cal = False
         self.service = None
 
-        if GOOGLE_LIBS_AVAILABLE and self.creds_json:
-            try:
-                # Can be direct JSON string or a file path
-                if self.creds_json.strip().startswith("{"):
-                    info = json.loads(self.creds_json)
-                    creds = service_account.Credentials.from_service_account_info(
-                        info, scopes=["https://www.googleapis.com/auth/calendar"]
-                    )
-                else:
-                    creds = service_account.Credentials.from_service_account_file(
-                        self.creds_json, scopes=["https://www.googleapis.com/auth/calendar"]
-                    )
-                self.service = build("calendar", "v3", credentials=creds)
-                self.use_real_cal = True
-                logger.info("Successfully authenticated with Google Calendar API.")
-            except Exception as e:
-                logger.error(f"Google Calendar authentication failed: {e}. Falling back to sandbox mock mode.")
+        if GOOGLE_LIBS_AVAILABLE:
+            creds = None
+            SCOPES = ["https://www.googleapis.com/auth/calendar"]
+            
+            # 1. Try to load cached User OAuth tokens
+            token_path = "token.json"
+            if os.path.exists(token_path):
+                try:
+                    creds = Credentials.from_authorized_user_file(token_path, SCOPES)
+                    logger.info("Found cached OAuth credentials (token.json).")
+                except Exception as e:
+                    logger.error(f"Error loading token.json: {e}")
+
+            # 2. If no valid cached tokens, try the OAuth Client flow (credentials.json)
+            credentials_path = "credentials.json"
+            if (not creds or not creds.valid) and os.path.exists(credentials_path):
+                try:
+                    logger.info("Credentials file found. Launching local OAuth consent flow...")
+                    if creds and creds.expired and creds.refresh_token:
+                        creds.refresh(Request())
+                    else:
+                        flow = InstalledAppFlow.from_client_secrets_file(credentials_path, SCOPES)
+                        creds = flow.run_local_server(port=0)
+                    # Cache credentials for subsequent runs
+                    with open(token_path, "w") as token_file:
+                        token_file.write(creds.to_json())
+                    logger.info("OAuth authentication successful. Saved token.json.")
+                except Exception as e:
+                    logger.error(f"OAuth Client Flow failed: {e}")
+
+            # 3. Fallback to Service Account Credentials if specified
+            if (not creds or not creds.valid) and self.creds_json:
+                try:
+                    if self.creds_json.strip().startswith("{"):
+                        info = json.loads(self.creds_json)
+                        creds = service_account.Credentials.from_service_account_info(
+                            info, scopes=SCOPES
+                        )
+                    else:
+                        creds = service_account.Credentials.from_service_account_file(
+                            self.creds_json, scopes=SCOPES
+                        )
+                    logger.info("Authenticated with Google Service Account.")
+                except Exception as e:
+                    logger.error(f"Service Account authentication failed: {e}")
+
+            # 4. Initialize calendar service if credentials acquired
+            if creds:
+                try:
+                    self.service = build("calendar", "v3", credentials=creds)
+                    self.use_real_cal = True
+                    logger.info("Successfully initialized Google Calendar service.")
+                except Exception as e:
+                    logger.error(f"Failed to build Calendar service: {e}")
 
         if not self.use_real_cal:
             self.mock_file = Path(settings.DATA_DIR) / "mock_calendar.json"
