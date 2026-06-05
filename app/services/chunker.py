@@ -67,7 +67,21 @@ class ChunkingService:
         return chunks
 
     @staticmethod
+    def split_markdown(text: str, chunk_size: int = 1000, overlap: int = 100) -> List[str]:
+        # Split by markdown headers
+        sections = re.split(r"\n(?=#+ )", text)
+        chunks = []
+        
+        for section in sections:
+            section = section.strip()
+            if not section:
+                continue
+            if len(section) <= chunk_size:
+                chunks.append(section)
+            else:
+                chunks.extend(ChunkingService.split_by_words(section, chunk_size, overlap))
+        return chunks
+
     @staticmethod
-    def split_markdown(text: str, *args): return [text]
     @staticmethod
     def split_code(text: str, *args): return [text]
