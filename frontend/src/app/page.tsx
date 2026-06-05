@@ -8,6 +8,8 @@ import ChatMessage from '../components/ChatMessage';
 import BookingCard from '../components/BookingCard';
 import VoiceWaveform from '../components/VoiceWaveform';
 import EvidencePanel from '../components/EvidencePanel';
+import VoiceAssistantButton from '../components/VoiceAssistantButton';
+import VoiceCallModal from '../components/VoiceCallModal';
 import {
   MessageSquare,
   Sparkles,
@@ -38,7 +40,9 @@ export default function Home() {
 
   const [inputText, setInputText] = useState('');
   const [showVoice, setShowVoice] = useState(false);
+  const [voiceOpen, setVoiceOpen] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+
 
   // Auto-scroll to bottom of messages container
   useEffect(() => {
@@ -285,6 +289,10 @@ export default function Home() {
           onSelectCitation={(idx) => setSelectedCitationIndex(idx)}
         />
       </div>
+
+      {/* Voice Assistant Launcher & Telephony Portal */}
+      <VoiceAssistantButton onClick={() => setVoiceOpen(true)} />
+      <VoiceCallModal isOpen={voiceOpen} onClose={() => setVoiceOpen(false)} />
     </main>
   );
 }
