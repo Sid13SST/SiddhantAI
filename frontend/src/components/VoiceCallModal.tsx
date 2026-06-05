@@ -36,9 +36,22 @@ export default function VoiceCallModal({ isOpen, onClose }: VoiceCallModalProps)
   const synthRef = useRef<any>(null);
   const isSpeakingRef = useRef<boolean>(false);
   const isListeningRef = useRef<boolean>(false);
+  
+  const callStateRef = useRef<'idle' | 'connecting' | 'active' | 'ended' | 'error'>('idle');
+  const isMutedRef = useRef<boolean>(false);
+
+  const updateCallState = (newState: 'idle' | 'connecting' | 'active' | 'ended' | 'error') => {
+    setCallState(newState);
+    callStateRef.current = newState;
+  };
+
+  const updateMuteState = (newState: boolean) => {
+    setIsMuted(newState);
+    isMutedRef.current = newState;
+  };
 
   const safeStartRecognition = () => {
-    if (recognitionRef.current && !isListeningRef.current && !isSpeakingRef.current && !isMuted) {
+    if (recognitionRef.current && !isListeningRef.current && !isSpeakingRef.current && !isMutedRef.current) {
       try {
         recognitionRef.current.start();
         isListeningRef.current = true;
@@ -87,11 +100,11 @@ export default function VoiceCallModal({ isOpen, onClose }: VoiceCallModalProps)
       const vapi = new Vapi(publicKey);
       vapiRef.current = vapi;
 
-      setCallState('connecting');
+      updateCallState('connecting');
       vapi.start(assistantId);
 
       vapi.on('call-start', () => {
-        setCallState('active');
+        updateCallState('active');
         setCallId((vapi as any).getCallId?.() || `voice_${Math.random().toString(36).substring(7)}`);
         setTranscript([
           { role: 'assistant', content: "Hello, I am Siddhant's voice representative. How can I help you today?" }
@@ -99,7 +112,7 @@ export default function VoiceCallModal({ isOpen, onClose }: VoiceCallModalProps)
       });
 
       vapi.on('call-end', async () => {
-        setCallState('ended');
+        updateCallState('ended');
         // Fetch summary from backend which Vapi hits via webhook
         await fetchCallSummary((vapi as any).getCallId?.());
       });
@@ -123,17 +136,17 @@ export default function VoiceCallModal({ isOpen, onClose }: VoiceCallModalProps)
 
       vapi.on('error', (err: any) => {
         console.error('Vapi Error:', err);
-        setCallState('error');
+        updateCallState('error');
       });
     } catch (e) {
       console.error('Failed to start Vapi call:', e);
-      setCallState('error');
+      updateCallState('error');
     }
   };
 
   // Graceful Web Speech API Telephony Simulator (If Vapi keys are unconfigured)
   const startSimulatedCall = () => {
-    setCallState('connecting');
+    updateCallState('connecting');
     const simCallId = `voice_${Math.random().toString(36).substring(2, 14)}`;
     simulatedCallIdRef.current = simCallId;
     setCallId(simCallId);
@@ -141,7 +154,7 @@ export default function VoiceCallModal({ isOpen, onClose }: VoiceCallModalProps)
 
     // Trigger initial Greeting
     setTimeout(() => {
-      setCallState('active');
+      updateCallState('active');
       const welcome = "Hello, I am Siddhant's voice representative. How can I help you today?";
       setTranscript([{ role: 'assistant', content: welcome }]);
       speakText(welcome);
@@ -240,9 +253,9 @@ export default function VoiceCallModal({ isOpen, onClose }: VoiceCallModalProps)
     rec.onend = () => {
       isListeningRef.current = false;
       // Keep listening if call is active, user is not muted, and assistant is not speaking
-      if (callState === 'active' && !isMuted && !isSpeakingRef.current) {
+      if (callStateRef.current === 'active' && !isMutedRef.current && !isSpeakingRef.current) {
         setTimeout(() => {
-          if (callState === 'active' && !isMuted && !isSpeakingRef.current) {
+          if (callStateRef.current === 'active' && !isMutedRef.current && !isSpeakingRef.current) {
             safeStartRecognition();
           }
         }, 100);
@@ -259,7 +272,7 @@ export default function VoiceCallModal({ isOpen, onClose }: VoiceCallModalProps)
   };
 
   const speakText = (text: string) => {
-    if (!synthRef.current || isMuted) return;
+    if (!synthRef.current || isMutedRef.current) return;
     
     // Stop any active speech first
     synthRef.current.cancel();
@@ -277,7 +290,7 @@ export default function VoiceCallModal({ isOpen, onClose }: VoiceCallModalProps)
     // Resume speech recognition once TTS ends
     utterance.onend = () => {
       isSpeakingRef.current = false;
-      if (callState === 'active') {
+      if (callStateRef.current === 'active') {
         safeStartRecognition();
       }
     };
@@ -285,7 +298,7 @@ export default function VoiceCallModal({ isOpen, onClose }: VoiceCallModalProps)
     utterance.onerror = (e) => {
       console.warn("TTS utterance error:", e);
       isSpeakingRef.current = false;
-      if (callState === 'active') {
+      if (callStateRef.current === 'active') {
         safeStartRecognition();
       }
     };
@@ -340,7 +353,7 @@ export default function VoiceCallModal({ isOpen, onClose }: VoiceCallModalProps)
       vapiRef.current = null;
     }
 
-    setCallState('ended');
+    updateCallState('ended');
 
     // Trigger local backend call summary creation for simulated calls
     if (simulatedCallIdRef.current) {
@@ -374,7 +387,7 @@ export default function VoiceCallModal({ isOpen, onClose }: VoiceCallModalProps)
 
   const toggleMute = () => {
     const nextState = !isMuted;
-    setIsMuted(nextState);
+    updateMuteState(nextState);
     if (vapiRef.current) {
       vapiRef.current.setMuted(nextState);
     }
@@ -384,7 +397,7 @@ export default function VoiceCallModal({ isOpen, onClose }: VoiceCallModalProps)
         synthRef.current.cancel();
       }
     } else {
-      if (callState === 'active') {
+      if (callStateRef.current === 'active') {
         safeStartRecognition();
       }
     }
@@ -591,7 +604,7 @@ export default function VoiceCallModal({ isOpen, onClose }: VoiceCallModalProps)
               </div>
 
               <button
-                onClick={() => setCallState('idle')}
+                onClick={() => updateCallState('idle')}
                 className="w-full rounded-xl bg-slate-800 border border-slate-700 py-2.5 text-xs font-semibold hover:bg-slate-700 transition"
               >
                 Close Summary
