@@ -30,6 +30,11 @@ app.add_middleware(
 # Include APIs
 app.include_router(api_router, prefix="/api/v1")
 
+# Include root-level voice endpoints
+from app.api.v1.endpoints.voice import router as voice_router
+app.include_router(voice_router, prefix="/voice", tags=["voice-root"])
+
+
 @app.get("/")
 async def root():
     return {
