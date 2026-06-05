@@ -48,6 +48,21 @@ async def ask_question(request: QARequest):
         booking_context=request.booking_context
     )
 
+from fastapi.responses import StreamingResponse
+
+@app.post("/ask/stream")
+async def ask_question_stream(request: QARequest):
+    """Root-level streaming endpoint to query the Siddhant AI representative."""
+    return StreamingResponse(
+        qa_engine.answer_question_stream(
+            question=request.question,
+            filter_tags=request.filter_tags,
+            session_id=request.session_id,
+            booking_context=request.booking_context
+        ),
+        media_type="text/event-stream"
+    )
+
 if __name__ == "__main__":
     logger.info(f"Starting API server on {settings.HOST}:{settings.PORT}")
     uvicorn.run("app.main:app", host=settings.HOST, port=settings.PORT, reload=True)

@@ -106,3 +106,19 @@ async def ask_question(request: QARequest):
         session_id=request.session_id,
         booking_context=request.booking_context
     )
+
+from fastapi.responses import StreamingResponse
+
+@router.post("/ask/stream")
+async def ask_question_stream(request: QARequest):
+    """Streams the QAEngine answer using Server-Sent Events (SSE)."""
+    return StreamingResponse(
+        qa_engine.answer_question_stream(
+            question=request.question,
+            filter_tags=request.filter_tags,
+            session_id=request.session_id,
+            booking_context=request.booking_context
+        ),
+        media_type="text/event-stream"
+    )
+

@@ -1,5 +1,6 @@
 import json
 import re
+import asyncio
 # pyrefly: ignore [missing-import]
 import httpx
 from typing import List, Dict, Any, Tuple, Optional
@@ -204,3 +205,77 @@ class AnswerGenerator:
             ))
             
         return unique_citations, evidence_items
+
+    @classmethod
+    async def generate_grounded_answer_stream(cls, question: str, context: str, intent: str):
+        """Streams a grounded answer from context token-by-token."""
+        if not settings.OPENROUTER_API_KEY:
+            # Fallback local stream
+            fallback_text = cls._fallback_generate(question, context)
+            for token in fallback_text.split(" "):
+                yield token + " "
+                await asyncio.sleep(0.02)
+            return
+
+        system_prompt = (
+            "You are Siddhant's digital AI representative. Your goal is to answer questions from recruiters "
+            "about Siddhant's background, projects, repositories, commits, and technical skills.\n\n"
+            "CRITICAL RULES:\n"
+            "1. Answer ONLY using the facts explicitly stated in the provided context evidence.\n"
+            "2. Never use external knowledge, speculate, or fabricate details.\n"
+            "3. Never claim experience, technologies, or accomplishments not listed in the evidence.\n"
+            f"4. If the evidence does not contain the answer, respond EXACTLY with: '{cls.REFUSAL_MESSAGE}'\n"
+            "5. Stay in character as Siddhant (using first-person 'I' when talking about projects or skills).\n"
+            "6. Make answers concise, professional, and directly cite the sources in brackets where facts are mentioned "
+            "(e.g., [Resume Page 1], [Gradonix README], [Commit: a81d3f], [src/auth/jwt.py])."
+        )
+        
+        user_prompt = f"User Question: {question}\n\nContext Evidence:\n{context}"
+        
+        url = "https://openrouter.ai/api/v1/chat/completions"
+        headers = {
+            "Authorization": f"Bearer {settings.OPENROUTER_API_KEY}",
+            "Content-Type": "application/json",
+            "HTTP-Referer": "https://github.com/Sid13SST/SiddhantAI",
+            "X-Title": "Siddhant AI Persona Platform"
+        }
+        payload = {
+            "model": settings.OPENROUTER_MODEL,
+            "messages": [
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_prompt}
+            ],
+            "temperature": 0.0,
+            "stream": True # Enable streaming!
+        }
+        
+        try:
+            async with httpx.AsyncClient(timeout=30.0) as client:
+                async with client.stream("POST", url, json=payload, headers=headers) as response:
+                    if response.status_code != 200:
+                        raise RuntimeError(f"OpenRouter returned status {response.status_code}")
+                        
+                    async for line in response.iter_lines():
+                        if not line:
+                            continue
+                        line_str = line.strip()
+                        if line_str.startswith("data: "):
+                            data_content = line_str[6:]
+                            if data_content == "[DONE]":
+                                break
+                            try:
+                                data_json = json.loads(data_content)
+                                choice = data_json.get("choices", [{}])[0]
+                                delta = choice.get("delta", {})
+                                token = delta.get("content", "")
+                                if token:
+                                    yield token
+                            except Exception:
+                                pass
+        except Exception as e:
+            logger.error(f"Error during streaming answer generation: {e}")
+            fallback_text = cls._fallback_generate(question, context)
+            for token in fallback_text.split(" "):
+                yield token + " "
+                await asyncio.sleep(0.02)
+
