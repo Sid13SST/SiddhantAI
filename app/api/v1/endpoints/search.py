@@ -100,4 +100,9 @@ async def get_persona_profile():
 @router.post("/ask", response_model=QAResponse)
 async def ask_question(request: QARequest):
     """Triggers the QAEngine to answer questions grounded in the context with citations and evidence panel."""
-    return await qa_engine.answer_question(request.question, request.filter_tags)
+    return await qa_engine.answer_question(
+        question=request.question,
+        filter_tags=request.filter_tags,
+        session_id=request.session_id,
+        booking_context=request.booking_context
+    )

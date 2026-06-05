@@ -5,6 +5,8 @@ from pydantic import BaseModel, Field
 class QARequest(BaseModel):
     question: str = Field(..., description="The user question to Siddhant's AI Representative")
     filter_tags: Optional[List[str]] = Field(None, description="Optional retrieval tags to prioritize")
+    session_id: Optional[str] = Field(None, description="Optional conversation session ID")
+    booking_context: Optional[Dict[str, Any]] = Field(None, description="Optional client-side booking conversation context")
 
 class EvidenceItem(BaseModel):
     source: str = Field(..., description="The name of the source (e.g., Gradonix README)")
@@ -15,6 +17,8 @@ class QAResponse(BaseModel):
     citations: List[str] = Field(default_factory=list, description="List of source citations used (e.g. [Resume Page 1])")
     confidence: float = Field(..., description="The grounding confidence score (0.0 to 1.0)")
     sources: List[EvidenceItem] = Field(default_factory=list, description="Compiled evidence items for the Next.js UI panel")
+    session_id: Optional[str] = Field(None, description="Optional conversation session ID")
+    booking_context: Optional[Dict[str, Any]] = Field(None, description="Optional updated booking conversation context returned to client")
 
 class SafetyLog(BaseModel):
     question: str
