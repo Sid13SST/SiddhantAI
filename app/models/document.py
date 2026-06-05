@@ -75,3 +75,17 @@ class SearchResult(BaseModel):
     metadata: Dict[str, Any]
 
 # Persona Profile Model
+class ProjectSummary(BaseModel):
+    name: str
+    description: str
+    technologies: List[str]
+    repo_url: Optional[str] = None
+
+class PersonaProfile(BaseModel):
+    name: str = "Siddhant"
+    education: List[str] = Field(default_factory=list)
+    core_skills: List[str] = Field(default_factory=list, description="Primary programming languages, frameworks, tools")
+    top_projects: List[ProjectSummary] = Field(default_factory=list)
+    technologies: List[str] = Field(default_factory=list)
+    strengths: List[str] = Field(default_factory=list)
+    repository_summary: Dict[str, str] = Field(default_factory=dict, description="Summary description of each repository")
