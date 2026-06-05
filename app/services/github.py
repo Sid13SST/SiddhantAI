@@ -62,5 +62,33 @@ class GitHubIngestionService:
             logger.error(f"Error fetching README for {owner}/{repo}: {e}")
         return None
 
+    async def fetch_commits(self, owner: str, repo: str) -> List[Dict[str, Any]]:
+        logger.info(f"Fetching commits for {owner}/{repo}...")
+        url = f"https://api.github.com/repos/{owner}/{repo}/commits"
+        params = {"author": self.username, "per_page": 15}
+        try:
+            response = await self.client.get(url, params=params)
+            if response.status_code != 200:
+                logger.warning(f"Failed to fetch commits for {owner}/{repo}: {response.status_code}")
+                return []
+            return response.json()
+        except Exception as e:
+            logger.error(f"Error fetching commits for {owner}/{repo}: {e}")
+            return []
+
+    async def fetch_commit_details(self, owner: str, repo: str, sha: str) -> List[str]:
+        url = f"https://api.github.com/repos/{owner}/{repo}/commits/{sha}"
+        try:
+            response = await self.client.get(url)
+            if response.status_code == 200:
+                data = response.json()
+                files = data.get("files", [])
+                return [f.get("filename", "") for f in files if f.get("filename")]
+            else:
+                logger.warning(f"Failed to fetch commit details for {sha}: {response.status_code}")
+        except Exception as e:
+            logger.error(f"Error fetching commit details for {sha}: {e}")
+        return []
+
     async def ingest_all_repositories(self) -> list:
         return []
