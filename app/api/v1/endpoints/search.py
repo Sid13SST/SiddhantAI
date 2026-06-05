@@ -9,10 +9,13 @@ from pydantic import BaseModel, Field
 from app.services.embeddings import EmbeddingService
 from app.services.vector_store import VectorStoreService
 from app.models.document import SearchResult, PersonaProfile
+from app.models.qa import QARequest, QAResponse
+from app.services.qa_engine import QAEngine
 from app.core.config import settings
 from app.core.logging import logger
 
 router = APIRouter()
+qa_engine = QAEngine()
 embedding_service = EmbeddingService()
 vector_store = VectorStoreService()
 
@@ -93,3 +96,8 @@ async def get_persona_profile():
     except Exception as e:
         logger.error(f"Failed to read persona profile: {e}")
         raise HTTPException(status_code=500, detail="Failed to load persona profile.")
+
+@router.post("/ask", response_model=QAResponse)
+async def ask_question(request: QARequest):
+    """Triggers the QAEngine to answer questions grounded in the context with citations and evidence panel."""
+    return await qa_engine.answer_question(request.question, request.filter_tags)
