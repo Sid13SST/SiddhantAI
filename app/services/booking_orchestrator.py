@@ -18,6 +18,9 @@ SESSION_CACHE: Dict[str, Dict[str, Any]] = {}
 CACHE_MUTEX = threading.Lock()
 
 class BookingOrchestrator:
+    SESSION_CACHE = SESSION_CACHE
+    CACHE_MUTEX = CACHE_MUTEX
+
     @classmethod
     def get_or_create_session(cls, session_id: Optional[str], client_context: Optional[Dict[str, Any]] = None) -> Tuple[str, Dict[str, Any]]:
         """Retrieves or creates session context, favoring client-side state for statelessness."""
@@ -152,6 +155,7 @@ class BookingOrchestrator:
                 if success:
                     context["step"] = "none"
                     context["action"] = "none"
+                    context["last_cancellation_completed"] = True
                     cls.update_session(session_id, context)
                     return QAResponse(
                         answer=f"Your interview with Siddhant associated with {email} has been successfully cancelled. A calendar notification has been sent.",
@@ -264,6 +268,8 @@ class BookingOrchestrator:
                 if success:
                     context["step"] = "none"
                     context["action"] = "none"
+                    context["last_booking_created"] = True
+                    context["last_booking_id"] = details_or_error["id"]
                     cls.update_session(session_id, context)
                     
                     confirm_text = (
@@ -318,6 +324,8 @@ class BookingOrchestrator:
                 if success:
                     context["step"] = "none"
                     context["action"] = "none"
+                    context["last_booking_created"] = True
+                    context["last_booking_id"] = details_or_error["id"]
                     cls.update_session(session_id, context)
                     
                     confirm_text = (
