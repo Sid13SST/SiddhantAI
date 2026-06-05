@@ -25,6 +25,8 @@ class VoiceConfidenceRecovery:
         "grad onion": "Gradonix",
         "gradonics": "Gradonix",
         "gradonix": "Gradonix",
+        "red onix": "Gradonix",
+        "redonics": "Gradonix",
         "friction ai": "FrictaAI",
         "fricta ai": "FrictaAI",
         "fricta": "FrictaAI",
