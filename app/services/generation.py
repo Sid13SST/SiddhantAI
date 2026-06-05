@@ -29,12 +29,23 @@ class AnswerGenerator:
             return cls.REFUSAL_MESSAGE
 
         matched_lines = []
-        for line in context.split("\n"):
+        lines = context.split("\n")
+        for i, line in enumerate(lines):
             if any(kw in line.lower() for kw in keywords):
                 # Clean header lines
                 if not any(line.startswith(p) for p in ["===", "Type:", "Repository:", "File:", "Commit"]):
                     matched_lines.append(line.strip())
-                    if len(matched_lines) >= 3:
+                    # If this line is a heading or list introduction, grab the next few lines for context
+                    if line.strip().startswith("#") or line.strip().endswith(":"):
+                        for offset in range(1, 5):
+                            if i + offset < len(lines):
+                                next_line = lines[i + offset].strip()
+                                # Stop if we hit another header or metadata block
+                                if next_line.startswith("#") or any(next_line.startswith(p) for p in ["===", "Type:", "Repository:", "File:", "Commit"]):
+                                    break
+                                if next_line:
+                                    matched_lines.append(next_line)
+                    if len(matched_lines) >= 6:
                         break
 
         if matched_lines:
