@@ -8,14 +8,22 @@ from app.services.qa_retrieval import QARetrievalService
 from app.services.grounding import ContextBuilder, HiringFitEngine
 from app.services.generation import AnswerGenerator
 from app.services.observability import ObservabilityService
+from app.services.booking_intent import BookingIntentService
+from app.services.booking_orchestrator import BookingOrchestrator
 from app.core.logging import logger
 
 class QAEngine:
     def __init__(self):
         self.retrieval_service = QARetrievalService()
 
-    async def answer_question(self, question: str, filter_tags: Optional[List[str]] = None) -> QAResponse:
-        """Main orchestrator coordinating intent routing, query rewriting, semantic retrieval, grounding validation, generation, and citation compilation."""
+    async def answer_question(
+        self,
+        question: str,
+        filter_tags: Optional[List[str]] = None,
+        session_id: Optional[str] = None,
+        booking_context: Optional[Dict[str, Any]] = None
+    ) -> QAResponse:
+        """Main orchestrator coordinating intent routing (booking vs QA), safety, retrieval, validation, generation, and observability."""
         start_time = time.time()
         logger.info(f"=== QAEngine Request: '{question}' ===")
         
@@ -36,7 +44,33 @@ class QAEngine:
                 answer=refusal_reason,
                 citations=[],
                 confidence=0.0,
-                sources=[]
+                sources=[],
+                session_id=session_id,
+                booking_context=booking_context
+            )
+            
+        # 2. Intercept Booking/Scheduling Flows
+        is_active_booking = False
+        if booking_context and booking_context.get("step") != "none":
+            is_active_booking = True
+        else:
+            # Check backend cache state for this session ID
+            _, cached_ctx = BookingOrchestrator.get_or_create_session(session_id)
+            if cached_ctx and cached_ctx.get("step") != "none":
+                is_active_booking = True
+                
+        booking_intent_data = await BookingIntentService.classify_booking_intent(question)
+        
+        if is_active_booking or booking_intent_data:
+            intent_str = booking_intent_data["intent"] if booking_intent_data else "booking_continuation"
+            resolved_session_id, resolved_context = BookingOrchestrator.get_or_create_session(session_id, booking_context)
+            
+            # Delegate to BookingOrchestrator
+            return await BookingOrchestrator.process_booking_message(
+                question=question,
+                session_id=resolved_session_id,
+                context=resolved_context,
+                intent=intent_str
             )
 
         # 2. Intent Classification
@@ -155,7 +189,9 @@ class QAEngine:
                 answer=AnswerGenerator.REFUSAL_MESSAGE,
                 citations=[],
                 confidence=0.0,
-                sources=[]
+                sources=[],
+                session_id=session_id,
+                booking_context=booking_context
             )
 
         # 5. Answer Generation (with verification & regeneration)
@@ -191,5 +227,7 @@ class QAEngine:
             answer=answer,
             citations=citations,
             confidence=confidence,
-            sources=sources
+            sources=sources,
+            session_id=session_id,
+            booking_context=booking_context
         )
