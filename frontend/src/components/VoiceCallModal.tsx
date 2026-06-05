@@ -34,6 +34,30 @@ export default function VoiceCallModal({ isOpen, onClose }: VoiceCallModalProps)
   const callStartRef = useRef<number>(0);
   const recognitionRef = useRef<any>(null);
   const synthRef = useRef<any>(null);
+  const isSpeakingRef = useRef<boolean>(false);
+  const isListeningRef = useRef<boolean>(false);
+
+  const safeStartRecognition = () => {
+    if (recognitionRef.current && !isListeningRef.current && !isSpeakingRef.current && !isMuted) {
+      try {
+        recognitionRef.current.start();
+        isListeningRef.current = true;
+      } catch (e) {
+        console.warn("safeStartRecognition error:", e);
+      }
+    }
+  };
+
+  const safeStopRecognition = () => {
+    if (recognitionRef.current && isListeningRef.current) {
+      try {
+        recognitionRef.current.stop();
+        isListeningRef.current = false;
+      } catch (e) {
+        console.warn("safeStopRecognition error:", e);
+      }
+    }
+  };
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -200,22 +224,38 @@ export default function VoiceCallModal({ isOpen, onClose }: VoiceCallModalProps)
     rec.interimResults = false;
     rec.lang = 'en-US';
 
+    rec.onstart = () => {
+      isListeningRef.current = true;
+    };
+
     rec.onresult = (event: any) => {
       const resultText = event.results[0][0].transcript;
       handleUserUtterance(resultText);
     };
 
+    rec.onerror = (e: any) => {
+      console.warn("SpeechRecognition error:", e.error);
+    };
+
     rec.onend = () => {
-      // Keep listening if call is active and user is not muted
-      if (callState === 'active' && !isMuted) {
-        try {
-          rec.start();
-        } catch (e) {}
+      isListeningRef.current = false;
+      // Keep listening if call is active, user is not muted, and assistant is not speaking
+      if (callState === 'active' && !isMuted && !isSpeakingRef.current) {
+        setTimeout(() => {
+          if (callState === 'active' && !isMuted && !isSpeakingRef.current) {
+            safeStartRecognition();
+          }
+        }, 100);
       }
     };
 
     recognitionRef.current = rec;
-    rec.start();
+    isListeningRef.current = true;
+    try {
+      rec.start();
+    } catch (e) {
+      console.warn("Initial rec.start() error:", e);
+    }
   };
 
   const speakText = (text: string) => {
@@ -231,21 +271,24 @@ export default function VoiceCallModal({ isOpen, onClose }: VoiceCallModalProps)
     utterance.rate = 1.0;
     utterance.pitch = 1.0;
     
+    isSpeakingRef.current = true;
+    safeStopRecognition();
+    
     // Resume speech recognition once TTS ends
     utterance.onend = () => {
-      if (callState === 'active' && recognitionRef.current) {
-        try {
-          recognitionRef.current.start();
-        } catch (e) {}
+      isSpeakingRef.current = false;
+      if (callState === 'active') {
+        safeStartRecognition();
       }
     };
 
-    // Pause speech recognition while speaking to prevent echo feedback loop
-    if (recognitionRef.current) {
-      try {
-        recognitionRef.current.stop();
-      } catch (e) {}
-    }
+    utterance.onerror = (e) => {
+      console.warn("TTS utterance error:", e);
+      isSpeakingRef.current = false;
+      if (callState === 'active') {
+        safeStartRecognition();
+      }
+    };
 
     synthRef.current.speak(utterance);
   };
@@ -282,10 +325,10 @@ export default function VoiceCallModal({ isOpen, onClose }: VoiceCallModalProps)
   };
 
   const handleEndCall = async () => {
-    // End speech recognition and synth
+    isSpeakingRef.current = false;
+    safeStopRecognition();
     if (recognitionRef.current) {
       recognitionRef.current.onend = null;
-      try { recognitionRef.current.stop(); } catch(e) {}
       recognitionRef.current = null;
     }
     if (synthRef.current) {
@@ -336,15 +379,13 @@ export default function VoiceCallModal({ isOpen, onClose }: VoiceCallModalProps)
       vapiRef.current.setMuted(nextState);
     }
     if (nextState) {
-      if (recognitionRef.current) {
-        try { recognitionRef.current.stop(); } catch(e) {}
-      }
+      safeStopRecognition();
       if (synthRef.current) {
         synthRef.current.cancel();
       }
     } else {
-      if (recognitionRef.current && callState === 'active') {
-        try { recognitionRef.current.start(); } catch(e) {}
+      if (callState === 'active') {
+        safeStartRecognition();
       }
     }
   };
