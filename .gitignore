@@ -1,0 +1,10 @@
+# Environment variables
+.env
+
+# Python Virtual Environment
+.venv/
+__pycache__/
+*.pyc
+
+# Local Data Storage & Vector Indexes
+data/
