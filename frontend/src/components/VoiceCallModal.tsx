@@ -127,6 +127,63 @@ export default function VoiceCallModal({ isOpen, onClose }: VoiceCallModalProps)
     }, 1200);
   };
 
+  const handleUserUtterance = async (resultText: string) => {
+    if (!resultText || !resultText.trim()) return;
+
+    // Add user speech to transcript
+    setTranscript((prev) => [...prev, { role: 'user', content: resultText }]);
+
+    // POST user utterance to completions endpoint
+    try {
+      const res = await fetch(`${API_BASE}/api/v1/voice/query`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'x-vapi-call-id': simulatedCallIdRef.current
+        },
+        body: JSON.stringify({
+          model: 'google/gemini-2.5-flash',
+          messages: [
+            { role: 'user', content: resultText }
+          ]
+        })
+      });
+
+      if (!res.ok) throw new Error('API completion call failed');
+      const data = await res.json();
+      const assistantReply = data.choices[0].message.content;
+
+      // Fetch session update to sync topic and corrections
+      const sessRes = await fetch(`${API_BASE}/api/v1/voice/session?session_id=${simulatedCallIdRef.current}`);
+      if (sessRes.ok) {
+        const sessData = await sessRes.json();
+        setActiveTopic(sessData.active_topic);
+        // Sync phonetic corrections if any
+        const lastUserTurn = sessData.history[sessData.history.length - 2];
+        if (lastUserTurn) {
+          setTranscript((prev) => {
+            const next = [...prev];
+            const userIdx = next.map(t => t.role).lastIndexOf('user');
+            if (userIdx !== -1) {
+              next[userIdx].corrected = lastUserTurn.corrected;
+            }
+            return next;
+          });
+        }
+      }
+
+      // Add assistant reply and speak it
+      setTranscript((prev) => [...prev, { role: 'assistant', content: assistantReply }]);
+      speakText(assistantReply);
+
+    } catch (err) {
+      console.error('Simulated query completions fail:', err);
+      const errReply = "I am sorry, but there was an error processing your query.";
+      setTranscript((prev) => [...prev, { role: 'assistant', content: errReply }]);
+      speakText(errReply);
+    }
+  };
+
   const startRecognition = () => {
     if (typeof window === 'undefined') return;
     
@@ -143,62 +200,9 @@ export default function VoiceCallModal({ isOpen, onClose }: VoiceCallModalProps)
     rec.interimResults = false;
     rec.lang = 'en-US';
 
-    rec.onresult = async (event: any) => {
+    rec.onresult = (event: any) => {
       const resultText = event.results[0][0].transcript;
-      if (!resultText.trim()) return;
-
-      // Add user speech to transcript
-      setTranscript((prev) => [...prev, { role: 'user', content: resultText }]);
-
-      // POST user utterance to completions endpoint
-      try {
-        const res = await fetch(`${API_BASE}/api/v1/voice/query`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'x-vapi-call-id': simulatedCallIdRef.current
-          },
-          body: JSON.stringify({
-            model: 'google/gemini-2.5-flash',
-            messages: [
-              { role: 'user', content: resultText }
-            ]
-          })
-        });
-
-        if (!res.ok) throw new Error('API completion call failed');
-        const data = await res.json();
-        const assistantReply = data.choices[0].message.content;
-
-        // Fetch session update to sync topic and corrections
-        const sessRes = await fetch(`${API_BASE}/api/v1/voice/session?session_id=${simulatedCallIdRef.current}`);
-        if (sessRes.ok) {
-          const sessData = await sessRes.json();
-          setActiveTopic(sessData.active_topic);
-          // Sync phonetic corrections if any
-          const lastUserTurn = sessData.history[sessData.history.length - 2];
-          if (lastUserTurn) {
-            setTranscript((prev) => {
-              const next = [...prev];
-              const userIdx = next.map(t => t.role).lastIndexOf('user');
-              if (userIdx !== -1) {
-                next[userIdx].corrected = lastUserTurn.corrected;
-              }
-              return next;
-            });
-          }
-        }
-
-        // Add assistant reply and speak it
-        setTranscript((prev) => [...prev, { role: 'assistant', content: assistantReply }]);
-        speakText(assistantReply);
-
-      } catch (err) {
-        console.error('Simulated query completions fail:', err);
-        const errReply = "I am sorry, but there was an error processing your query.";
-        setTranscript((prev) => [...prev, { role: 'assistant', content: errReply }]);
-        speakText(errReply);
-      }
+      handleUserUtterance(resultText);
     };
 
     rec.onend = () => {
@@ -424,6 +428,36 @@ export default function VoiceCallModal({ isOpen, onClose }: VoiceCallModalProps)
             <div className="w-full space-y-4">
               <VoiceTranscript history={transcript} />
               
+              {/* Simulator Text Input Fallback */}
+              {simulatedCallIdRef.current && (
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    const form = e.currentTarget;
+                    const inputEl = form.elements.namedItem('simulatedInput') as HTMLInputElement;
+                    const text = inputEl.value;
+                    if (text.trim()) {
+                      handleUserUtterance(text.trim());
+                      inputEl.value = '';
+                    }
+                  }}
+                  className="flex gap-2 px-2"
+                >
+                  <input
+                    name="simulatedInput"
+                    type="text"
+                    placeholder="Type to simulate spoken sentence..."
+                    className="flex-1 rounded-xl border border-slate-800 bg-slate-900/60 px-3 py-2 text-xs text-slate-200 placeholder-slate-500 focus:border-cyan-500/50 focus:outline-none focus:ring-1 focus:ring-cyan-500/50"
+                  />
+                  <button
+                    type="submit"
+                    className="rounded-xl bg-cyan-600 px-4 py-2 text-xs font-bold text-slate-100 hover:bg-cyan-500 transition active:scale-95"
+                  >
+                    Simulate
+                  </button>
+                </form>
+              )}
+
               {/* Call Controls */}
               <div className="flex items-center justify-center gap-4 pt-4 border-t border-slate-850">
                 <button
