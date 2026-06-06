@@ -1,0 +1,51 @@
+{
+  "name": "Siddhant",
+  "education": [
+    "Bachelor of Technology in Computer Science & Engineering"
+  ],
+  "core_skills": [
+    "Analytics",
+    "FAISS",
+    "FastAPI",
+    "Fastapi",
+    "Git",
+    "JavaScript",
+    "Next.js",
+    "Python",
+    "Rag",
+    "React",
+    "TypeScript"
+  ],
+  "top_projects": [
+    {
+      "name": "FrictaAI",
+      "description": "Timing models and pattern analysis engine.",
+      "technologies": [
+        "Python"
+      ],
+      "repo_url": "https://github.com/Siddhant/FrictaAI"
+    }
+  ],
+  "technologies": [
+    "Analytics",
+    "FAISS",
+    "FastAPI",
+    "Fastapi",
+    "Git",
+    "JavaScript",
+    "Next.js",
+    "Python",
+    "Rag",
+    "React",
+    "TypeScript"
+  ],
+  "strengths": [
+    "Full-Stack AI Engineering",
+    "Advanced Vector Search and RAG Architectures",
+    "Clean Code and Scalable Software Architecture",
+    "System Automation and API Integrations"
+  ],
+  "repository_summary": {
+    "FrictaAI": "Timing models and pattern analysis engine."
+  }
+}

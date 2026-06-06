@@ -11,7 +11,11 @@ class TimezoneService:
         "EST": "America/New_York",
         "PST": "America/Los_Angeles",
         "GMT": "Europe/London",
-        "PHT": "Asia/Manila", # Just in case
+        "PHT": "Asia/Manila",
+        "CST": "America/Chicago",
+        "MST": "America/Denver",
+        "CET": "Europe/Paris",
+        "AEST": "Australia/Sydney"
     }
 
     @classmethod

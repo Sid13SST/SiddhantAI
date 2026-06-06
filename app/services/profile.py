@@ -8,6 +8,14 @@ from app.core.config import settings
 from app.core.logging import logger
 
 class PersonaBuilderService:
+    FALLBACK_MODELS = [
+        "google/gemma-4-31b-it:free",
+        "google/gemma-4-26b-a4b-it:free",
+        "qwen/qwen3-next-80b-a3b-instruct:free",
+        "z-ai/glm-4.5-air:free",
+        "meta-llama/llama-3.3-70b-instruct:free",
+        "meta-llama/llama-3.2-3b-instruct:free"
+    ]
     @staticmethod
     def _get_fallback_profile(documents: List[IngestedDocument]) -> Dict[str, Any]:
         """Generates a high-quality fallback profile from local document data when LLM is unavailable."""
@@ -136,35 +144,45 @@ class PersonaBuilderService:
                 f"CRITICAL: Respond ONLY with valid JSON. Do not write explanations, thoughts, or markdown formatting blocks."
             )
             
-            payload = {
-                "model": settings.OPENROUTER_MODEL,
-                "messages": [
-                    {"role": "user", "content": prompt}
-                ]
-            }
-            
-            try:
-                logger.info(f"Calling OpenRouter model {settings.OPENROUTER_MODEL} to generate profile...")
-                async with httpx.AsyncClient(timeout=45.0) as client:
-                    response = await client.post(url, json=payload, headers=headers)
-                    if response.status_code == 200:
-                        res_json = response.json()
-                        raw_content = res_json["choices"][0]["message"]["content"].strip()
-                        
-                        # Clean Markdown code fence backticks if LLM mistakenly returned them
-                        if raw_content.startswith("```"):
-                            # Remove ```json and ``` lines
-                            lines = raw_content.split("\n")
-                            cleaned_lines = [l for l in lines if not l.strip().startswith("```")]
-                            raw_content = "\n".join(cleaned_lines).strip()
+            models_to_try = [settings.OPENROUTER_MODEL]
+            for fallback in cls.FALLBACK_MODELS:
+                if fallback not in models_to_try:
+                    models_to_try.append(fallback)
+                    
+            profile_dict = None
+            for model in models_to_try:
+                payload = {
+                    "model": model,
+                    "messages": [
+                        {"role": "user", "content": prompt}
+                    ]
+                }
+                
+                try:
+                    logger.info(f"Calling OpenRouter model {model} to generate profile...")
+                    async with httpx.AsyncClient(timeout=45.0) as client:
+                        response = await client.post(url, json=payload, headers=headers)
+                        if response.status_code == 200:
+                            res_json = response.json()
+                            raw_content = res_json["choices"][0]["message"]["content"].strip()
                             
-                        profile_dict = json.loads(raw_content)
-                        logger.info("Successfully synthesized persona profile using OpenRouter.")
-                    else:
-                        logger.error(f"OpenRouter call failed: {response.status_code} - {response.text}. Using fallback.")
-                        profile_dict = cls._get_fallback_profile(documents)
-            except Exception as e:
-                logger.error(f"Error calling OpenRouter profile service: {e}. Using fallback.")
+                            # Clean Markdown code fence backticks if LLM mistakenly returned them
+                            if raw_content.startswith("```"):
+                                # Remove ```json and ``` lines
+                                lines = raw_content.split("\n")
+                                cleaned_lines = [l for l in lines if not l.strip().startswith("```")]
+                                raw_content = "\n".join(cleaned_lines).strip()
+                                
+                            profile_dict = json.loads(raw_content)
+                            logger.info(f"Successfully synthesized persona profile using OpenRouter with model {model}.")
+                            break
+                        else:
+                            logger.warning(f"Profile generation model {model} failed: {response.status_code} - {response.text}")
+                except Exception as e:
+                    logger.error(f"Error calling OpenRouter profile service with model {model}: {e}")
+            
+            if not profile_dict:
+                logger.warning("All OpenRouter models failed to generate profile. Using local fallback.")
                 profile_dict = cls._get_fallback_profile(documents)
                 
         # Validate profile with Pydantic

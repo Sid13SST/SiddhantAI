@@ -75,10 +75,12 @@ class BookingOrchestrator:
             context["step"] = "ask_cancellation_email"
             cls.update_session(session_id, context)
             return QAResponse(
-                answer="I can certainly help you cancel your interview with Siddhant. Could you please provide the candidate email address used for the booking?",
+                answer="I can certainly help you cancel your interview with Siddhant on Google Calendar. Could you please provide the candidate email address used for the booking?",
                 confidence=1.0,
                 session_id=session_id,
-                booking_context=context
+                booking_context=context,
+                citations=["Google Calendar Booking Agent"],
+                sources=[EvidenceItem(source="Booking Agent", snippet="Cancel Google Calendar booking.")]
             )
             
         elif intent == "reschedule_request" and action != "reschedule":
@@ -86,10 +88,12 @@ class BookingOrchestrator:
             context["step"] = "ask_reschedule_email"
             cls.update_session(session_id, context)
             return QAResponse(
-                answer="Sure, I can help you reschedule your interview. To locate your current booking, what is the candidate email address associated with it?",
+                answer="Sure, I can help you reschedule your interview on Google Calendar. To locate your current booking, what is the candidate email address associated with it?",
                 confidence=1.0,
                 session_id=session_id,
-                booking_context=context
+                booking_context=context,
+                citations=["Google Calendar Booking Agent"],
+                sources=[EvidenceItem(source="Booking Agent", snippet="Reschedule Google Calendar booking.")]
             )
 
         elif (intent in ["booking_request", "availability_check"]) and action not in ["booking", "reschedule"] and step == "none":
@@ -97,32 +101,58 @@ class BookingOrchestrator:
             context["step"] = "ask_timezone"
             cls.update_session(session_id, context)
             return QAResponse(
-                answer="I'd be glad to help you schedule an interview with Siddhant! To display the correct available times, could you please tell me your timezone (e.g. IST, EST, PST, GMT, UTC)?",
+                answer="I'd be glad to help you schedule an interview with Siddhant on Google Calendar! To display the correct available times, could you please tell me your timezone (e.g. IST, EST, PST, GMT, UTC)?",
                 confidence=1.0,
                 session_id=session_id,
-                booking_context=context
+                booking_context=context,
+                citations=["Google Calendar Booking Agent"],
+                sources=[EvidenceItem(source="Booking Agent", snippet="Google Calendar scheduling link integration available. Interview availability slots: Mon-Fri 14:00 - 18:00 IST.")]
             )
 
         # STATE MACHINE PROCESSING
         
         # 1. Ask Timezone
         if step == "ask_timezone":
-            tz_input = q_clean.upper().replace(" ", "")
-            # Try to resolve timezone
-            tz_resolved = TimezoneService.TZ_MAP.get(tz_input)
-            if not tz_resolved:
-                # If they entered something like "Kolkata" or "New York"
-                for abbrev, olson in TimezoneService.TZ_MAP.items():
-                    if tz_input in olson.upper() or tz_input in abbrev:
+            q_upper = q_clean.upper()
+            
+            # Define aliases matching the keys in TimezoneService.TZ_MAP
+            abbrev_aliases = {
+                "IST": ["IST", "INDIA", "KOLKATA"],
+                "EST": ["EST", "EDT", "EASTERN", "NEW YORK", "NEWYORK"],
+                "PST": ["PST", "PDT", "PACIFIC", "LOS ANGELES", "LOSANGELES"],
+                "GMT": ["GMT", "BST", "LONDON"],
+                "UTC": ["UTC"],
+                "CST": ["CST", "CDT", "CENTRAL", "CHICAGO"],
+                "MST": ["MST", "MDT", "MOUNTAIN", "DENVER"],
+                "CET": ["CET", "CEST", "PARIS", "BERLIN", "EUROPE"],
+                "AEST": ["AEST", "AEDT", "SYDNEY", "MELBOURNE", "AUSTRALIA"]
+            }
+            
+            tz_input = None
+            for abbrev, aliases in abbrev_aliases.items():
+                for alias in aliases:
+                    # Check if alias is found as a substring or word
+                    if alias in q_upper:
                         tz_input = abbrev
                         break
-                else:
-                    return QAResponse(
-                        answer="Sorry, I didn't recognize that timezone. Please provide a standard abbreviation like IST, EST, PST, GMT, or UTC.",
-                        confidence=1.0,
-                        session_id=session_id,
-                        booking_context=context
-                    )
+                if tz_input:
+                    break
+                    
+            if not tz_input:
+                # Fallback to checking if the clean query is contained in any Olson ID
+                q_no_spaces = q_upper.replace(" ", "")
+                for abbrev, olson in TimezoneService.TZ_MAP.items():
+                    if q_no_spaces in olson.upper().replace(" ", "") or q_no_spaces in abbrev:
+                        tz_input = abbrev
+                        break
+                        
+            if not tz_input:
+                return QAResponse(
+                    answer="Sorry, I didn't recognize that timezone. Please provide a standard abbreviation like IST, EST, PST, GMT, or UTC.",
+                    confidence=1.0,
+                    session_id=session_id,
+                    booking_context=context
+                )
             
             context["timezone"] = tz_input
             context["step"] = "ask_email"

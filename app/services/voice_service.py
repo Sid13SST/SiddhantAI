@@ -152,10 +152,24 @@ class VoiceQueryRouter:
         # 2. Retrieve caller context
         session = VoiceSessionManager.get_or_create_session(call_id)
         
+        # Inject active topic context for short/pronoun-based follow-up queries
+        active_topic = session.get("active_topic", "General QA")
+        query_for_qa = corrected_query
+        if active_topic != "General QA" and "Scheduling" not in active_topic:
+            query_lower = corrected_query.lower()
+            pronouns = ["it", "they", "its", "he", "she", "this", "that", "there", "project", "system", "app", "technologies", "tech"]
+            words = query_lower.split()
+            has_pronoun = any(p in words for p in pronouns)
+            is_short = len(words) < 6
+            if has_pronoun or is_short:
+                clean_topic = active_topic.replace("Project", "").strip()
+                query_for_qa = f"{corrected_query} (regarding {clean_topic})"
+                logger.info(f"Voice Router Context Injection: '{corrected_query}' -> '{query_for_qa}'")
+
         # 3. Call ground RAG QAEngine (which automatically routes booking steps to BookingOrchestrator)
-        logger.info(f"Voice Router: Routing '{corrected_query}' for Call ID {call_id}")
+        logger.info(f"Voice Router: Routing '{query_for_qa}' for Call ID {call_id}")
         qa_response = await cls.qa_engine.answer_question(
-            question=corrected_query,
+            question=query_for_qa,
             session_id=call_id,
             booking_context=session
         )
@@ -318,6 +332,81 @@ class ObservabilityLogger:
         except Exception as e:
             logger.error(f"Failed to write voice observability log: {e}")
 
+    @classmethod
+    def generate_voice_metrics(cls) -> Dict[str, Any]:
+        """Calculates voice metrics and updates voice_metrics.json."""
+        metrics_path = Path(settings.DATA_DIR) / "voice_metrics.json"
+        
+        call_count = 0
+        avg_duration = 0.0
+        avg_latency = 0.0
+        booking_success_rate = 0.0
+        qa_success_rate = 0.0
+        
+        # 1. Read call summaries
+        summaries = []
+        if SUMMARIES_PATH.exists():
+            try:
+                with open(SUMMARIES_PATH, "r", encoding="utf-8") as f:
+                    summaries = json.load(f)
+            except Exception:
+                pass
+                
+        if summaries:
+            call_count = len(summaries)
+            total_duration_sec = 0.0
+            total_bookings = 0
+            for s in summaries:
+                duration_str = s.get("call_duration", "0s")
+                sec = 0
+                parts = duration_str.split()
+                for p in parts:
+                    if p.endswith("m"):
+                        sec += int(p[:-1]) * 60
+                    elif p.endswith("s"):
+                        sec += int(p[:-1])
+                total_duration_sec += sec
+                if s.get("booking_created", False):
+                    total_bookings += 1
+            avg_duration = total_duration_sec / call_count
+            booking_success_rate = total_bookings / call_count
+
+        # 2. Read query metrics
+        queries = []
+        if OBSERVABILITY_PATH.exists():
+            try:
+                with open(OBSERVABILITY_PATH, "r", encoding="utf-8") as f:
+                    for line in f:
+                        if line.strip():
+                            queries.append(json.loads(line))
+            except Exception:
+                pass
+                
+        voice_queries = [q for q in queries if q.get("event") == "voice_query"]
+        if voice_queries:
+            total_latency = sum(q.get("latency_ms", 0.0) for q in voice_queries)
+            successful_queries = sum(1 for q in voice_queries if q.get("success", True))
+            avg_latency = total_latency / len(voice_queries)
+            qa_success_rate = successful_queries / len(voice_queries)
+            
+        metrics = {
+            "call_count": call_count,
+            "avg_duration_seconds": round(avg_duration, 2),
+            "avg_latency_ms": round(avg_latency, 2),
+            "booking_success_rate": round(booking_success_rate, 4),
+            "qa_success_rate": round(qa_success_rate, 4),
+            "last_updated": datetime.now().isoformat()
+        }
+        
+        try:
+            with open(metrics_path, "w", encoding="utf-8") as f:
+                json.dump(metrics, f, indent=2, ensure_ascii=False)
+            logger.info(f"Updated voice metrics in {metrics_path}")
+        except Exception as e:
+            logger.error(f"Failed to save voice metrics: {e}")
+            
+        return metrics
+
 
 class VapiService:
     """Orchestrates configuration schema generation and webhook event management for Vapi."""
@@ -390,6 +479,9 @@ class VapiService:
             with BookingOrchestrator.CACHE_MUTEX:
                 BookingOrchestrator.SESSION_CACHE.pop(call_id, None)
                 
+            # Trigger voice metrics update
+            ObservabilityLogger.generate_voice_metrics()
+            
             return {"status": "success", "summary": summary}
             
         return {"status": "ignored"}

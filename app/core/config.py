@@ -5,7 +5,7 @@ from pydantic_settings import BaseSettings
 from typing import Optional
 
 class Settings(BaseSettings):
-    HOST: str = "127.0.0.1"
+    HOST: str = "0.0.0.0"
     PORT: int = 8000
     GITHUB_PAT: str = ""
     GITHUB_USERNAME: str = "Siddhant"

@@ -6,10 +6,14 @@ from sentence_transformers import SentenceTransformer
 from app.core.logging import logger
 
 class EmbeddingService:
+    _model = None
+
     def __init__(self, model_name: str = "sentence-transformers/all-MiniLM-L6-v2"):
-        logger.info(f"Loading local SentenceTransformer model: {model_name}...")
-        self.model = SentenceTransformer(model_name)
-        logger.info("SentenceTransformer model loaded successfully.")
+        if EmbeddingService._model is None:
+            logger.info(f"Loading local SentenceTransformer model: {model_name}...")
+            EmbeddingService._model = SentenceTransformer(model_name)
+            logger.info("SentenceTransformer model loaded successfully.")
+        self.model = EmbeddingService._model
 
     def generate_embeddings(self, texts: List[str]) -> np.ndarray:
         """Generates high-dimensional embeddings for a list of text strings in batch."""

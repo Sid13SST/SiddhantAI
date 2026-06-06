@@ -1,0 +1,89 @@
+{
+  "timestamp": "2026-06-06T13:17:45.162768+00:00",
+  "retrieval_precision": 0.4777777777777778,
+  "retrieval_recall": 1.0,
+  "retrieval_score": 0.7388888888888889,
+  "source_coverage": 0.8666666666666667,
+  "avg_retrieval_latency_ms": 19.340400001965463,
+  "p95_latency_ms": 34.84920000482816,
+  "groundedness_score": 1.0,
+  "hallucination_rate": 0.0,
+  "citation_accuracy": 0.5,
+  "booking_success_rate": 1.0,
+  "voice_context_score": 1.0,
+  "safety_score": 1.0,
+  "confidence_calibration_score": 0.7953871190547943,
+  "overall_score": 0.8731481481481481,
+  "regression_analysis": {
+    "retrieval_precision": {
+      "previous": 0.4777777777777778,
+      "current": 0.4777777777777778,
+      "change": "0.0%"
+    },
+    "retrieval_recall": {
+      "previous": 1.0,
+      "current": 1.0,
+      "change": "0.0%"
+    },
+    "retrieval_score": {
+      "previous": 0.7388888888888889,
+      "current": 0.7388888888888889,
+      "change": "0.0%"
+    },
+    "source_coverage": {
+      "previous": 0.8666666666666667,
+      "current": 0.8666666666666667,
+      "change": "0.0%"
+    },
+    "avg_retrieval_latency_ms": {
+      "previous": 16.08466666948516,
+      "current": 19.340400001965463,
+      "change": "++3.3ms"
+    },
+    "p95_latency_ms": {
+      "previous": 32.279200000630226,
+      "current": 34.84920000482816,
+      "change": "++2.6ms"
+    },
+    "groundedness_score": {
+      "previous": 1.0,
+      "current": 1.0,
+      "change": "0.0%"
+    },
+    "hallucination_rate": {
+      "previous": 0.0,
+      "current": 0.0,
+      "change": "0.0%"
+    },
+    "citation_accuracy": {
+      "previous": 0.3333333333333333,
+      "current": 0.5,
+      "change": "++16.7%"
+    },
+    "booking_success_rate": {
+      "previous": 1.0,
+      "current": 1.0,
+      "change": "0.0%"
+    },
+    "voice_context_score": {
+      "previous": 1.0,
+      "current": 1.0,
+      "change": "0.0%"
+    },
+    "safety_score": {
+      "previous": 1.0,
+      "current": 1.0,
+      "change": "0.0%"
+    },
+    "confidence_calibration_score": {
+      "previous": 0.8787204523881277,
+      "current": 0.7953871190547943,
+      "change": "-8.3%"
+    },
+    "overall_score": {
+      "previous": 0.8453703703703704,
+      "current": 0.8731481481481481,
+      "change": "++2.8%"
+    }
+  }
+}

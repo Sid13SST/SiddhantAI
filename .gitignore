@@ -1,15 +1,28 @@
 # Environment variables
 .env
+.env.local
 
 # Python Virtual Environment
 .venv/
 __pycache__/
 *.pyc
 
-# Local Data Storage & Vector Indexes
-data/
-
 # Credentials and OAuth Tokens
 credentials.json
 token.json
 
+# Logs (regenerated at runtime)
+data/observability.log
+data/booking_observability.log
+data/voice_observability.log
+data/voice_transcripts.jsonl
+
+# Frontend build artifacts
+frontend/.next/
+frontend/node_modules/
+
+# Node modules
+node_modules/
+
+# Scratch/temp files
+scratch/

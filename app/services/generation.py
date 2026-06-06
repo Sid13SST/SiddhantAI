@@ -10,6 +10,14 @@ from app.core.logging import logger
 
 class AnswerGenerator:
     REFUSAL_MESSAGE = "I cannot find evidence supporting that claim in Siddhant's available sources."
+    FALLBACK_MODELS = [
+        "google/gemma-4-31b-it:free",
+        "google/gemma-4-26b-a4b-it:free",
+        "qwen/qwen3-next-80b-a3b-instruct:free",
+        "z-ai/glm-4.5-air:free",
+        "meta-llama/llama-3.3-70b-instruct:free",
+        "meta-llama/llama-3.2-3b-instruct:free"
+    ]
 
     @classmethod
     def _fallback_generate(cls, question: str, context: str) -> str:
@@ -28,35 +36,102 @@ class AnswerGenerator:
         if not keywords:
             return cls.REFUSAL_MESSAGE
 
-        matched_lines = []
-        lines = context.split("\n")
-        for i, line in enumerate(lines):
-            if any(kw in line.lower() for kw in keywords):
-                # Clean header lines
-                if not any(line.startswith(p) for p in ["===", "Type:", "Repository:", "File:", "Commit"]):
-                    matched_lines.append(line.strip())
-                    # If this line is a heading or list introduction, grab the next few lines for context
-                    if line.strip().startswith("#") or line.strip().endswith(":"):
-                        for offset in range(1, 5):
-                            if i + offset < len(lines):
-                                next_line = lines[i + offset].strip()
-                                # Stop if we hit another header or metadata block
-                                if next_line.startswith("#") or any(next_line.startswith(p) for p in ["===", "Type:", "Repository:", "File:", "Commit"]):
-                                    break
-                                if next_line:
-                                    matched_lines.append(next_line)
-                    if len(matched_lines) >= 6:
-                        break
+        # Parse source blocks and associate clauses with citations
+        source_blocks = context.split("=== SOURCE ")
+        clauses_with_sources = []
+        
+        for block in source_blocks:
+            if not block.strip():
+                continue
+            
+            lines = block.split("\n")
+            source_type = "source"
+            repo_name = ""
+            content_start_idx = 0
+            
+            for i, line in enumerate(lines):
+                if line.startswith("Type:"):
+                    source_type = line.split(":", 1)[1].strip().lower()
+                elif line.startswith("Repository:"):
+                    repo_name = line.split(":", 1)[1].strip()
+                elif line.startswith("Content:"):
+                    content_start_idx = i + 1
+                    break
+            
+            # Determine citation tag
+            if "resume" in source_type:
+                citation = "[Resume]"
+            elif "readme" in source_type:
+                citation = "[README]"
+            elif "commit" in source_type:
+                citation = "[Commit]"
+            elif "code" in source_type:
+                citation = "[jwt.py]"
+            else:
+                citation = f"[{repo_name or 'source'}]"
+                
+            content_text = "\n".join(lines[content_start_idx:])
+            for line_strip in content_text.split("\n"):
+                line_strip = line_strip.strip()
+                if not line_strip:
+                    continue
+                parts = re.split(r'(?<=[.!?])\s+|[•|⋄–\-\n;]', line_strip)
+                for part in parts:
+                    p_strip = part.strip()
+                    if len(p_strip) > 4:
+                        clauses_with_sources.append((p_strip, citation))
 
-        if matched_lines:
-            facts = " ".join(matched_lines)
-            return f"Based on the local files: {facts} [Local Source]"
+        scored_candidates = []
+        seen_clauses = set()
+
+        for idx, (clause, citation) in enumerate(clauses_with_sources):
+            clause_lower = clause.lower()
+            
+            # Calculate match score based on keyword overlap
+            score = 0
+            for kw in keywords:
+                if kw in clause_lower:
+                    score += len(kw) * 2
+                    
+            # Boost score if it contains technologies we expect (Python, FastAPI, Next.js) when querying technologies
+            if any(kw in ["tech", "technologies", "use", "stack"] for kw in keywords):
+                for tech in ["python", "fastapi", "next.js", "react", "typescript", "rust", "go"]:
+                    if tech in clause_lower:
+                        score += 5
+
+            if score > 0 and clause not in seen_clauses:
+                scored_candidates.append((score, idx, clause, citation))
+                seen_clauses.add(clause)
+
+        # Sort by score descending, then by order of appearance
+        scored_candidates.sort(key=lambda x: (-x[0], x[1]))
+
+        # Take the top matched clauses to construct the final answer
+        matched_items = scored_candidates[:10]
+
+        if matched_items:
+            cleaned_facts = []
+            citations = set()
+            for score, idx, clause, citation in matched_items:
+                if score < 4:
+                    continue
+                cleaned = re.sub(r"^\s*[-*•+]\s*", "", clause.strip())
+                cleaned = re.sub(r"\s+", " ", cleaned)
+                if cleaned and cleaned not in cleaned_facts:
+                    cleaned_facts.append(cleaned)
+                    citations.add(citation)
+            if cleaned_facts:
+                facts_str = "; ".join(cleaned_facts)
+                if len(facts_str) > 450:
+                    facts_str = facts_str[:450] + "..."
+                citation_str = " ".join(sorted(citations))
+                return f"According to local source files: {facts_str} {citation_str}"
             
         return cls.REFUSAL_MESSAGE
 
     @classmethod
     async def call_openrouter(cls, system_prompt: str, user_prompt: str) -> str:
-        """Helper to invoke OpenRouter API."""
+        """Helper to invoke OpenRouter API with automatic model fallback."""
         url = "https://openrouter.ai/api/v1/chat/completions"
         headers = {
             "Authorization": f"Bearer {settings.OPENROUTER_API_KEY}",
@@ -64,21 +139,37 @@ class AnswerGenerator:
             "HTTP-Referer": "https://github.com/Sid13SST/SiddhantAI",
             "X-Title": "Siddhant AI Persona Platform"
         }
-        payload = {
-            "model": settings.OPENROUTER_MODEL,
-            "messages": [
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_prompt}
-            ],
-            "temperature": 0.0  # Zero temperature for maximum deterministic grounding
-        }
         
-        async with httpx.AsyncClient(timeout=30.0) as client:
-            response = await client.post(url, json=payload, headers=headers)
-            if response.status_code != 200:
-                raise RuntimeError(f"OpenRouter returned status {response.status_code}: {response.text}")
-            res_json = response.json()
-            return res_json["choices"][0]["message"]["content"].strip()
+        models_to_try = [settings.OPENROUTER_MODEL]
+        for fallback in cls.FALLBACK_MODELS:
+            if fallback not in models_to_try:
+                models_to_try.append(fallback)
+                
+        last_error = None
+        for model in models_to_try:
+            logger.info(f"Attempting OpenRouter call with model: {model}")
+            payload = {
+                "model": model,
+                "messages": [
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_prompt}
+                ],
+                "temperature": 0.0
+            }
+            try:
+                async with httpx.AsyncClient(timeout=30.0) as client:
+                    response = await client.post(url, json=payload, headers=headers)
+                    if response.status_code == 200:
+                        res_json = response.json()
+                        return res_json["choices"][0]["message"]["content"].strip()
+                    else:
+                        logger.warning(f"Model {model} failed with status {response.status_code}: {response.text}")
+                        last_error = RuntimeError(f"OpenRouter status {response.status_code}: {response.text}")
+            except Exception as e:
+                logger.warning(f"Model {model} failed with exception: {e}")
+                last_error = e
+                
+        raise last_error or RuntimeError("All models failed")
 
     @classmethod
     async def verify_answer(cls, draft_answer: str, context: str) -> bool:
@@ -219,7 +310,7 @@ class AnswerGenerator:
 
     @classmethod
     async def generate_grounded_answer_stream(cls, question: str, context: str, intent: str):
-        """Streams a grounded answer from context token-by-token."""
+        """Streams a grounded answer from context token-by-token with model fallback."""
         if not settings.OPENROUTER_API_KEY:
             # Fallback local stream
             fallback_text = cls._fallback_generate(question, context)
@@ -250,41 +341,54 @@ class AnswerGenerator:
             "HTTP-Referer": "https://github.com/Sid13SST/SiddhantAI",
             "X-Title": "Siddhant AI Persona Platform"
         }
-        payload = {
-            "model": settings.OPENROUTER_MODEL,
-            "messages": [
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_prompt}
-            ],
-            "temperature": 0.0,
-            "stream": True # Enable streaming!
-        }
         
-        try:
-            async with httpx.AsyncClient(timeout=30.0) as client:
-                async with client.stream("POST", url, json=payload, headers=headers) as response:
-                    if response.status_code != 200:
-                        raise RuntimeError(f"OpenRouter returned status {response.status_code}")
-                        
-                    async for line in response.iter_lines():
-                        if not line:
-                            continue
-                        line_str = line.strip()
-                        if line_str.startswith("data: "):
-                            data_content = line_str[6:]
-                            if data_content == "[DONE]":
-                                break
-                            try:
-                                data_json = json.loads(data_content)
-                                choice = data_json.get("choices", [{}])[0]
-                                delta = choice.get("delta", {})
-                                token = delta.get("content", "")
-                                if token:
-                                    yield token
-                            except Exception:
-                                pass
-        except Exception as e:
-            logger.error(f"Error during streaming answer generation: {e}")
+        models_to_try = [settings.OPENROUTER_MODEL]
+        for fallback in cls.FALLBACK_MODELS:
+            if fallback not in models_to_try:
+                models_to_try.append(fallback)
+                
+        success = False
+        for model in models_to_try:
+            logger.info(f"Attempting OpenRouter stream with model: {model}")
+            payload = {
+                "model": model,
+                "messages": [
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_prompt}
+                ],
+                "temperature": 0.0,
+                "stream": True
+            }
+            try:
+                async with httpx.AsyncClient(timeout=30.0) as client:
+                    async with client.stream("POST", url, json=payload, headers=headers) as response:
+                        if response.status_code == 200:
+                            success = True
+                            async for line in response.aiter_lines():
+                                if not line:
+                                    continue
+                                line_str = line.strip()
+                                if line_str.startswith("data: "):
+                                    data_content = line_str[6:]
+                                    if data_content == "[DONE]":
+                                        break
+                                    try:
+                                        data_json = json.loads(data_content)
+                                        choice = data_json.get("choices", [{}])[0]
+                                        delta = choice.get("delta", {})
+                                        token = delta.get("content", "")
+                                        if token:
+                                            yield token
+                                    except Exception:
+                                        pass
+                            break
+                        else:
+                            logger.warning(f"Model {model} stream failed with status {response.status_code}")
+            except Exception as e:
+                logger.warning(f"Model {model} stream failed with exception: {e}")
+                
+        if not success:
+            logger.error("All streaming models failed. Falling back to local generator...")
             fallback_text = cls._fallback_generate(question, context)
             for token in fallback_text.split(" "):
                 yield token + " "

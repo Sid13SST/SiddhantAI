@@ -1,0 +1,198 @@
+{
+  "0": {
+    "chunk_id": "resume_p1_97d75b72e1ed_c0_8d176e698feb",
+    "text": "[Document: Resume | Page 1]\n\nSiddhant - Lead AI Systems Engineer Email: siddhant@example.com | GitHub: github.com/Siddhant EDUCATION: Bachelor of Technology in Computer Science & Engineering, GPA 9.8/10 Graduation: May 2024 TECHNICAL SKILLS: Programming: Python, TypeScript, C++, Rust, Go, SQL AI/ML: PyTorch, Hugging Face, sentence-transformers, FAISS, LangChain, RAG Backend: FastAPI, Next.js, Docker, Kubernetes, AWS, PostgreSQL, Redis EXPERIENCE: Principal Engineer - AI Systems Group (July 2024 - Present) - Designed and",
+    "metadata": {
+      "source_type": "resume",
+      "source_url": "file:///data/vector_db/resume.pdf",
+      "page_number": 1,
+      "total_pages": 1,
+      "source_path": "data\\vector_db\\resume.pdf",
+      "extraction_timestamp": "2026-06-06T13:11:35.156412",
+      "retrieval_tags": [
+        "aws",
+        "fastapi",
+        "docker",
+        "sql",
+        "faiss",
+        "typescript",
+        "langchain",
+        "kubernetes",
+        "redis",
+        "postgresql",
+        "python",
+        "rag"
+      ],
+      "chunk_index": 0
+    }
+  },
+  "1": {
+    "chunk_id": "resume_p1_97d75b72e1ed_c1_df6d297b8077",
+    "text": "[Document: Resume | Page 1]\n\nAI Systems Group (July 2024 - Present) - Designed and built high-performance Retrieval-Augmented Generation (RAG) backend systems powering chat and voice agents. - Optimized vector store retrieval using hybrid search and custom tag pre-filtering, boosting semantic match accuracy by 35%. - Implemented asynchronous data ingestion pipelines that process PDF resumes, GitHub repositories, and git commit histories. - Developed Gradonix, a stateful calendar orchestrator that connects directly to",
+    "metadata": {
+      "source_type": "resume",
+      "source_url": "file:///data/vector_db/resume.pdf",
+      "page_number": 1,
+      "total_pages": 1,
+      "source_path": "data\\vector_db\\resume.pdf",
+      "extraction_timestamp": "2026-06-06T13:11:35.156412",
+      "retrieval_tags": [
+        "vector",
+        "rag"
+      ],
+      "chunk_index": 1
+    }
+  },
+  "2": {
+    "chunk_id": "resume_p1_97d75b72e1ed_c2_dce18416917a",
+    "text": "[Document: Resume | Page 1]\n\nDeveloped Gradonix, a stateful calendar orchestrator that connects directly to Google Calendar and automates slots booking.",
+    "metadata": {
+      "source_type": "resume",
+      "source_url": "file:///data/vector_db/resume.pdf",
+      "page_number": 1,
+      "total_pages": 1,
+      "source_path": "data\\vector_db\\resume.pdf",
+      "extraction_timestamp": "2026-06-06T13:11:35.156412",
+      "retrieval_tags": [],
+      "chunk_index": 2
+    }
+  },
+  "3": {
+    "chunk_id": "gh_repo_Siddhant_FrictaAI_6f5e835f630d_c0_bb3b9f5fcdee",
+    "text": "[Repository: FrictaAI]\n[Source: Repo Metadata]\n\nRepository: FrictaAI\nDescription: Timing models and pattern analysis engine.\nLanguage: Python\nStars: 120\nTopics: fastapi, rag, analytics",
+    "metadata": {
+      "source_type": "github_repo_metadata",
+      "source_url": "https://github.com/Siddhant/FrictaAI",
+      "repo_name": "FrictaAI",
+      "owner": "Siddhant",
+      "stars": 120,
+      "language": "Python",
+      "description": "Timing models and pattern analysis engine.",
+      "topics": [
+        "fastapi",
+        "rag",
+        "analytics"
+      ],
+      "retrieval_tags": [
+        "python",
+        "analytics",
+        "fastapi",
+        "rag"
+      ],
+      "chunk_index": 0
+    }
+  },
+  "4": {
+    "chunk_id": "gh_readme_Siddhant_FrictaAI_f29e87dc3e13_c0_5692010fc128",
+    "text": "[Repository: FrictaAI]\n[Source: README]\n\n# FrictaAI & Gradonix Calendar Orchestrator\n\nGradonix is a system developed by Siddhant to automate interview scheduling. It is a multi-agent calendar tool that interfaces directly with Google Calendar API to rank, book, and prevent double bookings using locks.",
+    "metadata": {
+      "source_type": "github_readme",
+      "source_url": "https://github.com/Siddhant/FrictaAI/blob/main/README.md",
+      "repo_name": "FrictaAI",
+      "owner": "Siddhant",
+      "file_path": "README.md",
+      "branch": "main",
+      "retrieval_tags": [
+        "api",
+        "frictaai",
+        "documentation",
+        "readme",
+        "agent"
+      ],
+      "chunk_index": 0
+    }
+  },
+  "5": {
+    "chunk_id": "gh_readme_Siddhant_FrictaAI_f29e87dc3e13_c1_2ffaa98a2f68",
+    "text": "[Repository: FrictaAI]\n[Source: README]\n\n## Technologies Used\n- Backend: FastAPI, Python 3.12+\n- Fronted: Next.js 15, TypeScript, Tailwind CSS\n- Embedding: sentence-transformers/all-MiniLM-L6-v2\n- Database: FAISS vector database & mock cache\n- Security: JWT Authentication and role-based permissions (RBAC).",
+    "metadata": {
+      "source_type": "github_readme",
+      "source_url": "https://github.com/Siddhant/FrictaAI/blob/main/README.md",
+      "repo_name": "FrictaAI",
+      "owner": "Siddhant",
+      "file_path": "README.md",
+      "branch": "main",
+      "retrieval_tags": [
+        "tailwind",
+        "fastapi",
+        "frictaai",
+        "documentation",
+        "python",
+        "faiss",
+        "typescript",
+        "readme",
+        "security",
+        "jwt",
+        "database",
+        "vector"
+      ],
+      "chunk_index": 1
+    }
+  },
+  "6": {
+    "chunk_id": "gh_readme_Siddhant_FrictaAI_f29e87dc3e13_c2_e5d2849dfb7f",
+    "text": "[Repository: FrictaAI]\n[Source: README]\n\n## Setup\nRun the main server using `uvicorn app.main:app --reload`.",
+    "metadata": {
+      "source_type": "github_readme",
+      "source_url": "https://github.com/Siddhant/FrictaAI/blob/main/README.md",
+      "repo_name": "FrictaAI",
+      "owner": "Siddhant",
+      "file_path": "README.md",
+      "branch": "main",
+      "retrieval_tags": [
+        "frictaai",
+        "readme",
+        "documentation"
+      ],
+      "chunk_index": 2
+    }
+  },
+  "7": {
+    "chunk_id": "gh_commit_FrictaAI_a5b7c8d9e1f2_c0_43a745841bb7",
+    "text": "[Repository: FrictaAI]\n[Source: Commit | SHA: a5b7c8d9]\n\nRepository: FrictaAI\nCommit: a5b7c8d9\nAuthor: Siddhant\nDate: 2026-06-06T13:11:35.156412\nMessage: Added JWT authentication middleware decoder\nFiles Changed:\n- src/auth/jwt.py\n- app/main.py",
+    "metadata": {
+      "source_type": "github_commit",
+      "source_url": "https://github.com/Siddhant/FrictaAI/commit/a5b7c8d9e1f2",
+      "repo_name": "FrictaAI",
+      "owner": "Siddhant",
+      "commit_sha": "a5b7c8d9e1f2",
+      "author": "Siddhant",
+      "commit_date": "2026-06-06T13:11:35.156412",
+      "changed_files": [
+        "src/auth/jwt.py",
+        "app/main.py"
+      ],
+      "retrieval_tags": [
+        "commit",
+        "auth",
+        "frictaai",
+        "git",
+        "jwt",
+        "middleware"
+      ],
+      "chunk_index": 0
+    }
+  },
+  "8": {
+    "chunk_id": "gh_code_FrictaAI_87a3eb626edb_c0_1231e70f03f1",
+    "text": "[Repository: FrictaAI]\n[Source: CODE | File: src/auth/jwt.py]\n\nfrom fastapi import APIRouter, Depends, HTTPException, status\nfrom jose import jwt, JWTError\nfrom datetime import datetime, timedelta\n\nrouter = APIRouter()\nSECRET_KEY = \"super-secret\"\nALGORITHM = \"HS256\"\ndef decode_access_token(token: str) -> dict:\n    try:\n        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])\n        return payload\n    except JWTError:\n        raise HTTPException(\n            status_code=status.HTTP_401_UNAUTHORIZED,\n            detail=\"Could not validate credentials\",\n            headers={\"WWW-Authenticate\": \"Bearer\"},\n        )",
+    "metadata": {
+      "source_type": "github_code",
+      "source_url": "https://github.com/Siddhant/FrictaAI/blob/main/src/auth/jwt.py",
+      "repo_name": "FrictaAI",
+      "owner": "Siddhant",
+      "file_path": "src/auth/jwt.py",
+      "branch": "main",
+      "language": "Python",
+      "retrieval_tags": [
+        "fastapi",
+        "auth",
+        "code",
+        "frictaai",
+        "jwt",
+        "python"
+      ],
+      "chunk_index": 0
+    }
+  }
+}

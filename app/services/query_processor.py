@@ -12,6 +12,14 @@ class QueryProcessor:
     RESUME_KEYWORDS = ["resume", "cv", "education", "degree", "gpa", "experience", "job", "career", "college", "university"]
     TECH_KEYWORDS = ["architecture", "decision", "design patterns", "auth", "jwt", "database choice", "postgres vs", "why did you choose", "how did you implement", "code structure"]
     REPO_KEYWORDS = ["github", "repo", "repository", "repositories", "commit", "commits", "history", "codebase"]
+    FALLBACK_MODELS = [
+        "google/gemma-4-31b-it:free",
+        "google/gemma-4-26b-a4b-it:free",
+        "qwen/qwen3-next-80b-a3b-instruct:free",
+        "z-ai/glm-4.5-air:free",
+        "meta-llama/llama-3.3-70b-instruct:free",
+        "meta-llama/llama-3.2-3b-instruct:free"
+    ]
 
     @classmethod
     async def classify_intent(cls, query: str) -> Dict[str, Any]:
@@ -43,7 +51,9 @@ class QueryProcessor:
             url = "https://openrouter.ai/api/v1/chat/completions"
             headers = {
                 "Authorization": f"Bearer {settings.OPENROUTER_API_KEY}",
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                "HTTP-Referer": "https://github.com/Sid13SST/SiddhantAI",
+                "X-Title": "Siddhant AI Persona Platform"
             }
             
             prompt = (
@@ -60,27 +70,39 @@ class QueryProcessor:
                 f"Respond ONLY in valid JSON matching this schema: {{\"intent\": \"string\", \"confidence\": float}}"
             )
             
-            payload = {
-                "model": settings.OPENROUTER_MODEL,
-                "messages": [{"role": "user", "content": prompt}],
-                "response_format": {"type": "json_object"}
-            }
-            
-            try:
-                async with httpx.AsyncClient(timeout=10.0) as client:
-                    response = await client.post(url, json=payload, headers=headers)
-                    if response.status_code == 200:
-                        data = response.json()
-                        raw_content = data["choices"][0]["message"]["content"].strip()
-                        import json
-                        res = json.loads(raw_content)
-                        logger.info(f"OpenRouter classified intent: {res.get('intent')} (confidence: {res.get('confidence')})")
-                        return {
-                            "intent": res.get("intent", "unknown"),
-                            "confidence": float(res.get("confidence", 0.7))
-                        }
-            except Exception as e:
-                logger.error(f"OpenRouter intent classification fallback failed: {e}")
+            models_to_try = [settings.OPENROUTER_MODEL]
+            for fallback in cls.FALLBACK_MODELS:
+                if fallback not in models_to_try:
+                    models_to_try.append(fallback)
+                    
+            for model in models_to_try:
+                payload = {
+                    "model": model,
+                    "messages": [{"role": "user", "content": prompt}]
+                }
+                
+                try:
+                    async with httpx.AsyncClient(timeout=10.0) as client:
+                        response = await client.post(url, json=payload, headers=headers)
+                        if response.status_code == 200:
+                            data = response.json()
+                            raw_content = data["choices"][0]["message"]["content"].strip()
+                            cleaned_content = raw_content
+                            if "```" in cleaned_content:
+                                m = re.search(r"```(?:json)?\s*(\{.*?\})\s*```", cleaned_content, re.DOTALL)
+                                if m:
+                                    cleaned_content = m.group(1)
+                            import json
+                            res = json.loads(cleaned_content)
+                            logger.info(f"OpenRouter classified intent using {model}: {res.get('intent')} (confidence: {res.get('confidence')})")
+                            return {
+                                "intent": res.get("intent", "unknown"),
+                                "confidence": float(res.get("confidence", 0.7))
+                            }
+                        else:
+                            logger.warning(f"Intent classification model {model} failed with status {response.status_code}")
+                except Exception as e:
+                    logger.error(f"Intent classification model {model} fallback failed: {e}")
 
         # Default fallback
         return {"intent": "unknown", "confidence": 0.5}
@@ -94,7 +116,9 @@ class QueryProcessor:
             url = "https://openrouter.ai/api/v1/chat/completions"
             headers = {
                 "Authorization": f"Bearer {settings.OPENROUTER_API_KEY}",
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                "HTTP-Referer": "https://github.com/Sid13SST/SiddhantAI",
+                "X-Title": "Siddhant AI Persona Platform"
             }
             
             prompt = (
@@ -107,23 +131,31 @@ class QueryProcessor:
                 f"Output ONLY the optimized search terms. Do not write explanation, quotes, or markdown code blocks."
             )
             
-            payload = {
-                "model": settings.OPENROUTER_MODEL,
-                "messages": [{"role": "user", "content": prompt}]
-            }
-            
-            try:
-                async with httpx.AsyncClient(timeout=10.0) as client:
-                    response = await client.post(url, json=payload, headers=headers)
-                    if response.status_code == 200:
-                        data = response.json()
-                        rewritten = data["choices"][0]["message"]["content"].strip()
-                        # Clean up quotes if returned
-                        rewritten = re.sub(r'^["\']|["\']$', '', rewritten)
-                        logger.info(f"OpenRouter rewritten query: '{rewritten}'")
-                        return rewritten
-            except Exception as e:
-                logger.error(f"OpenRouter query rewriter failed: {e}")
+            models_to_try = [settings.OPENROUTER_MODEL]
+            for fallback in cls.FALLBACK_MODELS:
+                if fallback not in models_to_try:
+                    models_to_try.append(fallback)
+                    
+            for model in models_to_try:
+                payload = {
+                    "model": model,
+                    "messages": [{"role": "user", "content": prompt}]
+                }
+                
+                try:
+                    async with httpx.AsyncClient(timeout=10.0) as client:
+                        response = await client.post(url, json=payload, headers=headers)
+                        if response.status_code == 200:
+                            data = response.json()
+                            rewritten = data["choices"][0]["message"]["content"].strip()
+                            # Clean up quotes if returned
+                            rewritten = re.sub(r'^["\']|["\']$', '', rewritten)
+                            logger.info(f"OpenRouter rewritten query using {model}: '{rewritten}'")
+                            return rewritten
+                        else:
+                            logger.warning(f"Query rewriter model {model} failed with status {response.status_code}")
+                except Exception as e:
+                    logger.error(f"Query rewriter model {model} failed: {e}")
 
         # 2. Heuristic rule-based query expansion (Offline fallback)
         logger.info("Using rule-based query expansion...")

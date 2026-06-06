@@ -423,6 +423,24 @@ export default function VoiceCallModal({ isOpen, onClose }: VoiceCallModalProps)
           )}
         </div>
 
+        {/* Voice Connection Status Banner */}
+        <div className={`px-6 py-2.5 text-[11px] flex items-center gap-2 border-b border-slate-800/60 ${
+          process.env.NEXT_PUBLIC_VAPI_PUBLIC_KEY && process.env.NEXT_PUBLIC_VAPI_ASSISTANT_ID
+            ? 'bg-emerald-950/20 text-emerald-400' 
+            : 'bg-amber-950/20 text-amber-400'
+        }`}>
+          <span className={`h-1.5 w-1.5 rounded-full ${
+            process.env.NEXT_PUBLIC_VAPI_PUBLIC_KEY && process.env.NEXT_PUBLIC_VAPI_ASSISTANT_ID 
+              ? 'bg-emerald-400 animate-pulse' 
+              : 'bg-amber-400 animate-pulse'
+          }`}></span>
+          {process.env.NEXT_PUBLIC_VAPI_PUBLIC_KEY && process.env.NEXT_PUBLIC_VAPI_ASSISTANT_ID ? (
+            <span>Production Voice Active: ✓ Connected to Vapi | ✓ Phone Number Live</span>
+          ) : (
+            <span>Local Development Simulator Active: Using Browser Speech APIs (No Twilio/Vapi Keys)</span>
+          )}
+        </div>
+
         {/* Call Panel / Avatar */}
         <div className="flex flex-col items-center justify-center py-10 px-6 bg-slate-950/20">
           {callState !== 'ended' ? (

@@ -1,0 +1,89 @@
+{
+  "timestamp": "2026-06-06T13:05:38.136056+00:00",
+  "retrieval_precision": 0.3333333333333333,
+  "retrieval_recall": 0.16666666666666666,
+  "retrieval_score": 0.25,
+  "source_coverage": 0.5,
+  "avg_retrieval_latency_ms": 25.012233333351713,
+  "p95_latency_ms": 37.12390000146115,
+  "groundedness_score": 0.08333333333333333,
+  "hallucination_rate": 0.0,
+  "citation_accuracy": 0.0,
+  "booking_success_rate": 0.0,
+  "voice_context_score": 1.0,
+  "safety_score": 0.0,
+  "confidence_calibration_score": 0.6654530763626099,
+  "overall_score": 0.2222222222222222,
+  "regression_analysis": {
+    "retrieval_precision": {
+      "previous": null,
+      "current": 0.3333333333333333,
+      "change": "N/A"
+    },
+    "retrieval_recall": {
+      "previous": null,
+      "current": 0.16666666666666666,
+      "change": "N/A"
+    },
+    "retrieval_score": {
+      "previous": null,
+      "current": 0.25,
+      "change": "N/A"
+    },
+    "source_coverage": {
+      "previous": null,
+      "current": 0.5,
+      "change": "N/A"
+    },
+    "avg_retrieval_latency_ms": {
+      "previous": null,
+      "current": 25.012233333351713,
+      "change": "N/A"
+    },
+    "p95_latency_ms": {
+      "previous": null,
+      "current": 37.12390000146115,
+      "change": "N/A"
+    },
+    "groundedness_score": {
+      "previous": null,
+      "current": 0.08333333333333333,
+      "change": "N/A"
+    },
+    "hallucination_rate": {
+      "previous": null,
+      "current": 0.0,
+      "change": "N/A"
+    },
+    "citation_accuracy": {
+      "previous": null,
+      "current": 0.0,
+      "change": "N/A"
+    },
+    "booking_success_rate": {
+      "previous": null,
+      "current": 0.0,
+      "change": "N/A"
+    },
+    "voice_context_score": {
+      "previous": null,
+      "current": 1.0,
+      "change": "N/A"
+    },
+    "safety_score": {
+      "previous": null,
+      "current": 0.0,
+      "change": "N/A"
+    },
+    "confidence_calibration_score": {
+      "previous": null,
+      "current": 0.6654530763626099,
+      "change": "N/A"
+    },
+    "overall_score": {
+      "previous": null,
+      "current": 0.2222222222222222,
+      "change": "N/A"
+    }
+  }
+}

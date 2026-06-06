@@ -68,7 +68,7 @@ class VectorStoreService:
         faiss.write_index(self.index, str(self.index_path))
         
         with open(self.metadata_path, "w", encoding="utf-8") as f:
-            json.dump(self.metadata_map, f, indent=2, ensure_ascii=False)
+            json.dump(self.metadata_map, f, indent=2, ensure_ascii=False, default=str)
             
         logger.info("Successfully persisted index.faiss and metadata.json.")
 

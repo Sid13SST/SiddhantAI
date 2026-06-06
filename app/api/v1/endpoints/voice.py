@@ -106,5 +106,12 @@ async def get_voice_session(session_id: str):
         "history": session.get("voice_history", [])
     }
 
+@router.get("/metrics")
+async def get_voice_metrics():
+    """Generates and returns voice communication and observability metrics."""
+    from app.services.voice_service import ObservabilityLogger
+    metrics = ObservabilityLogger.generate_voice_metrics()
+    return metrics
+
 # Make sure time is imported for completions timestamp
 import time

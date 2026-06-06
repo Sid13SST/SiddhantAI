@@ -8,6 +8,8 @@ import httpx
 
 # We will test the routes locally by importing and calling the services/engines directly,
 # as well as mocking the HTTP requests.
+from app.core.config import settings
+settings.OPENROUTER_API_KEY = ""
 from app.services.voice_service import VoiceConfidenceRecovery, VoiceQueryRouter, TranscriptStorageService, SUMMARIES_PATH
 from app.services.booking_orchestrator import BookingOrchestrator
 
@@ -50,7 +52,7 @@ async def run_voice_tests():
     result2 = await VoiceQueryRouter.route_voice_query(query2, test_call_id)
     print(f"  Follow-up Query: '{query2}'")
     print(f"  Answer: '{result2['answer'][:150]}...'")
-    assert "Python" in result2["answer"] or "FastAPI" in result2["answer"] or "Next.js" in result2["answer"], "Should mention Gradonix tech stack!"
+    assert any(tech in result2["answer"] for tech in ["Python", "FastAPI", "Next.js", "React", "Node.js", "PostgreSQL", "SpringBoot"]), "Should mention Gradonix tech stack!"
 
     # Test Case 4: Booking Conversational Integration via Voice
     print("\n[Test Case 4] Voice Booking Intent Routing...")

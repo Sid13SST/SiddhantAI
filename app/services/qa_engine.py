@@ -67,12 +67,24 @@ class QAEngine:
             resolved_session_id, resolved_context = BookingOrchestrator.get_or_create_session(session_id, booking_context)
             
             # Delegate to BookingOrchestrator
-            return await BookingOrchestrator.process_booking_message(
+            res = await BookingOrchestrator.process_booking_message(
                 question=question,
                 session_id=resolved_session_id,
                 context=resolved_context,
                 intent=intent_str
             )
+            
+            total_latency = (time.time() - start_time) * 1000
+            ObservabilityService.log_query_metrics(
+                question=question,
+                intent=intent_str,
+                retrieval_latency_ms=0.0,
+                generation_latency_ms=0.0,
+                total_latency_ms=total_latency,
+                source_count=len(res.sources) if res.sources else 0,
+                confidence_score=res.confidence
+            )
+            return res
 
         # 2. Intent Classification
         intent_data = await QueryProcessor.classify_intent(question)
@@ -278,9 +290,20 @@ class QAEngine:
                 intent=intent_str
             )
             
+            total_latency = (time.time() - start_time) * 1000
+            ObservabilityService.log_query_metrics(
+                question=question,
+                intent=intent_str,
+                retrieval_latency_ms=0.0,
+                generation_latency_ms=0.0,
+                total_latency_ms=total_latency,
+                source_count=len(response.sources) if response.sources else 0,
+                confidence_score=response.confidence
+            )
+            
             # Stream booking reply
             yield f"data: {json.dumps({'type': 'token', 'content': response.answer})}\n\n"
-            yield f"data: {json.dumps({'type': 'metadata', 'answer': response.answer, 'citations': response.citations, 'confidence': response.confidence, 'sources': [ev.model_dump() for ev in response.sources], 'session_id': resolved_session_id, 'booking_context': response.booking_context})}\n\n"
+            yield f"data: {json.dumps({'type': 'metadata', 'answer': response.answer, 'citations': response.citations, 'confidence': response.confidence, 'sources': [ev.model_dump() for ev in response.sources] if response.sources else [], 'session_id': resolved_session_id, 'booking_context': response.booking_context})}\n\n"
             return
 
         # 3. Intent Routing for general QA

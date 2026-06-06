@@ -1,0 +1,128 @@
+[
+  {
+    "call_id": "booking_call_voice_9999",
+    "call_duration": "3m 5s",
+    "topics_discussed": [
+      "Interview Availability"
+    ],
+    "booking_created": true,
+    "booking_id": "evt_mock_cal_12345",
+    "cancellation_completed": false,
+    "timestamp": "2026-06-06T01:30:08.843725"
+  },
+  {
+    "call_id": "voice_jgf0liw994s",
+    "call_duration": "1m 5s",
+    "topics_discussed": [
+      "General Q&A"
+    ],
+    "booking_created": false,
+    "booking_id": null,
+    "cancellation_completed": false,
+    "timestamp": "2026-06-06T01:38:00.897505"
+  },
+  {
+    "call_id": "voice_34fu71jpo0y",
+    "call_duration": "23s",
+    "topics_discussed": [
+      "General Q&A"
+    ],
+    "booking_created": false,
+    "booking_id": null,
+    "cancellation_completed": false,
+    "timestamp": "2026-06-06T01:38:30.346919"
+  },
+  {
+    "call_id": "voice_kz4qwpnsyno",
+    "call_duration": "59s",
+    "topics_discussed": [
+      "Career Experience",
+      "FrictaAI",
+      "Gradonix",
+      "Interview Availability"
+    ],
+    "booking_created": false,
+    "booking_id": null,
+    "cancellation_completed": false,
+    "timestamp": "2026-06-06T01:50:04.160867"
+  },
+  {
+    "call_id": "voice_y7g8serj6ar",
+    "call_duration": "6m 1s",
+    "topics_discussed": [
+      "Career Experience",
+      "Gradonix",
+      "Interview Availability"
+    ],
+    "booking_created": false,
+    "booking_id": null,
+    "cancellation_completed": false,
+    "timestamp": "2026-06-06T17:48:47.348639"
+  },
+  {
+    "call_id": "voice_ijqs240sqy",
+    "call_duration": "3m 39s",
+    "topics_discussed": [
+      "Interview Availability"
+    ],
+    "booking_created": true,
+    "booking_id": "odeuv1im4i5jrqg09eeon1skjk",
+    "cancellation_completed": false,
+    "timestamp": "2026-06-06T17:59:43.438248"
+  },
+  {
+    "call_id": "booking_call_voice_9999",
+    "call_duration": "3m 5s",
+    "topics_discussed": [
+      "Interview Availability"
+    ],
+    "booking_created": true,
+    "booking_id": "evt_mock_cal_12345",
+    "cancellation_completed": false,
+    "timestamp": "2026-06-06T18:34:19.774013"
+  },
+  {
+    "call_id": "booking_call_voice_9999",
+    "call_duration": "3m 5s",
+    "topics_discussed": [
+      "Interview Availability"
+    ],
+    "booking_created": true,
+    "booking_id": "evt_mock_cal_12345",
+    "cancellation_completed": false,
+    "timestamp": "2026-06-06T18:52:20.224033"
+  },
+  {
+    "call_id": "booking_call_voice_9999",
+    "call_duration": "3m 5s",
+    "topics_discussed": [
+      "Interview Availability"
+    ],
+    "booking_created": true,
+    "booking_id": "evt_mock_cal_12345",
+    "cancellation_completed": false,
+    "timestamp": "2026-06-06T18:52:45.061785"
+  },
+  {
+    "call_id": "booking_call_voice_9999",
+    "call_duration": "3m 5s",
+    "topics_discussed": [
+      "Interview Availability"
+    ],
+    "booking_created": true,
+    "booking_id": "evt_mock_cal_12345",
+    "cancellation_completed": false,
+    "timestamp": "2026-06-06T19:04:24.154648"
+  },
+  {
+    "call_id": "voice_t393pqqai1",
+    "call_duration": "4s",
+    "topics_discussed": [
+      "General Q&A"
+    ],
+    "booking_created": false,
+    "booking_id": null,
+    "cancellation_completed": false,
+    "timestamp": "2026-06-06T19:09:10.423170"
+  }
+]

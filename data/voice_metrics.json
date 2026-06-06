@@ -1,0 +1,8 @@
+{
+  "call_count": 11,
+  "avg_duration_seconds": 150.55,
+  "avg_latency_ms": 11023.74,
+  "booking_success_rate": 0.5455,
+  "qa_success_rate": 1.0,
+  "last_updated": "2026-06-06T19:09:10.476064"
+}

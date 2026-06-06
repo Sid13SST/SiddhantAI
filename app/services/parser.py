@@ -43,7 +43,7 @@ class ResumeParserService:
             documents.append(IngestedDocument(
                 id=doc_id,
                 content=text,
-                metadata=metadata.model_dump()
+                metadata=metadata.model_dump(mode="json")
             ))
 
         logger.info(f"Successfully extracted {len(documents)} document pages from resume PDF.")

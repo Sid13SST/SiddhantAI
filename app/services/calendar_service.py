@@ -28,7 +28,7 @@ class CalendarService:
         self.use_real_cal = False
         self.service = None
 
-        if GOOGLE_LIBS_AVAILABLE:
+        if GOOGLE_LIBS_AVAILABLE and os.environ.get("DISABLE_REAL_CALENDAR") != "true":
             creds = None
             SCOPES = ["https://www.googleapis.com/auth/calendar"]
             
@@ -83,9 +83,10 @@ class CalendarService:
                 except Exception as e:
                     logger.error(f"Failed to build Calendar service: {e}")
 
+        # Always initialize mock_file path so it exists even if real calendar is active
+        self.mock_file = Path(settings.DATA_DIR) / "mock_calendar.json"
+        self.mock_file.parent.mkdir(parents=True, exist_ok=True)
         if not self.use_real_cal:
-            self.mock_file = Path(settings.DATA_DIR) / "mock_calendar.json"
-            self.mock_file.parent.mkdir(parents=True, exist_ok=True)
             logger.info(f"Using mock calendar sandbox file at: {self.mock_file}")
 
     def _read_mock_events(self) -> List[Dict[str, Any]]:
@@ -162,7 +163,11 @@ class CalendarService:
                     "end": {"dateTime": end.isoformat(), "timeZone": "UTC"},
                     "attendees": [{"email": email}]
                 }
-                created = self.service.events().insert(calendarId=self.calendar_id, body=event_body).execute()
+                created = self.service.events().insert(
+                    calendarId=self.calendar_id, 
+                    body=event_body,
+                    sendUpdates="all"
+                ).execute()
                 return {
                     "id": created["id"],
                     "summary": created.get("summary", title),
@@ -203,7 +208,11 @@ class CalendarService:
         """Deletes a calendar event. Returns True if successful, False otherwise."""
         if self.use_real_cal:
             try:
-                self.service.events().delete(calendarId=self.calendar_id, eventId=event_id).execute()
+                self.service.events().delete(
+                    calendarId=self.calendar_id, 
+                    eventId=event_id,
+                    sendUpdates="all"
+                ).execute()
                 return True
             except Exception as e:
                 logger.error(f"Google Calendar event deletion failed: {e}. Attempting mock calendar.")
@@ -230,14 +239,22 @@ class CalendarService:
                 event = self.service.events().get(calendarId=self.calendar_id, eventId=event_id).execute()
                 event["start"] = {"dateTime": new_start.isoformat(), "timeZone": "UTC"}
                 event["end"] = {"dateTime": new_end.isoformat(), "timeZone": "UTC"}
-                updated = self.service.events().update(calendarId=self.calendar_id, eventId=event_id, body=event).execute()
+                updated = self.service.events().update(
+                    calendarId=self.calendar_id, 
+                    eventId=event_id, 
+                    body=event,
+                    sendUpdates="all"
+                ).execute()
+                # Safely extract attendee email
+                attendees = updated.get("attendees") or []
+                attendee_email = attendees[0].get("email", "") if attendees else ""
                 return {
                     "id": updated["id"],
                     "summary": updated.get("summary"),
                     "description": updated.get("description"),
                     "start": updated["start"]["dateTime"],
                     "end": updated["end"]["dateTime"],
-                    "attendee_email": updated.get("attendees", [{}])[0].get("email", ""),
+                    "attendee_email": attendee_email,
                     "html_link": updated.get("htmlLink")
                 }
             except Exception as e:

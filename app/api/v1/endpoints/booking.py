@@ -131,7 +131,9 @@ async def reschedule_booking(request: BookingRescheduleRequest):
                 event = calendar_service.service.events().get(
                     calendarId=calendar_service.calendar_id, eventId=request.event_id
                 ).execute()
-                email = event.get("attendees", [{}])[0].get("email")
+                # Safely extract attendee email
+                attendees = event.get("attendees") or []
+                email = attendees[0].get("email") if attendees else ""
                 topic = event.get("description", "").split("Discussion Topic:\n")[-1].split("\n")[0] if "Discussion Topic:\n" in event.get("description", "") else "Interview"
             except Exception as e:
                 logger.error(f"Failed to fetch event for rescheduling details: {e}")

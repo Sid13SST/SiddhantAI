@@ -10,6 +10,7 @@ from app.services.booking_engine import AvailabilityEngine, SlotRecommendationSe
 from app.services.booking_orchestrator import BookingOrchestrator
 from app.services.qa_engine import QAEngine
 from app.core.config import settings
+settings.OPENROUTER_API_KEY = ""
 from app.core.logging import logger
 
 logger.info("Initializing Booking & Calendar Layer integration tests...")
@@ -23,6 +24,8 @@ async def run_booking_tests():
         logger.info(f"Using temp DATA_DIR for tests: {tmpdir}")
         
         calendar_service = CalendarService()
+        calendar_service.use_real_cal = False # Force mock sandbox mode for deterministic testing!
+        calendar_service.mock_file = Path(tmpdir) / "mock_calendar.json"
         
         # 1. Test Timezone normalization and formatting
         logger.info("\n--- Test Case 1: Timezone Normalization ---")

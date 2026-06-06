@@ -156,6 +156,60 @@ export default function Home() {
                   <TrustIndicator />
                 </div>
 
+                {/* Telephony Connection Panel */}
+                <div className="w-full rounded-2xl border border-slate-800 bg-slate-900/40 p-6 backdrop-blur-md space-y-4">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                    <div className="space-y-1.5">
+                      <h3 className="text-sm font-bold text-slate-100 flex items-center gap-2">
+                        <span className="flex h-2 w-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                        Voice Agent Telephony Channel
+                      </h3>
+                      <p className="text-xs text-slate-400">
+                        Interview Siddhant's voice representative or book slots over standard telephony.
+                      </p>
+                    </div>
+
+                    <button
+                      onClick={() => setVoiceOpen(true)}
+                      className="inline-flex items-center justify-center gap-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 px-5 py-2.5 text-xs font-bold text-slate-950 transition active:scale-95 shadow-lg shadow-cyan-500/10 shrink-0"
+                    >
+                      <Mic className="h-4 w-4" />
+                      Call My AI Representative
+                    </button>
+                  </div>
+
+                  {/* Render phone number if configured in env */}
+                  {process.env.NEXT_PUBLIC_REPRESENTATIVE_PHONE && (
+                    <div className="flex items-center gap-2 rounded-lg bg-slate-950/40 border border-slate-850 px-3 py-2 text-xs text-slate-400">
+                      <span className="font-bold text-cyan-400">📞 Phone Line:</span>
+                      <a href={`tel:${process.env.NEXT_PUBLIC_REPRESENTATIVE_PHONE}`} className="hover:underline font-mono text-slate-200">
+                        {process.env.NEXT_PUBLIC_REPRESENTATIVE_PHONE}
+                      </a>
+                    </div>
+                  )}
+
+                  {/* Suggest voice questions */}
+                  <div className="pt-2 border-t border-slate-850">
+                    <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block mb-2">
+                      Suggested Voice Questions:
+                    </span>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px]">
+                      <button 
+                        onClick={() => handleSuggestionSelect("Why should Scaler hire Siddhant?")}
+                        className="text-left rounded-lg border border-slate-850 bg-slate-900/20 px-3 py-2 text-slate-400 hover:border-slate-700 hover:text-slate-200 hover:bg-slate-900/50 transition"
+                      >
+                        "Why should Scaler hire Siddhant?"
+                      </button>
+                      <button 
+                        onClick={() => handleSuggestionSelect("Tell me about the Gradonix calendar project.")}
+                        className="text-left rounded-lg border border-slate-850 bg-slate-900/20 px-3 py-2 text-slate-400 hover:border-slate-700 hover:text-slate-200 hover:bg-slate-900/50 transition"
+                      >
+                        "Tell me about the Gradonix project."
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
                 {/* Suggestions List */}
                 <div className="w-full">
                   <Suggestions onSelect={handleSuggestionSelect} />
