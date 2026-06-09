@@ -63,15 +63,16 @@ class PersonaBuilderService:
             repo_summaries["SiddhantAI"] = "Core codebase for the Siddhant AI Persona Platform backend."
 
         fallback = {
-            "name": "Siddhant",
+            "name": "Siddhant Prasad",
             "education": [
-                "Bachelor of Technology in Computer Science & Engineering"
+                "Bachelor in Science, Birla Institute of Technology Pilani (Computer Science and Engineering)",
+                "Scaler School of Technology (Aug 2024 - Present)"
             ],
             "core_skills": sorted(list(skills_set)),
             "top_projects": top_projects,
             "technologies": sorted(list(skills_set)),
             "strengths": [
-                "Full-Stack AI Engineering",
+                "Full-Stack AI/Web Engineering",
                 "Advanced Vector Search and RAG Architectures",
                 "Clean Code and Scalable Software Architecture",
                 "System Automation and API Integrations"

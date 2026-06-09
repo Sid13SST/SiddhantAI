@@ -1,0 +1,43 @@
+--- Extracted Text ---
+=== Page 1 ===
+SIDDHANT PRASAD
+(+91)9310079833⋄siddhant.prasad8@gmail.com
+Portfolio– https://siddhant-prasad.vercel.app/
+EDUCA TION
+Scaler School of T echnologyAugust 2024 - Present
+Bachelor in Science, Birla Institute of Technology Pilani
+Computer Science and Engineering
+Amity International School V asundhara Sector 6, GhaziabadJuly 2011 - March 2024
+Class XII (Senior Secondary), CBSE — Overall Percentage: 90.90
+Class X (Secondary), CBSE — Overall Percentage: 96.60
+PROJECTS
+Gradonix – AI-Powered Subjective Hand-written Evaluation Platform
+Developed a full-stack AI-based examination system with React, Node.js, and PostgreSQL for au-
+tomated answer evaluation. Planned AI workflows and implemented role-based authentication, test
+creation, submission workflows, and result publishing.(https://www.gradonix.com)
+Attendance Management System using SpringBoot
+Developed a RESTful Attendance Management System using Spring Boot and Spring Data JPA with
+role-based access for teachers and students. Designed advanced features and normalized database
+schema with unique constraints and optimized queries for attendance tracking.(https://attendance-
+system-nine-mu.vercel.app/)
+Claribot - An AI-powered, RAG-driven Support Widget with Actionable Analytics
+ClariBot is an embeddable AI widget that provides hallucination-free, cited answers by using RAG
+strictly against a project’s uploaded documentation. It is built with a Node.js/Hono backend, uses
+PostgreSQL with pgvector for fast similarity searching, and relies on Google’s Gemini API for generat-
+ing embeddings and context-aware responses. It also features an automated analytics engine to track
+user frustration and cluster repeated queries.(Currently implementing)
+TECHNICAL STRENGTHS
+LanguagePython, Java, Javascript, C++, Go
+Data AnalysisNumPy, Pandas, Matplotlib, Seaborn
+DatabasesMongo DB, PostgreSQL
+W eb T echnologiesHTML, Tailwind CSS, SpringBoot, React.js, Express.js
+Developer T oolsGit, Github, PostMan, Vercel, Render
+EXTRA-CIRRUCULAR
+Member of the Open Source club.
+House Captain in college.
+Volunteered at college Cultural Fest in the Sponsorship Team.
+PROFILES
+LinkedInwww.linkedin.com/in/siddhant-prasad-50516a339
+Githubhttps://github.com/Sidd-hant13
+https://github.com/Sid13SST
+----------------------
