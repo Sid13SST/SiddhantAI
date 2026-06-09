@@ -2,16 +2,14 @@ FROM python:3.12-slim
 
 WORKDIR /app
 
-# Install system dependencies
+# Copy slim requirements (no PyTorch — uses HuggingFace API for embeddings)
+COPY requirements.deploy.txt .
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential \
-    && rm -rf /var/lib/apt/lists/*
+    libgomp1 \
+    && rm -rf /var/lib/apt/lists/* \
+    && pip install --no-cache-dir -r requirements.deploy.txt
 
-# Copy requirements first for caching
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Copy application code
+# Copy application code and pre-built data
 COPY app/ app/
 COPY data/ data/
 
