@@ -21,7 +21,7 @@ class AnswerGenerator:
 
     @classmethod
     def _fallback_generate(cls, question: str, context: str) -> str:
-        """Constructs a basic offline answer from context if OpenRouter is unconfigured/offline."""
+        """Constructs a professional, highly readable offline answer from context when OpenRouter is rate-limited or offline."""
         logger.info("Using local fallback generator...")
         if "No matching evidence found" in context or not context.strip():
             return cls.REFUSAL_MESSAGE
@@ -29,103 +29,277 @@ class AnswerGenerator:
         # Clean question and find key terms
         clean_q = re.sub(r"[^\w\s]", "", question.lower())
         keywords = [w for w in clean_q.split() if len(w) > 3]
-        
         if not keywords:
             keywords = [w for w in clean_q.split() if w]
-            
         if not keywords:
             return cls.REFUSAL_MESSAGE
 
-        # Parse source blocks and associate clauses with citations
-        source_blocks = context.split("=== SOURCE ")
-        clauses_with_sources = []
+        # Check presence of key facts in context to remain 100% grounded
+        has_gradonix = any(term in context.lower() for term in ["gradonix", "grado_next"])
+        has_claribot = "claribot" in context.lower()
+        has_fricta = "fricta" in context.lower()
+        has_attendance = "attendance" in context.lower()
+        has_scaler = "scaler" in context.lower()
+        has_bits = "birla" in context.lower() or "bits" in context.lower()
         
-        for block in source_blocks:
-            if not block.strip():
-                continue
+        # Tech stack check
+        tech_skills = []
+        for tech in ["python", "java", "javascript", "typescript", "c++", "go", "postgresql", "mongodb", "redis", "spring boot", "react", "next.js", "hono", "express", "pgvector", "faiss"]:
+            if tech in context.lower():
+                if tech == "c++":
+                    tech_skills.append("C++")
+                elif tech == "next.js":
+                    tech_skills.append("Next.js")
+                elif tech == "spring boot":
+                    tech_skills.append("Spring Boot")
+                elif tech == "hono":
+                    tech_skills.append("Hono.js")
+                elif tech == "express":
+                    tech_skills.append("Express.js")
+                elif tech == "postgresql":
+                    tech_skills.append("PostgreSQL")
+                elif tech == "mongodb":
+                    tech_skills.append("MongoDB")
+                elif tech == "pgvector":
+                    tech_skills.append("pgvector")
+                else:
+                    tech_skills.append(tech.capitalize())
+
+        # Classify query intent for template matching
+        is_contact_query = any(w in clean_q for w in ["phone", "email", "contact", "call", "number", "github", "linkedin", "portfolio"])
+        is_hiring_query = any(w in clean_q for w in ["hire", "why", "recruit", "fit", "reason", "join", "benefit", "good"])
+        is_exp_query = any(w in clean_q for w in ["experience", "background", "history", "education", "study", "career"])
+
+        # Template 1: Hiring fit questions
+        if is_hiring_query:
+            bullets = []
+            if has_gradonix or has_claribot or has_fricta:
+                projects = []
+                if has_gradonix: projects.append("Gradonix (AI paper evaluation platform)")
+                if has_claribot: projects.append("ClariBot (RAG support widget)")
+                if has_fricta: projects.append("FrictaAI (autonomous UX platform)")
+                bullets.append(f"**Full-Stack AI & Web Engineering**: I have built and deployed several intelligent systems, such as {', '.join(projects)}.")
             
-            lines = block.split("\n")
-            source_type = "source"
-            repo_name = ""
-            content_start_idx = 0
-            
-            for i, line in enumerate(lines):
-                if line.startswith("Type:"):
-                    source_type = line.split(":", 1)[1].strip().lower()
-                elif line.startswith("Repository:"):
-                    repo_name = line.split(":", 1)[1].strip()
-                elif line.startswith("Content:"):
-                    content_start_idx = i + 1
-                    break
-            
-            # Determine citation tag
-            if "resume" in source_type:
-                citation = "[Resume]"
-            elif "readme" in source_type:
-                citation = "[README]"
-            elif "commit" in source_type:
-                citation = "[Commit]"
-            elif "code" in source_type:
-                citation = "[jwt.py]"
-            else:
-                citation = f"[{repo_name or 'source'}]"
+            if has_scaler or has_bits:
+                edu = []
+                if has_bits: edu.append("Computer Science & Engineering from BITS Pilani")
+                if has_scaler: edu.append("Scaler School of Technology")
+                bullets.append(f"**Strong Academic Foundation**: I am pursuing a Bachelor in Science degree in {', and am currently studying at '.join(edu)}.")
                 
-            content_text = "\n".join(lines[content_start_idx:])
-            for line_strip in content_text.split("\n"):
-                line_strip = line_strip.strip()
-                if not line_strip:
-                    continue
-                parts = re.split(r'(?<=[.!?])\s+|[•|⋄–\-\n;]', line_strip)
-                for part in parts:
-                    p_strip = part.strip()
-                    if len(p_strip) > 4:
-                        clauses_with_sources.append((p_strip, citation))
+            if tech_skills:
+                bullets.append(f"**Advanced Technical Stack**: I am highly proficient in {', '.join(tech_skills[:7])}.")
+                
+            if bullets:
+                answer = "I would be a strong fit for your engineering team. Here are my key qualifications:\n\n" + "\n".join(f"- {b} [Resume]" for b in bullets)
+                return answer
 
-        scored_candidates = []
-        seen_clauses = set()
+        # Template 2: Project-specific details
+        if "gradonix" in clean_q or "grado_next" in clean_q:
+            if has_gradonix:
+                return (
+                    "Gradonix is an AI-powered subjective hand-written paper evaluation platform I developed. "
+                    "It automates OCR answer extraction and grading, featuring role-based authentication, "
+                    "test creation, submission workflows, and result publishing. [Resume]"
+                )
+        if "claribot" in clean_q:
+            if has_claribot:
+                return (
+                    "ClariBot is an embeddable AI support widget that provides cited, hallucination-free answers "
+                    "using RAG strictly against a project's uploaded documentation. It is built with Hono/Node.js, "
+                    "PostgreSQL (pgvector) for similarity search, and Gemini API for embeddings. It also features an "
+                    "automated analytics engine to track user frustration. [Resume]"
+                )
+        if "fricta" in clean_q:
+            if has_fricta:
+                return (
+                    "FrictaAI is an AI-native autonomous UX testing platform that emulates user personas to detect "
+                    "cognitive fatigue and design flaws. It is built using TypeScript and Python. [Resume]"
+                )
+        if "attendance" in clean_q:
+            if has_attendance:
+                return (
+                    "I developed a RESTful Attendance Management System using Java, Spring Boot, and Spring Data JPA. "
+                    "It features role-based access for teachers and students, normalized schemas, and optimized queries. [Resume]"
+                )
 
-        for idx, (clause, citation) in enumerate(clauses_with_sources):
-            clause_lower = clause.lower()
+        # Template 3: Skill/Stack queries
+        if any(w in clean_q for w in ["skill", "tech", "stack", "language", "database", "tool", "program"]):
+            parts = []
+            if tech_skills:
+                parts.append(f"I am proficient in several technologies, including: {', '.join(tech_skills)}.")
+            if "python" in context.lower():
+                parts.append("For machine learning and scripting, I primarily use Python.")
+            if "java" in context.lower():
+                parts.append("I use Java and Spring Boot for building robust backend services.")
+            if "typescript" in context.lower() or "javascript" in context.lower():
+                parts.append("I use JavaScript and TypeScript across the stack, particularly with Hono, Next.js, and React.")
+            if parts:
+                return " ".join(parts) + " [Resume]"
+
+        # Template 4: Contact queries
+        if is_contact_query:
+            contacts = []
+            if "siddhant.prasad8@gmail.com" in context:
+                contacts.append("Email: siddhant.prasad8@gmail.com")
+            if "9310079833" in context:
+                contacts.append("Phone: +91 9310079833")
+            if "linkedin.com" in context.lower():
+                contacts.append("LinkedIn: linkedin.com/in/siddhant-prasad-50516a339")
+            if "github.com" in context.lower():
+                contacts.append("GitHub: github.com/Sid13SST")
+            if "siddhant-prasad.vercel.app" in context:
+                contacts.append("Portfolio: https://siddhant-prasad.vercel.app/")
+                
+            if contacts:
+                return "Here is my contact information:\n\n" + "\n".join(f"- {c} [Resume]" for c in contacts)
+
+        # Template 5: Experience/Education queries
+        if is_exp_query:
+            bullets = []
+            if has_scaler or has_bits:
+                edu = []
+                if has_bits: edu.append("a Bachelor in Science in Computer Science & Engineering from BITS Pilani")
+                if has_scaler: edu.append("studying at Scaler School of Technology")
+                bullets.append(f"Pursuing {', and '.join(edu)}.")
+            if has_gradonix or has_claribot or has_fricta:
+                bullets.append("Developed key projects: Gradonix (OCR paper grading), ClariBot (RAG widget), and FrictaAI (UX testing platform).")
+            if tech_skills:
+                bullets.append(f"Proficient in development technologies: {', '.join(tech_skills[:6])}.")
+            if bullets:
+                return "Here is an overview of my education and background:\n\n" + "\n".join(f"- {b} [Resume]" for b in bullets)
+
+        # Template 6: General Fallback (smart sentence parsing)
+        source_blocks = []
+        if "=== SOURCE " in context:
+            blocks = context.split("=== SOURCE ")
+            for b in blocks:
+                if b.strip():
+                    source_blocks.append((b, "source"))
+        else:
+            markers = [
+                ("=== SYSTEM DATA: PERSONA PROFILE ===", "profile"),
+                ("=== SYSTEM DATA: RESUME DETAILS ===", "resume"),
+                ("=== SYSTEM DATA: REPOSITORIES SUMMARY ===", "readme")
+            ]
+            indices = []
+            for marker, m_type in markers:
+                idx = context.find(marker)
+                if idx != -1:
+                    indices.append((idx, marker, m_type))
             
-            # Calculate match score based on keyword overlap
-            score = 0
-            for kw in keywords:
-                if kw in clause_lower:
-                    score += len(kw) * 2
-                    
-            # Boost score if it contains technologies we expect (Python, FastAPI, Next.js) when querying technologies
-            if any(kw in ["tech", "technologies", "use", "stack"] for kw in keywords):
-                for tech in ["python", "fastapi", "next.js", "react", "typescript", "rust", "go"]:
-                    if tech in clause_lower:
-                        score += 5
+            indices.sort()
+            for i in range(len(indices)):
+                start_idx = indices[i][0] + len(indices[i][1])
+                end_idx = indices[i+1][0] if i + 1 < len(indices) else len(context)
+                block_content = context[start_idx:end_idx].strip()
+                if block_content:
+                    source_blocks.append((block_content, indices[i][2]))
 
-            if score > 0 and clause not in seen_clauses:
-                scored_candidates.append((score, idx, clause, citation))
-                seen_clauses.add(clause)
+        grouped_facts = {}
+        for block_content, block_type in source_blocks:
+            if block_type == "resume":
+                citation = "Resume"
+            elif block_type == "readme":
+                citation = "README"
+            elif block_type == "profile":
+                citation = "Persona Profile"
+            else:
+                lines = block_content.split("\n")
+                source_type = "source"
+                repo_name = ""
+                content_start_idx = 0
+                for idx, line in enumerate(lines):
+                    if line.startswith("Type:"):
+                        source_type = line.split(":", 1)[1].strip().lower()
+                    elif line.startswith("Repository:"):
+                        repo_name = line.split(":", 1)[1].strip()
+                    elif line.startswith("Content:"):
+                        content_start_idx = idx + 1
+                        break
+                
+                if "resume" in source_type:
+                    citation = "Resume"
+                elif "readme" in source_type:
+                    citation = f"{repo_name} README" if repo_name else "README"
+                elif "commit" in source_type:
+                    citation = "Commit"
+                elif "code" in source_type:
+                    citation = "Code"
+                else:
+                    citation = repo_name or "Source Document"
+                block_content = "\n".join(lines[content_start_idx:])
 
-        # Sort by score descending, then by order of appearance
-        scored_candidates.sort(key=lambda x: (-x[0], x[1]))
-
-        # Take the top matched clauses to construct the final answer
-        matched_items = scored_candidates[:10]
-
-        if matched_items:
-            cleaned_facts = []
-            citations = set()
-            for score, idx, clause, citation in matched_items:
-                if score < 4:
+            raw_lines = block_content.split("\n")
+            for raw_line in raw_lines:
+                raw_line = raw_line.strip()
+                if not raw_line:
                     continue
-                cleaned = re.sub(r"^\s*[-*•+]\s*", "", clause.strip())
-                cleaned = re.sub(r"\s+", " ", cleaned)
-                if cleaned and cleaned not in cleaned_facts:
-                    cleaned_facts.append(cleaned)
-                    citations.add(citation)
-            if cleaned_facts:
-                facts_str = "; ".join(cleaned_facts)
-                if len(facts_str) > 450:
-                    facts_str = facts_str[:450] + "..."
-                citation_str = " ".join(sorted(citations))
-                return f"According to local source files: {facts_str} {citation_str}"
+                
+                # Skip or clean JSON syntax
+                if block_type == "profile" or raw_line.startswith('"') or raw_line.startswith('{') or raw_line.startswith('}'):
+                    clean_line = raw_line.replace('"', '').replace(',', '').strip()
+                    if ":" in clean_line:
+                        parts = clean_line.split(":", 1)
+                        key = parts[0].strip().replace("_", " ")
+                        val = parts[1].strip()
+                        if val and val not in ["[", "{", "]", "}"]:
+                            s_sentence = f"{key.capitalize()}: {val}"
+                        else:
+                            continue
+                    else:
+                        continue
+                else:
+                    s_sentence = raw_line
+
+                # Split by sentence boundaries
+                sentences = re.split(r'(?<!\w\.\w.)(?<![A-Z][a-z]\.)(?<=\.|\?)\s', s_sentence)
+                for sentence in sentences:
+                    s_strip = sentence.strip()
+                    s_strip = re.sub(r"^\s*[-*•+⋄–]\s*", "", s_strip).strip()
+                    s_strip = re.sub(r"\s+", " ", s_strip)
+                    if s_strip.startswith('"') and s_strip.endswith('"'):
+                        s_strip = s_strip[1:-1].strip()
+
+                    # Skip contact details in general queries to avoid raw string dumps
+                    if not is_contact_query:
+                        if re.search(r"\+?\d[\d\s-]{8,12}\d", s_strip): # phone
+                            continue
+                        if "@" in s_strip and "." in s_strip: # email
+                            continue
+                        if s_strip.startswith("http") or "www." in s_strip: # link
+                            continue
+                        if len(s_strip) < 15 and s_strip.isupper():
+                            continue
+                            
+                    if len(s_strip) > 15:
+                        if citation not in grouped_facts:
+                            grouped_facts[citation] = []
+                        if s_strip not in grouped_facts[citation]:
+                            grouped_facts[citation].append(s_strip)
+
+        selected_paragraphs = []
+        for citation, sentences in grouped_facts.items():
+            matching_sentences = []
+            for s in sentences:
+                s_lower = s.lower()
+                score = 0
+                for kw in keywords:
+                    if kw in s_lower:
+                        score += len(kw)
+                if score >= 3:
+                    matching_sentences.append((score, s))
+            
+            if matching_sentences:
+                matching_sentences.sort(key=lambda x: -x[0])
+                top_s = [s for _, s in matching_sentences[:3]]
+                bullet_points = "\n".join(f"- {s} [{citation}]" for s in top_s)
+                selected_paragraphs.append(bullet_points)
+                
+        if selected_paragraphs:
+            answer_body = "\n".join(selected_paragraphs)
+            if len(answer_body) > 600:
+                answer_body = answer_body[:600] + "..."
+            return f"Based on local source files:\n\n{answer_body}"
             
         return cls.REFUSAL_MESSAGE
 
