@@ -5,13 +5,13 @@
     "metadata": {
       "source_type": "resume",
       "source_url": "file:///C:/Users/Siddhant/Downloads/Resume_SiddhantPrasad_Final.pdf",
-      "created_at": "2026-06-09T18:53:49.649516",
-      "updated_at": "2026-06-09T18:53:49.649516",
+      "created_at": "2026-06-09T19:01:32.304942",
+      "updated_at": "2026-06-09T19:01:32.304942",
       "retrieval_tags": [],
       "page_number": 1,
       "total_pages": 1,
       "source_path": "C:\\Users\\Siddhant\\Downloads\\Resume_SiddhantPrasad_Final.pdf",
-      "extraction_timestamp": "2026-06-09T18:53:49.649516",
+      "extraction_timestamp": "2026-06-09T19:01:32.304942",
       "chunk_index": 0
     }
   },
@@ -21,8 +21,8 @@
     "metadata": {
       "source_type": "resume",
       "source_url": "file:///C:/Users/Siddhant/Downloads/Resume_SiddhantPrasad_Final.pdf",
-      "created_at": "2026-06-09T18:53:49.649516",
-      "updated_at": "2026-06-09T18:53:49.649516",
+      "created_at": "2026-06-09T19:01:32.304942",
+      "updated_at": "2026-06-09T19:01:32.304942",
       "retrieval_tags": [
         "react",
         "postgresql"
@@ -30,7 +30,7 @@
       "page_number": 1,
       "total_pages": 1,
       "source_path": "C:\\Users\\Siddhant\\Downloads\\Resume_SiddhantPrasad_Final.pdf",
-      "extraction_timestamp": "2026-06-09T18:53:49.649516",
+      "extraction_timestamp": "2026-06-09T19:01:32.304942",
       "chunk_index": 1
     }
   },
@@ -40,16 +40,16 @@
     "metadata": {
       "source_type": "resume",
       "source_url": "file:///C:/Users/Siddhant/Downloads/Resume_SiddhantPrasad_Final.pdf",
-      "created_at": "2026-06-09T18:53:49.649516",
-      "updated_at": "2026-06-09T18:53:49.649516",
+      "created_at": "2026-06-09T19:01:32.304942",
+      "updated_at": "2026-06-09T19:01:32.304942",
       "retrieval_tags": [
-        "database",
-        "rag"
+        "rag",
+        "database"
       ],
       "page_number": 1,
       "total_pages": 1,
       "source_path": "C:\\Users\\Siddhant\\Downloads\\Resume_SiddhantPrasad_Final.pdf",
-      "extraction_timestamp": "2026-06-09T18:53:49.649516",
+      "extraction_timestamp": "2026-06-09T19:01:32.304942",
       "chunk_index": 2
     }
   },
@@ -59,20 +59,20 @@
     "metadata": {
       "source_type": "resume",
       "source_url": "file:///C:/Users/Siddhant/Downloads/Resume_SiddhantPrasad_Final.pdf",
-      "created_at": "2026-06-09T18:53:49.649516",
-      "updated_at": "2026-06-09T18:53:49.649516",
+      "created_at": "2026-06-09T19:01:32.304942",
+      "updated_at": "2026-06-09T19:01:32.304942",
       "retrieval_tags": [
-        "api",
+        "gemini",
         "javascript",
-        "rag",
         "postgresql",
+        "api",
         "embeddings",
-        "gemini"
+        "rag"
       ],
       "page_number": 1,
       "total_pages": 1,
       "source_path": "C:\\Users\\Siddhant\\Downloads\\Resume_SiddhantPrasad_Final.pdf",
-      "extraction_timestamp": "2026-06-09T18:53:49.649516",
+      "extraction_timestamp": "2026-06-09T19:01:32.304942",
       "chunk_index": 3
     }
   },
@@ -82,19 +82,19 @@
     "metadata": {
       "source_type": "resume",
       "source_url": "file:///C:/Users/Siddhant/Downloads/Resume_SiddhantPrasad_Final.pdf",
-      "created_at": "2026-06-09T18:53:49.649516",
-      "updated_at": "2026-06-09T18:53:49.649516",
+      "created_at": "2026-06-09T19:01:32.304942",
+      "updated_at": "2026-06-09T19:01:32.304942",
       "retrieval_tags": [
-        "javascript",
-        "react",
         "express",
+        "javascript",
         "postgresql",
+        "react",
         "tailwind"
       ],
       "page_number": 1,
       "total_pages": 1,
       "source_path": "C:\\Users\\Siddhant\\Downloads\\Resume_SiddhantPrasad_Final.pdf",
-      "extraction_timestamp": "2026-06-09T18:53:49.649516",
+      "extraction_timestamp": "2026-06-09T19:01:32.304942",
       "chunk_index": 4
     }
   },
@@ -104,13 +104,13 @@
     "metadata": {
       "source_type": "resume",
       "source_url": "file:///C:/Users/Siddhant/Downloads/Resume_SiddhantPrasad_Final.pdf",
-      "created_at": "2026-06-09T18:53:49.649516",
-      "updated_at": "2026-06-09T18:53:49.649516",
+      "created_at": "2026-06-09T19:01:32.304942",
+      "updated_at": "2026-06-09T19:01:32.304942",
       "retrieval_tags": [],
       "page_number": 1,
       "total_pages": 1,
       "source_path": "C:\\Users\\Siddhant\\Downloads\\Resume_SiddhantPrasad_Final.pdf",
-      "extraction_timestamp": "2026-06-09T18:53:49.649516",
+      "extraction_timestamp": "2026-06-09T19:01:32.304942",
       "chunk_index": 5
     }
   },
@@ -133,14 +133,14 @@
         "redis"
       ],
       "retrieval_tags": [
-        "redis",
-        "gemini-api",
-        "pgvector",
-        "typescript",
-        "api",
-        "rag",
         "hono",
-        "gemini"
+        "typescript",
+        "gemini",
+        "pgvector",
+        "redis",
+        "api",
+        "gemini-api",
+        "rag"
       ],
       "chunk_index": 0
     }
@@ -156,10 +156,10 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
-        "claribot",
+        "readme",
         "documentation",
-        "rag",
-        "readme"
+        "claribot",
+        "rag"
       ],
       "chunk_index": 0
     }
@@ -175,14 +175,14 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
-        "redis",
-        "claribot",
-        "api",
         "react",
-        "readme",
-        "rag",
         "documentation",
-        "postgres"
+        "claribot",
+        "redis",
+        "api",
+        "readme",
+        "postgres",
+        "rag"
       ],
       "chunk_index": 1
     }
@@ -198,9 +198,9 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
-        "claribot",
+        "readme",
         "documentation",
-        "readme"
+        "claribot"
       ],
       "chunk_index": 2
     }
@@ -216,11 +216,11 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
-        "redis",
-        "claribot",
-        "readme",
+        "llm",
         "documentation",
-        "llm"
+        "claribot",
+        "redis",
+        "readme"
       ],
       "chunk_index": 3
     }
@@ -236,9 +236,9 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
-        "claribot",
+        "readme",
         "documentation",
-        "readme"
+        "claribot"
       ],
       "chunk_index": 4
     }
@@ -254,18 +254,18 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
-        "auth",
-        "middleware",
-        "redis",
-        "claribot",
-        "api",
-        "react",
-        "readme",
-        "rag",
-        "documentation",
-        "postgres",
         "rest",
-        "gemini"
+        "gemini",
+        "react",
+        "middleware",
+        "auth",
+        "documentation",
+        "claribot",
+        "redis",
+        "api",
+        "readme",
+        "postgres",
+        "rag"
       ],
       "chunk_index": 5
     }
@@ -281,17 +281,17 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
-        "redis",
-        "claribot",
+        "gemini",
+        "database",
+        "llm",
         "vector",
         "react",
-        "readme",
         "documentation",
-        "database",
+        "claribot",
         "postgresql",
-        "llm",
-        "embeddings",
-        "gemini"
+        "redis",
+        "readme",
+        "embeddings"
       ],
       "chunk_index": 6
     }
@@ -307,9 +307,9 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
-        "claribot",
+        "readme",
         "documentation",
-        "readme"
+        "claribot"
       ],
       "chunk_index": 7
     }
@@ -325,14 +325,14 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
+        "gemini",
+        "database",
+        "documentation",
         "claribot",
         "api",
         "readme",
-        "documentation",
         "postgres",
-        "database",
-        "embeddings",
-        "gemini"
+        "embeddings"
       ],
       "chunk_index": 8
     }
@@ -348,10 +348,10 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
-        "claribot",
+        "readme",
         "documentation",
-        "gemini",
-        "readme"
+        "claribot",
+        "gemini"
       ],
       "chunk_index": 9
     }
@@ -367,15 +367,15 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
+        "database",
+        "react",
+        "docker",
+        "documentation",
         "claribot",
         "api",
-        "react",
         "readme",
-        "rag",
-        "documentation",
         "postgres",
-        "docker",
-        "database"
+        "rag"
       ],
       "chunk_index": 10
     }
@@ -391,9 +391,9 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
-        "claribot",
+        "readme",
         "documentation",
-        "readme"
+        "claribot"
       ],
       "chunk_index": 11
     }
@@ -409,14 +409,14 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
-        "redis",
+        "gemini",
+        "docker",
+        "documentation",
         "claribot",
+        "redis",
         "api",
         "readme",
-        "documentation",
-        "postgres",
-        "docker",
-        "gemini"
+        "postgres"
       ],
       "chunk_index": 12
     }
@@ -432,15 +432,15 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
-        "redis",
+        "gemini",
+        "database",
+        "docker",
+        "documentation",
         "claribot",
+        "redis",
         "api",
         "readme",
-        "documentation",
-        "postgres",
-        "docker",
-        "database",
-        "gemini"
+        "postgres"
       ],
       "chunk_index": 13
     }
@@ -456,15 +456,15 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
-        "claribot",
         "security",
         "vector",
+        "database",
+        "llm",
+        "documentation",
+        "claribot",
         "api",
         "readme",
-        "documentation",
-        "postgres",
-        "database",
-        "llm"
+        "postgres"
       ],
       "chunk_index": 14
     }
@@ -481,12 +481,12 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "claribot",
         "typescript",
-        "rag-core",
-        "embeddings",
+        "gemini",
         "code",
-        "gemini"
+        "claribot",
+        "embeddings",
+        "rag-core"
       ],
       "chunk_index": 0
     }
@@ -503,13 +503,13 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "claribot",
         "typescript",
-        "api",
-        "rag-core",
-        "embeddings",
+        "gemini",
         "code",
-        "gemini"
+        "claribot",
+        "api",
+        "embeddings",
+        "rag-core"
       ],
       "chunk_index": 1
     }
@@ -526,13 +526,13 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "claribot",
         "typescript",
-        "api",
-        "rag-core",
-        "embeddings",
+        "gemini",
         "code",
-        "gemini"
+        "claribot",
+        "api",
+        "embeddings",
+        "rag-core"
       ],
       "chunk_index": 2
     }
@@ -549,13 +549,13 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "claribot",
         "typescript",
-        "api",
-        "rag-core",
-        "embeddings",
+        "gemini",
         "code",
-        "gemini"
+        "claribot",
+        "api",
+        "embeddings",
+        "rag-core"
       ],
       "chunk_index": 3
     }
@@ -572,12 +572,12 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "claribot",
-        "vector",
         "typescript",
-        "rag-core",
+        "vector",
+        "code",
+        "claribot",
         "embeddings",
-        "code"
+        "rag-core"
       ],
       "chunk_index": 4
     }
@@ -594,13 +594,13 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "claribot",
         "typescript",
-        "api",
-        "rag-core",
-        "embeddings",
+        "gemini",
         "code",
-        "gemini"
+        "claribot",
+        "api",
+        "embeddings",
+        "rag-core"
       ],
       "chunk_index": 5
     }
@@ -617,40 +617,139 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "claribot",
         "typescript",
-        "rag-core",
+        "code",
+        "claribot",
         "embeddings",
-        "code"
+        "rag-core"
       ],
       "chunk_index": 6
     }
   },
   "29": {
-    "chunk_id": "gh_commit_ClariBot_b8f9a2e3d4c5_c0_756a73bdc5f4",
-    "text": "[Repository: ClariBot]\n[Source: Commit | SHA: b8f9a2e3]\n\nRepository: ClariBot\nCommit: b8f9a2e3\nAuthor: Siddhant Prasad\nDate: 2026-06-09T18:53:49.654076\nMessage: Hardened production features and optimization pipelines for ClariBot\nFiles Changed:\n- packages/rag-core/src/embeddings/embedding-generator.ts",
+    "chunk_id": "gh_commit_ClariBot_2237257cbab6_c0_6ac3a415db92",
+    "text": "[Repository: ClariBot]\n[Source: Commit | SHA: 2237257c]\n\nRepository: ClariBot\nCommit: 2237257c\nAuthor: Siddhant\nDate: Sat May 23 02:42:12 2026 +0530\nMessage: docs: update README with Phase 4 and 5 features\nFiles Changed:\n- README.md",
     "metadata": {
       "source_type": "github_commit",
-      "source_url": "https://github.com/Sid13SST/ClariBot/commit/b8f9a2e3d4c5",
+      "source_url": "https://github.com/Sid13SST/ClariBot/commit/2237257cbab64f2341ae2ed140ed399ba3a7672c",
       "repo_name": "ClariBot",
       "owner": "Sid13SST",
-      "commit_sha": "b8f9a2e3d4c5",
-      "author": "Siddhant Prasad",
-      "commit_date": "2026-06-09T18:53:49.654076",
+      "commit_sha": "2237257cbab64f2341ae2ed140ed399ba3a7672c",
+      "author": "Siddhant",
+      "commit_date": "Sat May 23 02:42:12 2026 +0530",
       "changed_files": [
-        "packages/rag-core/src/embeddings/embedding-generator.ts"
+        "README.md"
       ],
       "retrieval_tags": [
-        "claribot",
-        "rag",
         "commit",
-        "git",
-        "embeddings"
+        "claribot",
+        "git"
       ],
       "chunk_index": 0
     }
   },
   "30": {
+    "chunk_id": "gh_commit_ClariBot_304c4912f877_c0_63b4c795e78b",
+    "text": "[Repository: ClariBot]\n[Source: Commit | SHA: 304c4912]\n\nRepository: ClariBot\nCommit: 304c4912\nAuthor: Siddhant\nDate: Sat May 23 02:37:59 2026 +0530\nMessage: feat: implement Phase 5 analytics, auto-improvements, load testing and final validation\nFiles Changed:\n- backend/src/scripts/auto-improve.ts\n- backend/src/scripts/final-validation.ts\n- backend/src/scripts/load-test.ts\n- backend/src/scripts/run-analytics-report.ts",
+    "metadata": {
+      "source_type": "github_commit",
+      "source_url": "https://github.com/Sid13SST/ClariBot/commit/304c4912f8779cd2815258b33cfa843fd8473552",
+      "repo_name": "ClariBot",
+      "owner": "Sid13SST",
+      "commit_sha": "304c4912f8779cd2815258b33cfa843fd8473552",
+      "author": "Siddhant",
+      "commit_date": "Sat May 23 02:37:59 2026 +0530",
+      "changed_files": [
+        "backend/src/scripts/auto-improve.ts",
+        "backend/src/scripts/final-validation.ts",
+        "backend/src/scripts/load-test.ts",
+        "backend/src/scripts/run-analytics-report.ts"
+      ],
+      "retrieval_tags": [
+        "commit",
+        "claribot",
+        "git"
+      ],
+      "chunk_index": 0
+    }
+  },
+  "31": {
+    "chunk_id": "gh_commit_ClariBot_38b1589b085d_c0_ca7fa8113a93",
+    "text": "[Repository: ClariBot]\n[Source: Commit | SHA: 38b1589b]\n\nRepository: ClariBot\nCommit: 38b1589b\nAuthor: Siddhant\nDate: Sat May 23 02:23:10 2026 +0530\nMessage: feat: implement phase-4 optimizations (prompt hardening, latency, tokens, QA)\nFiles Changed:\n- apps/dashboard/package-lock.json\n- backend/src/db/redis.client.ts\n- backend/src/services/answer-generation.service.ts\n- backend/src/services/embedding.service.ts\n- backend/src/services/retrieval.service.ts\n- backend/test-api.js\n- frontend/package-lock.json",
+    "metadata": {
+      "source_type": "github_commit",
+      "source_url": "https://github.com/Sid13SST/ClariBot/commit/38b1589b085dbc1d39748a90d739d784b4c7b3ea",
+      "repo_name": "ClariBot",
+      "owner": "Sid13SST",
+      "commit_sha": "38b1589b085dbc1d39748a90d739d784b4c7b3ea",
+      "author": "Siddhant",
+      "commit_date": "Sat May 23 02:23:10 2026 +0530",
+      "changed_files": [
+        "apps/dashboard/package-lock.json",
+        "backend/src/db/redis.client.ts",
+        "backend/src/services/answer-generation.service.ts",
+        "backend/src/services/embedding.service.ts",
+        "backend/src/services/retrieval.service.ts",
+        "backend/test-api.js",
+        "frontend/package-lock.json"
+      ],
+      "retrieval_tags": [
+        "commit",
+        "claribot",
+        "redis",
+        "api",
+        "git"
+      ],
+      "chunk_index": 0
+    }
+  },
+  "32": {
+    "chunk_id": "gh_commit_ClariBot_62a3500a488b_c0_382c2454384a",
+    "text": "[Repository: ClariBot]\n[Source: Commit | SHA: 62a3500a]\n\nRepository: ClariBot\nCommit: 62a3500a\nAuthor: Siddhant\nDate: Sat May 16 23:49:19 2026 +0530\nMessage: Readem file added\nFiles Changed:\n- README.md\n- apps/widget/index.html\n- backend/.env",
+    "metadata": {
+      "source_type": "github_commit",
+      "source_url": "https://github.com/Sid13SST/ClariBot/commit/62a3500a488b860d8d57c52bf461de3ea43307da",
+      "repo_name": "ClariBot",
+      "owner": "Sid13SST",
+      "commit_sha": "62a3500a488b860d8d57c52bf461de3ea43307da",
+      "author": "Siddhant",
+      "commit_date": "Sat May 16 23:49:19 2026 +0530",
+      "changed_files": [
+        "README.md",
+        "apps/widget/index.html",
+        "backend/.env"
+      ],
+      "retrieval_tags": [
+        "commit",
+        "claribot",
+        "git"
+      ],
+      "chunk_index": 0
+    }
+  },
+  "33": {
+    "chunk_id": "gh_commit_ClariBot_d8821a0f4474_c0_2d8ccb391e06",
+    "text": "[Repository: ClariBot]\n[Source: Commit | SHA: d8821a0f]\n\nRepository: ClariBot\nCommit: d8821a0f\nAuthor: Siddhant\nDate: Tue May 5 00:33:33 2026 +0530\nMessage: Deep dive file added\nFiles Changed:\n- CLARIBOT_SYSTEM_DEEP_DIVE.md",
+    "metadata": {
+      "source_type": "github_commit",
+      "source_url": "https://github.com/Sid13SST/ClariBot/commit/d8821a0f4474ab91225646c20e7a0185233f24b0",
+      "repo_name": "ClariBot",
+      "owner": "Sid13SST",
+      "commit_sha": "d8821a0f4474ab91225646c20e7a0185233f24b0",
+      "author": "Siddhant",
+      "commit_date": "Tue May 5 00:33:33 2026 +0530",
+      "changed_files": [
+        "CLARIBOT_SYSTEM_DEEP_DIVE.md"
+      ],
+      "retrieval_tags": [
+        "commit",
+        "claribot",
+        "git"
+      ],
+      "chunk_index": 0
+    }
+  },
+  "34": {
     "chunk_id": "gh_repo_Sid13SST_FrictaAI_e067c13ed2a0_c0_2a170bf134a9",
     "text": "[Repository: FrictaAI]\n[Source: Repo Metadata]\n\nRepository: FrictaAI\nDescription: AI-Native Autonomous UX Intelligence Platform emulating user personas to detect cognitive fatigue and design flaws.\nLanguage: TypeScript\nStars: 8\nTopics: hono, turborepo, react, prisma, postgresql, ux-testing",
     "metadata": {
@@ -670,18 +769,18 @@
         "ux-testing"
       ],
       "retrieval_tags": [
-        "turborepo",
+        "hono",
         "typescript",
-        "react",
-        "ux-testing",
         "prisma",
         "postgresql",
-        "hono"
+        "ux-testing",
+        "react",
+        "turborepo"
       ],
       "chunk_index": 0
     }
   },
-  "31": {
+  "35": {
     "chunk_id": "gh_readme_Sid13SST_FrictaAI_1e7569c5f6f7_c0_c6bb9e0818ef",
     "text": "[Repository: FrictaAI]\n[Source: README]\n\n# 🚀 Fricta AI — AI-Native Autonomous UX Intelligence Platform\n\nFricta is an AI-native autonomous user experience (UX) testing and simulation platform. It emulates realistic user personas and journeys on target websites to uncover usability friction, visual overlapping, layout defects, cognitive barriers, and onboarding leaks before real users ever face them.\n\n---",
     "metadata": {
@@ -692,14 +791,14 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
+        "readme",
         "documentation",
-        "frictaai",
-        "readme"
+        "frictaai"
       ],
       "chunk_index": 0
     }
   },
-  "32": {
+  "36": {
     "chunk_id": "gh_readme_Sid13SST_FrictaAI_1e7569c5f6f7_c1_67d2051f5bb4",
     "text": "[Repository: FrictaAI]\n[Source: README]\n\n## 🎨 System Architecture Overview\n\nFricta is structured as a high-performance **TypeScript monorepo** managed via **npm workspaces** and **Turborepo** for optimized caching, building, and linking.\n\n```mermaid\ngraph TD\n    A[Frontend: apps/frontend] -->|REST / API| B[Backend: apps/backend]\n    B -->|Prisma ORM| C[(PostgreSQL Database)]\n    B -->|Orchestrates| D[packages/report-engine]\n    B -->|Invokes| E[packages/agent]\n    E -->|Simulates User Actions| F[Target Website]\n    D -->|Aggregates Insights| G[UX Intelligence]\n    \n    subgraph Packages Layer\n        D\n        G[packages/ux-intelligence]\n        H[packages/visual-intelligence]\n        I[packages/db]\n    end\n```",
     "metadata": {
@@ -710,21 +809,21 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
+        "frictaai",
+        "rest",
         "typescript",
-        "api",
-        "readme",
+        "database",
         "documentation",
         "prisma",
-        "database",
-        "frictaai",
         "postgresql",
-        "agent",
-        "rest"
+        "api",
+        "readme",
+        "agent"
       ],
       "chunk_index": 1
     }
   },
-  "33": {
+  "37": {
     "chunk_id": "gh_readme_Sid13SST_FrictaAI_1e7569c5f6f7_c2_49e4541c116b",
     "text": "[Repository: FrictaAI]\n[Source: README]\n\n### 📦 Workspace Breakdown",
     "metadata": {
@@ -735,14 +834,14 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
+        "readme",
         "documentation",
-        "frictaai",
-        "readme"
+        "frictaai"
       ],
       "chunk_index": 2
     }
   },
-  "34": {
+  "38": {
     "chunk_id": "gh_readme_Sid13SST_FrictaAI_1e7569c5f6f7_c3_b4c5fecd4163",
     "text": "[Repository: FrictaAI]\n[Source: README]\n\n#### Applications (`apps/`)\n* **`apps/frontend`**: A premium, dark-mode dashboard built with **React**, **Vite**, **TypeScript**, **Tailwind CSS**, and **Lucide Icons** showcasing workflow replays, interactive timelines, cognitive simulations, and PDF/Markdown exports.\n* **`apps/backend`**: A modular **Hono.js** REST server that handles agent workflow runs, invokes layout/cognitive heuristics, and manages report compilation.",
     "metadata": {
@@ -753,19 +852,19 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
+        "frictaai",
         "typescript",
         "react",
-        "readme",
-        "documentation",
-        "frictaai",
         "agent",
-        "tailwind",
-        "rest"
+        "documentation",
+        "readme",
+        "rest",
+        "tailwind"
       ],
       "chunk_index": 3
     }
   },
-  "35": {
+  "39": {
     "chunk_id": "gh_readme_Sid13SST_FrictaAI_1e7569c5f6f7_c4_71bd0f81d1f2",
     "text": "[Repository: FrictaAI]\n[Source: README]\n\n#### Core Libraries (`packages/`)\n* **`@fricta/report-engine`**: Centralized orchestration library compiling scoring, executive summaries, chronological event stream correlation, and export builders.\n* **`@fricta/ux-intelligence`**: Evaluates cognitive fatigue, onboard drop-off risks, decision overload, and generates custom user persona profiles.\n* **`@fricta/visual-intelligence`**: Detects design flaws, overlapping elements, CTA discoverability issues, and generates bounding box telemetry.\n* **`@fricta/agent`**: Core headless browser executor simulating autonomous workflows using human-like interaction heuristics.\n* **`@fricta/db`**: Database configuration and clients utilizing **Prisma ORM** with **PostgreSQL**.\n* **`@fricta/types` / `@fricta/shared`**: Shared type definitions and functional utilities across frontend and backend.\n\n---",
     "metadata": {
@@ -776,18 +875,18 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
-        "readme",
+        "frictaai",
+        "database",
         "documentation",
         "prisma",
-        "database",
-        "frictaai",
         "postgresql",
+        "readme",
         "agent"
       ],
       "chunk_index": 4
     }
   },
-  "36": {
+  "40": {
     "chunk_id": "gh_readme_Sid13SST_FrictaAI_1e7569c5f6f7_c5_24361a6917d3",
     "text": "[Repository: FrictaAI]\n[Source: README]\n\n## 💎 Features & Capabilities",
     "metadata": {
@@ -798,14 +897,14 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
+        "readme",
         "documentation",
-        "frictaai",
-        "readme"
+        "frictaai"
       ],
       "chunk_index": 5
     }
   },
-  "37": {
+  "41": {
     "chunk_id": "gh_readme_Sid13SST_FrictaAI_1e7569c5f6f7_c6_1e5cb05be704",
     "text": "[Repository: FrictaAI]\n[Source: README]\n\n### 📺 Cinematic Timeline Replay\nAn immersive visual replay system synchronizing workflow steps with layout overlays. Developers can inspect agent **actions** (clicks, inputs, navigations) side-by-side with underlying **thoughts** (AI reasoning behind actions) at any timestamp.",
     "metadata": {
@@ -816,15 +915,15 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
+        "readme",
         "documentation",
         "agent",
-        "frictaai",
-        "readme"
+        "frictaai"
       ],
       "chunk_index": 6
     }
   },
-  "38": {
+  "42": {
     "chunk_id": "gh_readme_Sid13SST_FrictaAI_1e7569c5f6f7_c7_4590af196c62",
     "text": "[Repository: FrictaAI]\n[Source: README]\n\n### 📊 Correlated Event Stream (New)\nA dedicated, isolated chronology timeline. It maps events (e.g., clicks, page transitions) in sync with visual and cognitive finding alerts, letting PMs identify the exact moment a user experience degraded.",
     "metadata": {
@@ -835,14 +934,14 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
+        "readme",
         "documentation",
-        "frictaai",
-        "readme"
+        "frictaai"
       ],
       "chunk_index": 7
     }
   },
-  "39": {
+  "43": {
     "chunk_id": "gh_readme_Sid13SST_FrictaAI_1e7569c5f6f7_c8_752f3aa167af",
     "text": "[Repository: FrictaAI]\n[Source: README]\n\n### 🧠 Cognitive & Persona Simulation\nSimulates workflows under multiple cohort configurations:\n* **First-Time User**: Scored on onboarding friction and layout readability.\n* **Beginner User**: Analyzed for discoverability, hesitation, and guidance gaps.\n* **Power User**: Scored on interaction efficiency and click density.\n* Exposes **Cognitive Signals** (e.g., *Decision Fatigue*, *Workflow Density*) and **UX Findings** with actionable fixes.",
     "metadata": {
@@ -853,14 +952,14 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
+        "readme",
         "documentation",
-        "frictaai",
-        "readme"
+        "frictaai"
       ],
       "chunk_index": 8
     }
   },
-  "40": {
+  "44": {
     "chunk_id": "gh_readme_Sid13SST_FrictaAI_1e7569c5f6f7_c9_bcdcf82c5dfb",
     "text": "[Repository: FrictaAI]\n[Source: README]\n\n### 📝 Export Engine\nGenerates premium deliverables on-demand:\n1. **Markdown Executive Report**: Formal, readable audit summary.\n2. **PM Summary Sheet**: Direct copy-paste format summarizing key severity metrics.\n3. **Developer Debug JSON**: Raw session metadata, coordinates, and timings.\n\n---",
     "metadata": {
@@ -871,15 +970,15 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
+        "readme",
         "documentation",
         "session",
-        "frictaai",
-        "readme"
+        "frictaai"
       ],
       "chunk_index": 9
     }
   },
-  "41": {
+  "45": {
     "chunk_id": "gh_readme_Sid13SST_FrictaAI_1e7569c5f6f7_c10_04e94562c8e1",
     "text": "[Repository: FrictaAI]\n[Source: README]\n\n## 🛠️ Database Schema\n\nFricta relies on an evidence-centric database architecture. Below are the key tables defined in `schema.prisma`:\n\n| Model | Purpose |\n| :--- | :--- |\n| `WorkflowSession` | Represents an autonomous run targeting a specific user goal. |\n| `UXFinding` | Specific usability issues tagged by severity (e.g., *CTA_AMBIGUITY*, *ONBOARDING_FRICTION*). |\n| `CognitiveSignal` | Metric tracking user cognitive overload/fatigue intensity (0.0 to 1.0). |\n| `PersonaProfile` | Traits and behavioral weights adjusting threshold checks. |\n| `VisualFinding` | Layout defects and bounding box data identified on screenshots. |\n| `UXScore` / `VisualScore` | Calculated scoring metrics across Usability Pillars. |\n\n---",
     "metadata": {
@@ -890,16 +989,16 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
-        "readme",
+        "frictaai",
+        "database",
         "documentation",
         "prisma",
-        "database",
-        "frictaai"
+        "readme"
       ],
       "chunk_index": 10
     }
   },
-  "42": {
+  "46": {
     "chunk_id": "gh_readme_Sid13SST_FrictaAI_1e7569c5f6f7_c11_a8c0c6300694",
     "text": "[Repository: FrictaAI]\n[Source: README]\n\n## 🔌 API Route Reference",
     "metadata": {
@@ -910,15 +1009,15 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
+        "readme",
         "documentation",
-        "api",
         "frictaai",
-        "readme"
+        "api"
       ],
       "chunk_index": 11
     }
   },
-  "43": {
+  "47": {
     "chunk_id": "gh_readme_Sid13SST_FrictaAI_1e7569c5f6f7_c12_b1d9472de28b",
     "text": "[Repository: FrictaAI]\n[Source: README]\n\n### Workflow & Run Endpoints\n* `POST /api/workflows/run`: Dispatches an autonomous agent simulation.\n* `GET /api/workflows/sessions/:id`: Retrieves run logs and step statuses.",
     "metadata": {
@@ -929,16 +1028,16 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
+        "frictaai",
+        "documentation",
         "api",
         "readme",
-        "documentation",
-        "frictaai",
         "agent"
       ],
       "chunk_index": 12
     }
   },
-  "44": {
+  "48": {
     "chunk_id": "gh_readme_Sid13SST_FrictaAI_1e7569c5f6f7_c13_859bfa22d06b",
     "text": "[Repository: FrictaAI]\n[Source: README]\n\n### Intelligence & Heuristics Engines\n* `POST /api/visual/analyze/:sessionId`: Computes layout overlap and visual bounding box overlays.\n* `POST /api/ux/analyze/:sessionId`: Evaluates onboarding friction, cognitive load, and persona anomalies.",
     "metadata": {
@@ -949,15 +1048,15 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
+        "readme",
         "documentation",
-        "api",
         "frictaai",
-        "readme"
+        "api"
       ],
       "chunk_index": 13
     }
   },
-  "45": {
+  "49": {
     "chunk_id": "gh_readme_Sid13SST_FrictaAI_1e7569c5f6f7_c14_0be51e2d1340",
     "text": "[Repository: FrictaAI]\n[Source: README]\n\n### Reporting & Exports (Orchestrated by `@fricta/report-engine`)\n* `GET /api/reports/:sessionId`: Compiles full unified scorecards and metrics.\n* `GET /api/reports/:sessionId/executive`: Pulls grade summaries (`A` to `F`) and risk factors.\n* `GET /api/reports/:sessionId/export`: Generates markdown, developer JSON, and PM summary sheet formats.\n* `POST /api/reports/:sessionId/generate`: Regenerates scoring and summary structures.\n\n---",
     "metadata": {
@@ -968,15 +1067,15 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
+        "readme",
         "documentation",
-        "api",
         "frictaai",
-        "readme"
+        "api"
       ],
       "chunk_index": 14
     }
   },
-  "46": {
+  "50": {
     "chunk_id": "gh_readme_Sid13SST_FrictaAI_1e7569c5f6f7_c15_ed649e0f3586",
     "text": "[Repository: FrictaAI]\n[Source: README]\n\n## 🚦 Getting Started",
     "metadata": {
@@ -987,14 +1086,14 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
+        "readme",
         "documentation",
-        "frictaai",
-        "readme"
+        "frictaai"
       ],
       "chunk_index": 15
     }
   },
-  "47": {
+  "51": {
     "chunk_id": "gh_readme_Sid13SST_FrictaAI_1e7569c5f6f7_c16_355a88080238",
     "text": "[Repository: FrictaAI]\n[Source: README]\n\n### Prerequisites\n* **Node.js** >= 18\n* **npm** >= 10\n* **PostgreSQL** instance running",
     "metadata": {
@@ -1005,15 +1104,15 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
+        "readme",
         "documentation",
         "postgresql",
-        "frictaai",
-        "readme"
+        "frictaai"
       ],
       "chunk_index": 16
     }
   },
-  "48": {
+  "52": {
     "chunk_id": "gh_readme_Sid13SST_FrictaAI_1e7569c5f6f7_c17_76f5639c4bdf",
     "text": "[Repository: FrictaAI]\n[Source: README]\n\n### Installation\n\nClone the repository and install all monorepo dependencies:\n```bash\nnpm install\n```",
     "metadata": {
@@ -1024,14 +1123,14 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
+        "readme",
         "documentation",
-        "frictaai",
-        "readme"
+        "frictaai"
       ],
       "chunk_index": 17
     }
   },
-  "49": {
+  "53": {
     "chunk_id": "gh_readme_Sid13SST_FrictaAI_1e7569c5f6f7_c18_77d19997302a",
     "text": "[Repository: FrictaAI]\n[Source: README]\n\n### Database Setup\n\n1. Copy `.env.example` to `.env` and configure your `DATABASE_URL`.\n2. Generate the Prisma client and push migrations:\n```bash\nnpx prisma generate\nnpx prisma migrate dev\n```\n3. (Optional) Run the seed script to populate test sessions:\n```bash\nnpm run seed --workspace=@fricta/db\n```",
     "metadata": {
@@ -1042,16 +1141,16 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
-        "readme",
+        "frictaai",
+        "database",
         "documentation",
         "prisma",
-        "database",
-        "frictaai"
+        "readme"
       ],
       "chunk_index": 18
     }
   },
-  "50": {
+  "54": {
     "chunk_id": "gh_readme_Sid13SST_FrictaAI_1e7569c5f6f7_c19_731530a14821",
     "text": "[Repository: FrictaAI]\n[Source: README]\n\n### Run Local Development Servers\n\nStart frontend, backend, and all runner tasks in concurrent watch-mode via Turbo:\n```bash\nnpm run dev\n```\n* **Frontend**: `http://localhost:5173`\n* **Backend REST API**: `http://localhost:3001`",
     "metadata": {
@@ -1063,16 +1162,16 @@
       "branch": "main",
       "retrieval_tags": [
         "http",
+        "frictaai",
+        "documentation",
         "api",
         "readme",
-        "documentation",
-        "frictaai",
         "rest"
       ],
       "chunk_index": 19
     }
   },
-  "51": {
+  "55": {
     "chunk_id": "gh_readme_Sid13SST_FrictaAI_1e7569c5f6f7_c20_0486882c0f6f",
     "text": "[Repository: FrictaAI]\n[Source: README]\n\n### Running Tests\n\nRun unit tests inside the report engine package to verify scoring structures:\n```bash\nnpx tsx packages/report-engine/src/test-report.ts\n```\n\n---",
     "metadata": {
@@ -1083,14 +1182,14 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
+        "readme",
         "documentation",
-        "frictaai",
-        "readme"
+        "frictaai"
       ],
       "chunk_index": 20
     }
   },
-  "52": {
+  "56": {
     "chunk_id": "gh_readme_Sid13SST_FrictaAI_1e7569c5f6f7_c21_cd59b769a42b",
     "text": "[Repository: FrictaAI]\n[Source: README]\n\n## 🎨 Design Philosophy & UX Elegance\nFricta AI is styled as a state-of-the-art developer platform utilizing custom typography (Outfit / Inter), harmonized color palettes, neon gradients, glassmorphism containers, and reactive hover transitions to keep data interactive and digestible.",
     "metadata": {
@@ -1101,14 +1200,14 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
+        "readme",
         "documentation",
-        "frictaai",
-        "readme"
+        "frictaai"
       ],
       "chunk_index": 21
     }
   },
-  "53": {
+  "57": {
     "chunk_id": "gh_code_FrictaAI_ea209eb64188_c0_adc91c0b29bb",
     "text": "[Repository: FrictaAI]\n[Source: CODE | File: packages/report-engine/src/timeline.ts]\n\nimport { CorrelatedTimelineEvent, UnifiedUXReportPayload } from './types';",
     "metadata": {
@@ -1121,14 +1220,14 @@
       "language": "TypeScript",
       "retrieval_tags": [
         "report-engine",
+        "frictaai",
         "typescript",
-        "code",
-        "frictaai"
+        "code"
       ],
       "chunk_index": 0
     }
   },
-  "54": {
+  "58": {
     "chunk_id": "gh_code_FrictaAI_ea209eb64188_c1_922c10d940e6",
     "text": "[Repository: FrictaAI]\n[Source: CODE | File: packages/report-engine/src/timeline.ts]\n\nexport class TimelineCompiler {\n  /**\n   * Correlates actions, thoughts, visual findings, and cognitive signals into a sorted chronological stream.\n   */\n  static compile(\n    actions: any[],\n    thoughts: any[],\n    uxFindings: any[],\n    cognitiveSignals: any[],\n    visualFindings: any[]\n  ): CorrelatedTimelineEvent[] {\n    const events: CorrelatedTimelineEvent[] = [];\n\n    // 1. Process Actions\n    actions.forEach(action => {\n      const isError = action.errorMessage || action.status === 'failed';\n      events.push({\n        id: action.id || `action-${action.stepNumber}-${action.timestamp}`,\n        stepIndex: action.stepNumber || 0,\n        timestamp: new Date(action.timestamp),\n        eventType: isError ? 'ERROR' : 'ACTION',\n        title: isError ",
     "metadata": {
@@ -1141,14 +1240,14 @@
       "language": "TypeScript",
       "retrieval_tags": [
         "report-engine",
+        "frictaai",
         "typescript",
-        "code",
-        "frictaai"
+        "code"
       ],
       "chunk_index": 1
     }
   },
-  "55": {
+  "59": {
     "chunk_id": "gh_code_FrictaAI_ea209eb64188_c2_f83b3433ad7d",
     "text": "[Repository: FrictaAI]\n[Source: CODE | File: packages/report-engine/src/timeline.ts]\n\n        eventType: isError ? 'ERROR' : 'ACTION',\n        title: isError \n          ? `Interaction Failure: ${action.action}` \n          : `${action.action.toUpperCase()} Target: ${action.target}`,\n        description: action.errorMessage || `Executed action on target element ${action.target} with value: \"${action.value || ''}\".`,\n        metadata: {\n          target: action.target,\n          value: action.value,\n          status: action.status,\n          errorMessage: action.errorMessage\n        }\n      });\n    });\n\n    // 2. Process Thoughts\n    thoughts.forEach(thought => {\n      events.push({\n        id: thought.id || `thought-${thought.stepNumber}-${thought.timestamp}`,\n        stepIndex: thought.stepNumber || 0,\n        timestamp: new Date(thought.timestamp),",
     "metadata": {
@@ -1161,14 +1260,14 @@
       "language": "TypeScript",
       "retrieval_tags": [
         "report-engine",
+        "frictaai",
         "typescript",
-        "code",
-        "frictaai"
+        "code"
       ],
       "chunk_index": 2
     }
   },
-  "56": {
+  "60": {
     "chunk_id": "gh_code_FrictaAI_ea209eb64188_c3_70af0e787e55",
     "text": "[Repository: FrictaAI]\n[Source: CODE | File: packages/report-engine/src/timeline.ts]\n\n        stepIndex: thought.stepNumber || 0,\n        timestamp: new Date(thought.timestamp),\n        eventType: 'THOUGHT',\n        title: 'Cognitive Rationale',\n        description: thought.thought,\n      });\n    });\n\n    // 3. Process Visual Findings\n    visualFindings.forEach(vf => {\n      // Determine step number, fallback to metadata or 0\n      let stepIndex = 0;\n      if (vf.metadata && typeof vf.metadata === 'object' && vf.metadata.stepIndex !== undefined) {\n        stepIndex = Number(vf.metadata.stepIndex);\n      } else if (vf.description) {\n        const match = vf.description.match(/step (\\d+)/i);\n        if (match) stepIndex = parseInt(match[1], 10);\n      }\n\n      events.push({\n        id: vf.id || `visual-${stepIndex}-${vf.timestamp}`,\n        stepIndex,",
     "metadata": {
@@ -1181,14 +1280,14 @@
       "language": "TypeScript",
       "retrieval_tags": [
         "report-engine",
+        "frictaai",
         "typescript",
-        "code",
-        "frictaai"
+        "code"
       ],
       "chunk_index": 3
     }
   },
-  "57": {
+  "61": {
     "chunk_id": "gh_code_FrictaAI_ea209eb64188_c4_175992826d18",
     "text": "[Repository: FrictaAI]\n[Source: CODE | File: packages/report-engine/src/timeline.ts]\n\n        id: vf.id || `visual-${stepIndex}-${vf.timestamp}`,\n        stepIndex,\n        timestamp: new Date(vf.timestamp || new Date()),\n        eventType: 'VISUAL_FINDING',\n        title: `Visual Defect: ${vf.title}`,\n        description: vf.description,\n        metadata: {\n          findingType: vf.findingType,\n          severity: vf.severity,\n          boundingBoxes: vf.boundingBoxes,\n          screenshotId: vf.screenshotId\n        }\n      });\n    });\n\n    // 4. Process Cognitive Signals\n    cognitiveSignals.forEach(cs => {\n      let stepIndex = 0;\n      if (cs.metadata && typeof cs.metadata === 'object' && cs.metadata.stepIndex !== undefined) {\n        stepIndex = Number(cs.metadata.stepIndex);\n      }\n\n      // We only flag spikes if intensity is > 0.4\n      if (cs.intensity > 0.4) {",
     "metadata": {
@@ -1201,14 +1300,14 @@
       "language": "TypeScript",
       "retrieval_tags": [
         "report-engine",
+        "frictaai",
         "typescript",
-        "code",
-        "frictaai"
+        "code"
       ],
       "chunk_index": 4
     }
   },
-  "58": {
+  "62": {
     "chunk_id": "gh_code_FrictaAI_ea209eb64188_c5_a8bc9ae484d1",
     "text": "[Repository: FrictaAI]\n[Source: CODE | File: packages/report-engine/src/timeline.ts]\n\n      // We only flag spikes if intensity is > 0.4\n      if (cs.intensity > 0.4) {\n        events.push({\n          id: cs.id || `cog-${stepIndex}-${cs.timestamp}`,\n          stepIndex,\n          timestamp: new Date(cs.timestamp || new Date()),\n          eventType: 'COGNITIVE_SPIKE',\n          title: `Cognitive Signal: ${cs.signalType}`,\n          description: `Detected high-intensity UX signal: ${cs.signalType} (Intensity: ${(cs.intensity * 100).toFixed(0)}%)`,\n          metadata: {\n            signalType: cs.signalType,\n            intensity: cs.intensity,\n            meta: cs.metadata\n          }\n        });\n      }\n    });\n\n    // Sort: Step index ascending, then timestamp ascending, then eventType priority (ACTION -> THOUGHT -> VISUAL_FINDING -> COGNITIVE_SPIKE -> ERROR)",
     "metadata": {
@@ -1221,14 +1320,14 @@
       "language": "TypeScript",
       "retrieval_tags": [
         "report-engine",
+        "frictaai",
         "typescript",
-        "code",
-        "frictaai"
+        "code"
       ],
       "chunk_index": 5
     }
   },
-  "59": {
+  "63": {
     "chunk_id": "gh_code_FrictaAI_ea209eb64188_c6_c52442f5fb80",
     "text": "[Repository: FrictaAI]\n[Source: CODE | File: packages/report-engine/src/timeline.ts]\n\n\n    // Sort: Step index ascending, then timestamp ascending, then eventType priority (ACTION -> THOUGHT -> VISUAL_FINDING -> COGNITIVE_SPIKE -> ERROR)\n    const typePriority: Record<string, number> = {\n      'ACTION': 1,\n      'THOUGHT': 2,\n      'VISUAL_FINDING': 3,\n      'COGNITIVE_SPIKE': 4,\n      'ERROR': 5\n    };\n\n    return events.sort((a, b) => {\n      if (a.stepIndex !== b.stepIndex) {\n        return a.stepIndex - b.stepIndex;\n      }\n      const timeDiff = a.timestamp.getTime() - b.timestamp.getTime();\n      if (timeDiff !== 0) return timeDiff;\n      \n      const priorityA = typePriority[a.eventType] || 99;\n      const priorityB = typePriority[b.eventType] || 99;\n      return priorityA - priorityB;\n    });\n  }\n}",
     "metadata": {
@@ -1241,36 +1340,126 @@
       "language": "TypeScript",
       "retrieval_tags": [
         "report-engine",
+        "frictaai",
         "typescript",
-        "code",
-        "frictaai"
+        "code"
       ],
       "chunk_index": 6
     }
   },
-  "60": {
-    "chunk_id": "gh_commit_FrictaAI_b8f9a2e3d4c5_c0_1dfea2cffa5c",
-    "text": "[Repository: FrictaAI]\n[Source: Commit | SHA: b8f9a2e3]\n\nRepository: FrictaAI\nCommit: b8f9a2e3\nAuthor: Siddhant Prasad\nDate: 2026-06-09T18:53:49.655345\nMessage: Hardened production features and optimization pipelines for FrictaAI\nFiles Changed:\n- packages/report-engine/src/timeline.ts",
+  "64": {
+    "chunk_id": "gh_commit_FrictaAI_8cbfc5fc3ed9_c0_ebfee3dc86db",
+    "text": "[Repository: FrictaAI]\n[Source: Commit | SHA: 8cbfc5fc]\n\nRepository: FrictaAI\nCommit: 8cbfc5fc\nAuthor: Siddhant\nDate: Fri Jun 5 13:51:05 2026 +0530\nMessage: fix(observability): safely handle missing browserPool/checkpoint and implement fetch timeout\nFiles Changed:\n- apps/frontend/src/features/orchestrator/RuntimeObservabilityPanel.tsx",
     "metadata": {
       "source_type": "github_commit",
-      "source_url": "https://github.com/Sid13SST/FrictaAI/commit/b8f9a2e3d4c5",
+      "source_url": "https://github.com/Sid13SST/FrictaAI/commit/8cbfc5fc3ed9e890379776b4bd896b6602614e43",
       "repo_name": "FrictaAI",
       "owner": "Sid13SST",
-      "commit_sha": "b8f9a2e3d4c5",
-      "author": "Siddhant Prasad",
-      "commit_date": "2026-06-09T18:53:49.655345",
+      "commit_sha": "8cbfc5fc3ed9e890379776b4bd896b6602614e43",
+      "author": "Siddhant",
+      "commit_date": "Fri Jun 5 13:51:05 2026 +0530",
       "changed_files": [
-        "packages/report-engine/src/timeline.ts"
+        "apps/frontend/src/features/orchestrator/RuntimeObservabilityPanel.tsx"
       ],
       "retrieval_tags": [
         "commit",
-        "git",
-        "frictaai"
+        "frictaai",
+        "git"
       ],
       "chunk_index": 0
     }
   },
-  "61": {
+  "65": {
+    "chunk_id": "gh_commit_FrictaAI_451b58cffa49_c0_1c0cb9a37fc6",
+    "text": "[Repository: FrictaAI]\n[Source: Commit | SHA: 451b58cf]\n\nRepository: FrictaAI\nCommit: 451b58cf\nAuthor: Siddhant\nDate: Fri Jun 5 13:47:02 2026 +0530\nMessage: fix(observability): extract detailed server error messages in RuntimeObservabilityPanel\nFiles Changed:\n- apps/frontend/src/features/orchestrator/RuntimeObservabilityPanel.tsx",
+    "metadata": {
+      "source_type": "github_commit",
+      "source_url": "https://github.com/Sid13SST/FrictaAI/commit/451b58cffa492d90d1330b70cf3fd4f5e42e4c79",
+      "repo_name": "FrictaAI",
+      "owner": "Sid13SST",
+      "commit_sha": "451b58cffa492d90d1330b70cf3fd4f5e42e4c79",
+      "author": "Siddhant",
+      "commit_date": "Fri Jun 5 13:47:02 2026 +0530",
+      "changed_files": [
+        "apps/frontend/src/features/orchestrator/RuntimeObservabilityPanel.tsx"
+      ],
+      "retrieval_tags": [
+        "commit",
+        "frictaai",
+        "git"
+      ],
+      "chunk_index": 0
+    }
+  },
+  "66": {
+    "chunk_id": "gh_commit_FrictaAI_995d1039fd1a_c0_b874dac4fea8",
+    "text": "[Repository: FrictaAI]\n[Source: Commit | SHA: 995d1039]\n\nRepository: FrictaAI\nCommit: 995d1039\nAuthor: Siddhant\nDate: Fri Jun 5 13:44:56 2026 +0530\nMessage: fix(observability): authorize runtime telemetry endpoints with apiFetch\nFiles Changed:\n- apps/frontend/src/features/orchestrator/RuntimeObservabilityPanel.tsx",
+    "metadata": {
+      "source_type": "github_commit",
+      "source_url": "https://github.com/Sid13SST/FrictaAI/commit/995d1039fd1a225dd8ea46054bc2155c269c999d",
+      "repo_name": "FrictaAI",
+      "owner": "Sid13SST",
+      "commit_sha": "995d1039fd1a225dd8ea46054bc2155c269c999d",
+      "author": "Siddhant",
+      "commit_date": "Fri Jun 5 13:44:56 2026 +0530",
+      "changed_files": [
+        "apps/frontend/src/features/orchestrator/RuntimeObservabilityPanel.tsx"
+      ],
+      "retrieval_tags": [
+        "commit",
+        "frictaai",
+        "git"
+      ],
+      "chunk_index": 0
+    }
+  },
+  "67": {
+    "chunk_id": "gh_commit_FrictaAI_797b50eb03cb_c0_184e89a43bc2",
+    "text": "[Repository: FrictaAI]\n[Source: Commit | SHA: 797b50eb]\n\nRepository: FrictaAI\nCommit: 797b50eb\nAuthor: Siddhant\nDate: Fri Jun 5 13:40:47 2026 +0530\nMessage: fix(console): authorize console fetches and realtime event streams\nFiles Changed:\n- apps/frontend/src/pages/InvestigationConsole.tsx",
+    "metadata": {
+      "source_type": "github_commit",
+      "source_url": "https://github.com/Sid13SST/FrictaAI/commit/797b50eb03cba812bf4728762fe909f12020345b",
+      "repo_name": "FrictaAI",
+      "owner": "Sid13SST",
+      "commit_sha": "797b50eb03cba812bf4728762fe909f12020345b",
+      "author": "Siddhant",
+      "commit_date": "Fri Jun 5 13:40:47 2026 +0530",
+      "changed_files": [
+        "apps/frontend/src/pages/InvestigationConsole.tsx"
+      ],
+      "retrieval_tags": [
+        "commit",
+        "frictaai",
+        "git"
+      ],
+      "chunk_index": 0
+    }
+  },
+  "68": {
+    "chunk_id": "gh_commit_FrictaAI_a89774172aa9_c0_04708eeaef64",
+    "text": "[Repository: FrictaAI]\n[Source: Commit | SHA: a8977417]\n\nRepository: FrictaAI\nCommit: a8977417\nAuthor: Siddhant\nDate: Fri Jun 5 13:21:31 2026 +0530\nMessage: feat(monitor): complete Phase 4 Part 3 execution and monitoring experience\nFiles Changed:\n- apps/backend/src/routes/agent.ts\n- apps/frontend/src/pages/WorkflowMonitor.tsx",
+    "metadata": {
+      "source_type": "github_commit",
+      "source_url": "https://github.com/Sid13SST/FrictaAI/commit/a89774172aa94ef8104825c226c2b1c64ab04d8c",
+      "repo_name": "FrictaAI",
+      "owner": "Sid13SST",
+      "commit_sha": "a89774172aa94ef8104825c226c2b1c64ab04d8c",
+      "author": "Siddhant",
+      "commit_date": "Fri Jun 5 13:21:31 2026 +0530",
+      "changed_files": [
+        "apps/backend/src/routes/agent.ts",
+        "apps/frontend/src/pages/WorkflowMonitor.tsx"
+      ],
+      "retrieval_tags": [
+        "agent",
+        "commit",
+        "frictaai",
+        "git"
+      ],
+      "chunk_index": 0
+    }
+  },
+  "69": {
     "chunk_id": "gh_repo_Sid13SST_grado_next_c3b959b8079a_c0_fe2e28e5a5a2",
     "text": "[Repository: grado_next]\n[Source: Repo Metadata]\n\nRepository: grado_next\nDescription: Gradonix - AI-Powered Subjective Hand-written Evaluation Platform that automates OCR answer extraction and grading.\nLanguage: TypeScript\nStars: 15\nTopics: nextjs, clerk, mongodb, anthropic-sdk, claude-ai, ocr",
     "metadata": {
@@ -1290,18 +1479,18 @@
         "ocr"
       ],
       "retrieval_tags": [
+        "mongodb",
+        "typescript",
         "claude-ai",
         "nextjs",
-        "typescript",
         "anthropic-sdk",
-        "mongodb",
-        "clerk",
-        "ocr"
+        "ocr",
+        "clerk"
       ],
       "chunk_index": 0
     }
   },
-  "62": {
+  "70": {
     "chunk_id": "gh_readme_Sid13SST_grado_next_0194bdbe974f_c0_988dd4f1dbea",
     "text": "[Repository: grado_next]\n[Source: README]\n\n# GradoAI",
     "metadata": {
@@ -1312,14 +1501,14 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
+        "readme",
         "documentation",
-        "grado_next",
-        "readme"
+        "grado_next"
       ],
       "chunk_index": 0
     }
   },
-  "63": {
+  "71": {
     "chunk_id": "gh_readme_Sid13SST_grado_next_0194bdbe974f_c1_7f5aa6f87d3f",
     "text": "[Repository: grado_next]\n[Source: README]\n\n## AI-Powered Educational Management Platform\n*Transforming Learning Through Intelligence*",
     "metadata": {
@@ -1330,14 +1519,14 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
+        "readme",
         "documentation",
-        "grado_next",
-        "readme"
+        "grado_next"
       ],
       "chunk_index": 1
     }
   },
-  "64": {
+  "72": {
     "chunk_id": "gh_readme_Sid13SST_grado_next_0194bdbe974f_c2_68cdd286272b",
     "text": "[Repository: grado_next]\n[Source: README]\n\n## Overview\n\n**GradoAI** is a comprehensive educational management platform that leverages artificial intelligence to enhance teaching, learning, and administrative processes across multiple schools and institutions.",
     "metadata": {
@@ -1348,14 +1537,14 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
+        "readme",
         "documentation",
-        "grado_next",
-        "readme"
+        "grado_next"
       ],
       "chunk_index": 2
     }
   },
-  "65": {
+  "73": {
     "chunk_id": "gh_readme_Sid13SST_grado_next_0194bdbe974f_c3_5a7c0572a3f5",
     "text": "[Repository: grado_next]\n[Source: README]\n\n### Tech Stack\n\n- Framework - [Next.js 15](https://nextjs.org/13)\n- Language - [TypeScript](https://www.typescriptlang.org)\n- Auth - [Clerk](https://go.clerk.com/ILdYhn7)\n- Error tracking - [<picture><img alt=\"Sentry\" src=\"public/assets/sentry.svg\">\n        </picture>]\n- Styling - [Tailwind CSS v4](https://tailwindcss.com)\n- Components - [Shadcn-ui](https://ui.shadcn.com)\n- Schema Validations - [Zod](https://zod.dev)\n- State Management - [Zustand](https://zustand-demo.pmnd.rs)\n- Search params state manager - [Nuqs](https://nuqs.47ng.com/)\n- Tables - [Tanstack Data Tables](https://ui.shadcn.com/docs/components/data-table) • [Dice table](https://www.diceui.com/docs/components/data-table)\n- Forms - [React Hook Form](https://ui.shadcn.com/docs/components/form)\n- Command+k interface - [kbar](https://kbar.vercel.app/) To remove this \n- Linting - [ESLint](https://eslint.org)\n- Pre-commit Hooks - [Husky](https://typicode.github.io/husky/)\n- Formatting - [Prettier](https://prettier.io)",
     "metadata": {
@@ -1366,19 +1555,19 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
-        "auth",
-        "typescript",
-        "nextjs",
-        "react",
-        "readme",
-        "documentation",
         "grado_next",
+        "typescript",
+        "react",
+        "nextjs",
+        "auth",
+        "documentation",
+        "readme",
         "tailwind"
       ],
       "chunk_index": 3
     }
   },
-  "66": {
+  "74": {
     "chunk_id": "gh_readme_Sid13SST_grado_next_0194bdbe974f_c4_cb33aaa09076",
     "text": "[Repository: grado_next]\n[Source: README]\n\n## Pages | Pages | Specifications | | :------------------------------------------------------------------------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | | [Signup / Signin](https://go.clerk.com/ILdYhn7) | Authentication with **Clerk** provides secure authentication and user management with multiple sign-in options including passwordless authentication, social logins, and enterprise SSO - all designed to enhance security while delivering a seamless user experience. | | [Dashboard (Overview)]() | Cards with Recharts graphs for analytics. Parallel routes in the overview sections feature independent loading, error handling, and isolated component rendering. | | [Profile](/profile) | Clerk's full-featured account management UI that allows users to manage",
     "metadata": {
@@ -1389,15 +1578,15 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
+        "readme",
         "documentation",
-        "grado_next",
         "security",
-        "readme"
+        "grado_next"
       ],
       "chunk_index": 4
     }
   },
-  "67": {
+  "75": {
     "chunk_id": "gh_readme_Sid13SST_grado_next_0194bdbe974f_c5_f467bcdd5492",
     "text": "[Repository: grado_next]\n[Source: README]\n\nerror handling, and isolated component rendering. | | [Profile](/profile) | Clerk's full-featured account management UI that allows users to manage their profile and security settings | | [Not Found](/notfound) | Not Found Page Added in the root level | | [Global Error](https://sentry.io/for/nextjs/?utm_source=github&utm_medium=paid-community&utm_campaign=general-fy26q2-nextjs&utm_content=github-banner-project-tryfree) | A centralized error page that captures and displays errors across the application. Integrated with **Sentry** to log errors, provide detailed reports, and enable replay functionality for better debugging. |",
     "metadata": {
@@ -1409,15 +1598,15 @@
       "branch": "main",
       "retrieval_tags": [
         "security",
+        "grado_next",
         "nextjs",
-        "readme",
         "documentation",
-        "grado_next"
+        "readme"
       ],
       "chunk_index": 5
     }
   },
-  "68": {
+  "76": {
     "chunk_id": "gh_readme_Sid13SST_grado_next_0194bdbe974f_c6_42d708bb760c",
     "text": "[Repository: grado_next]\n[Source: README]\n\n## Feature based organization\n\n```plaintext\nsrc/\n├── app/ # Next.js App Router directory\n│ ├── auth/ # Authentication routes\n│ │ ├── sign-in/\n│ │ └── sign-up/\n│ ├── dashboard/ # Dashboard route group\n│ │ ├── overview/ # Analytics dashboard with parallel routes\n│ │ ├── profile/ # User profile management\n│ │ ├── layout.tsx\n│ │ └── page.tsx\n│ └── api/ # API routes\n│\n├── components/ # Shared components\n│ ├── ui/ # UI components (buttons, inputs, etc.)\n│ └── layout/ # Layout components (header, sidebar, etc.)\n│\n├── features/ # Feature-based modules (Educational)\n│ ├── auth/ # Authentication components\n│ ├── overview/ # Dashboard analytics\n│ └── profile/ # User profile\n│\n├── lib/ # Core utilities and configurations\n│ ├── mongodb.ts # MongoDB connection\n│ └── utils/ # Shared utilities\n│\n├── models/ # MongoDB/Mongoose models\n│ └── index.ts # User, School, Classroom, Exam models\n│\n├── hooks/ # Custom hooks\n├── stores/ # Zustand stores\n└── types/ # TypeScript types\n```",
     "metadata": {
@@ -1428,18 +1617,18 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
-        "auth",
-        "typescript",
-        "api",
-        "readme",
-        "documentation",
+        "mongodb",
         "grado_next",
-        "mongodb"
+        "typescript",
+        "auth",
+        "documentation",
+        "api",
+        "readme"
       ],
       "chunk_index": 6
     }
   },
-  "69": {
+  "77": {
     "chunk_id": "gh_readme_Sid13SST_grado_next_0194bdbe974f_c7_373d97f13fb1",
     "text": "[Repository: grado_next]\n[Source: README]\n\n## Getting Started\n\n> [!NOTE]  \n> We are using **Next 15** with **React 19**, follow these steps:\n\n- `pnpm install` ( we have legacy-peer-deps=true added in the .npmrc)\n- Create a `.env.local` file by copying the example environment file:\n  `cp env.example.txt .env.local`\n- Add the required environment variables to the `.env.local` file.\n- `pnpm run dev`",
     "metadata": {
@@ -1450,15 +1639,15 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
+        "readme",
         "documentation",
         "grado_next",
-        "react",
-        "readme"
+        "react"
       ],
       "chunk_index": 7
     }
   },
-  "70": {
+  "78": {
     "chunk_id": "gh_readme_Sid13SST_grado_next_0194bdbe974f_c8_9b25fef69202",
     "text": "[Repository: grado_next]\n[Source: README]\n\n##### Environment Configuration Setup\n\nTo configure the environment for this project, refer to the `env.example.txt` file. This file contains the necessary environment variables required for authentication and error tracking.\n\nYou should now be able to access the application at http://localhost:3000.\n\n> [!WARNING]\n> After cloning or forking the repository, be cautious when pulling or syncing with the latest changes, as this may result in breaking conflicts.\n\nCheers! 🥂",
     "metadata": {
@@ -1469,15 +1658,15 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
-        "http",
+        "readme",
         "documentation",
-        "grado_next",
-        "readme"
+        "http",
+        "grado_next"
       ],
       "chunk_index": 8
     }
   },
-  "71": {
+  "79": {
     "chunk_id": "gh_readme_Sid13SST_grado_next_0194bdbe974f_c9_460ed4375a97",
     "text": "[Repository: grado_next]\n[Source: README]\n\n## Student Answer Extraction Implementation\n\nThe student answer extraction system has been rebuilt from scratch for improved reliability and performance. Here's an overview of the completed implementation:",
     "metadata": {
@@ -1488,14 +1677,14 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
+        "readme",
         "documentation",
-        "grado_next",
-        "readme"
+        "grado_next"
       ],
       "chunk_index": 9
     }
   },
-  "72": {
+  "80": {
     "chunk_id": "gh_readme_Sid13SST_grado_next_0194bdbe974f_c10_24930d919335",
     "text": "[Repository: grado_next]\n[Source: README]\n\n### Core Components 1. **Worker Job Handler**: - Enhanced `extractStudentAnswersJob` function in `src/app/api/queue/worker/route.ts` - Added proper error handling and status updates - Implemented a robust Claude AI prompt for answer extraction - Clear existing answers before creating new ones to avoid duplication 2. **API Routes**: - Improved `GET /api/exams/[id]/extract-answers` to retrieve extracted student answers - Enhanced `POST /api/exams/[id]/extract-answers` to accept specific submission IDs - Added error handling and proper response formatting - Implemented caching to improve performance 3. **Frontend Components**: - Updated `OCRResultsViewer` component to display extracted answers with confidence ratings - Added support for displaying answer extraction status - Improved UX to show extraction status and handle different states 4. **Models and Data Flow**: - Using `ExtractedStudentAnswer` collection in MongoDB to store answers - Properly updating submission status with",
     "metadata": {
@@ -1506,16 +1695,16 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
-        "api",
-        "readme",
-        "documentation",
+        "mongodb",
         "grado_next",
-        "mongodb"
+        "documentation",
+        "api",
+        "readme"
       ],
       "chunk_index": 10
     }
   },
-  "73": {
+  "81": {
     "chunk_id": "gh_readme_Sid13SST_grado_next_0194bdbe974f_c11_26f0942c9d82",
     "text": "[Repository: grado_next]\n[Source: README]\n\n4. **Models and Data Flow**: - Using `ExtractedStudentAnswer` collection in MongoDB to store answers - Properly updating submission status with `answerExtractionStatus` field - Harmonizing data from both legacy and new extraction systems",
     "metadata": {
@@ -1526,15 +1715,15 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
-        "mongodb",
+        "readme",
         "documentation",
         "grado_next",
-        "readme"
+        "mongodb"
       ],
       "chunk_index": 11
     }
   },
-  "74": {
+  "82": {
     "chunk_id": "gh_readme_Sid13SST_grado_next_0194bdbe974f_c12_a7f48fb6d1fa",
     "text": "[Repository: grado_next]\n[Source: README]\n\n### Testing Tools\n\nCreated `scripts/test-student-answer-extraction.js` for diagnosing extraction issues and validating the implementation.",
     "metadata": {
@@ -1545,14 +1734,14 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
+        "readme",
         "documentation",
-        "grado_next",
-        "readme"
+        "grado_next"
       ],
       "chunk_index": 12
     }
   },
-  "75": {
+  "83": {
     "chunk_id": "gh_readme_Sid13SST_grado_next_0194bdbe974f_c13_20eec2abf90e",
     "text": "[Repository: grado_next]\n[Source: README]\n\n### Workflow\n\n1. Students submit answers -> OCR processing completes\n2. Teacher triggers student answer extraction\n3. System extracts answers using AI and stores in database\n4. UI displays extracted answers with confidence ratings\n5. Teacher can review and approve extracted answers\n\nThis implementation matches the successful pattern established by the question and model answer extraction systems, ensuring consistency and reliability across the application.",
     "metadata": {
@@ -1563,15 +1752,15 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
+        "readme",
         "documentation",
         "grado_next",
-        "database",
-        "readme"
+        "database"
       ],
       "chunk_index": 13
     }
   },
-  "76": {
+  "84": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c0_f73a0ee6628f",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\nimport { GoogleGenerativeAI } from '@google/generative-ai';\nimport { Anthropic } from '@anthropic-ai/sdk';\nimport OpenAI from 'openai';\n\n// Types for student answer extraction\nexport interface ExtractedAnswer {\n  questionNumber: number;\n  answerText: string;\n  confidence: number;\n}\nexport interface AnswerExtractionRequest {\n  extractedText: string;\n  questions: Array<{\n    questionNumber: number;\n    questionText: string;\n    marks: number;\n  }>;\n}\nexport interface AnswerExtractionResponse {\n  answers: ExtractedAnswer[];\n  provider: string;\n  processingTime: number;\n}\n\n// Provider types\nexport type ExtractionProvider = 'gemini' | 'claude' | 'openai';",
     "metadata": {
@@ -1583,18 +1772,18 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
-        "lib",
+        "typescript",
+        "gemini",
         "openai",
-        "code",
-        "gemini"
+        "lib",
+        "code"
       ],
       "chunk_index": 0
     }
   },
-  "77": {
+  "85": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c1_78f5c08347bd",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\nexport interface ProviderError {\n  provider: ExtractionProvider;\n  error: string;\n  timestamp: Date;\n}\n\n// Provider interface for unified handling\ninterface AnswerExtractionProviderInterface {\n  extractAnswers(request: AnswerExtractionRequest): Promise<ExtractedAnswer[]>;\n}\n\n/**\n * Google Gemini Answer Extraction Provider\n */",
     "metadata": {
@@ -1606,17 +1795,17 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
+        "gemini",
         "lib",
-        "code",
-        "gemini"
+        "code"
       ],
       "chunk_index": 1
     }
   },
-  "78": {
+  "86": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c2_02ce886fb8b5",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\nclass GeminiExtractionProvider implements AnswerExtractionProviderInterface {\n  private client: GoogleGenerativeAI;\n  private model: any;\n\n  constructor() {\n    if (!process.env.GOOGLE_AI_API_KEY) {\n      throw new Error('Google AI API key not configured');\n    }\n    this.client = new GoogleGenerativeAI(process.env.GOOGLE_AI_API_KEY);\n    this.model = this.client.getGenerativeModel({ model: 'gemini-2.5-flash' });\n  }\n\n  async extractAnswers(\n    request: AnswerExtractionRequest\n  ): Promise<ExtractedAnswer[]> {\n    const prompt = this.buildGeminiPrompt(request);\n\n    const result = await this.model.generateContent(prompt);\n    const response = await result.response;\n    const content = response.text();\n\n    if (!content) {\n      throw new Error('No content received from Gemini API');",
     "metadata": {
@@ -1628,18 +1817,18 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
-        "api",
         "processing",
         "grado_next",
+        "typescript",
+        "gemini",
         "lib",
         "code",
-        "gemini"
+        "api"
       ],
       "chunk_index": 2
     }
   },
-  "79": {
+  "87": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c3_4d42929e3985",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n    if (!content) {\n      throw new Error('No content received from Gemini API');\n    }\n\n    return this.parseExtractionResponse(content, 'gemini');\n  }\n\n  private buildGeminiPrompt(request: AnswerExtractionRequest): string {\n    const { extractedText, questions } = request;\n\n    const questionsList = questions\n      .map((q) => {\n        const truncatedText =\n          q.questionText.length > 500\n            ? q.questionText.substring(0, 500)\n            : q.questionText;\n        return `Q${q.questionNumber}: ${truncatedText} (${q.marks} marks)`;\n      })\n      .join('\\n\\n');\n\n    // For mobile uploads with multiple pages, ensure we don't exceed reasonable token limits\n    // Split into manageable chunks while preserving context",
     "metadata": {
@@ -1651,18 +1840,18 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
-        "api",
         "processing",
         "grado_next",
+        "typescript",
+        "gemini",
         "lib",
         "code",
-        "gemini"
+        "api"
       ],
       "chunk_index": 3
     }
   },
-  "80": {
+  "88": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c4_f0fb2e800b2f",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n    // For mobile uploads with multiple pages, ensure we don't exceed reasonable token limits\n    // Split into manageable chunks while preserving context\n    const processedText = this.preprocessExtractedText(extractedText);\n\n    return `You are an expert AI assistant specializing in extracting student answers from exam papers. Your task is to carefully analyze the student's submission and extract their answers to each specific question with proper text formatting.\n\n# Exam Questions:\n${questionsList}\n\n# Student Submission Text:\n${processedText}\n\n# Extraction Guidelines:\n1. **Careful Matching**: Identify text sections that clearly answer specific questions\n2. **Question Mapping**: Match answers to correct question numbers based on context and structure",
     "metadata": {
@@ -1674,16 +1863,16 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
         "lib",
         "code"
       ],
       "chunk_index": 4
     }
   },
-  "81": {
+  "89": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c5_3f97b25d472a",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n1. **Careful Matching**: Identify text sections that clearly answer specific questions\n2. **Question Mapping**: Match answers to correct question numbers based on context and structure\n3. **Complete Extraction**: Include the full answer text, not just fragments\n4. **Text Cleaning**: Clean up excessive whitespace and formatting issues\n5. **Confidence Assessment**: Rate your confidence in each extraction\n6. **Missing Answers**: If no answer is found for a question, omit it (don't fabricate)\n\n# Text Formatting Rules:\n- **Remove excessive whitespace**: Replace multiple spaces with single spaces\n- **Normalize line breaks**: Remove unnecessary line breaks and empty lines\n- **Clean formatting**: Remove OCR artifacts, extra punctuation, and formatting noise",
     "metadata": {
@@ -1695,16 +1884,16 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
         "lib",
         "code"
       ],
       "chunk_index": 5
     }
   },
-  "82": {
+  "90": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c6_bb6dbde8291f",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n- **Normalize line breaks**: Remove unnecessary line breaks and empty lines\n- **Clean formatting**: Remove OCR artifacts, extra punctuation, and formatting noise\n- **Preserve meaning**: Keep the student's original words and sentence structure\n- **Join fragments**: Combine fragmented sentences that belong together\n- **Trim whitespace**: Remove leading/trailing spaces from the answer text\n\n# Confidence Scoring:\n- **High (0.8-1.0)**: Clear, complete answer that directly addresses the question\n- **Medium (0.6-0.8)**: Partial answer or answer with some uncertainty in matching\n- **Low (0.4-0.6)**: Unclear or very incomplete answer\n- **Skip (<0.4)**: Too uncertain to include\n\n# Response Format:\nReturn ONLY a valid JSON array with this exact structure:\n\n[\n  {\n    \"questionNumber\": 1,",
     "metadata": {
@@ -1716,16 +1905,16 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
         "lib",
         "code"
       ],
       "chunk_index": 6
     }
   },
-  "83": {
+  "91": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c7_5f2293dd0fec",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n  {\n    \"questionNumber\": 1,\n    \"answerText\": \"Clean, properly formatted answer text with normalized spacing and no excessive whitespace\",\n    \"confidence\": 0.95\n  },\n  {\n    \"questionNumber\": 2,\n    \"answerText\": \"Another clean answer with proper formatting and minimal whitespace\", \n    \"confidence\": 0.85\n  }\n]\n\n# Critical Text Processing Instructions:\n1. **Whitespace Normalization**: Replace multiple consecutive spaces with single spaces\n2. **Line Break Cleanup**: Remove unnecessary line breaks that break sentence flow\n3. **Sentence Reconstruction**: Join fragmented sentences that were split by OCR\n4. **Punctuation Cleanup**: Fix spacing around punctuation marks\n5. **Word Boundary Fixes**: Correct words that were split incorrectly by OCR",
     "metadata": {
@@ -1737,16 +1926,16 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
         "lib",
         "code"
       ],
       "chunk_index": 7
     }
   },
-  "84": {
+  "92": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c8_db37fd5d484a",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n4. **Punctuation Cleanup**: Fix spacing around punctuation marks\n5. **Word Boundary Fixes**: Correct words that were split incorrectly by OCR\n6. **Remove Artifacts**: Eliminate OCR artifacts like random characters or symbols\n\n# Examples of Text Cleaning:\n- Input: \"Photosynthesis    is   the   process\\n\\nby which plants\\n make food\"\n- Output: \"Photosynthesis is the process by which plants make food\"\n\n- Input: \"The water   cycle includes\\nevaporation ,  condensation\\nand precipitation\"\n- Output: \"The water cycle includes evaporation, condensation and precipitation\"\n\n# Important Rules:\n- Return ONLY the JSON array, no additional text or explanation\n- Use proper JSON formatting with double quotes\n- Include only answers you're confident about (confidence >= 0.4)",
     "metadata": {
@@ -1758,16 +1947,16 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
         "lib",
         "code"
       ],
       "chunk_index": 8
     }
   },
-  "85": {
+  "93": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c9_cc8059c1cd47",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n- Use proper JSON formatting with double quotes\n- Include only answers you're confident about (confidence >= 0.4)\n- **CLEAN THE TEXT**: Apply all formatting rules to make text readable\n- Use integer question numbers matching the exam questions\n- Confidence must be a decimal between 0.0 and 1.0\n- **answerText must be clean, readable, and properly formatted**\n\nAnalyze the submission carefully, clean up the text formatting, and extract the student's answers now.`;\n  }\n\n  /**\n   * Preprocess extracted text to handle very long content from multi-page submissions\n   * This ensures we don't exceed token limits while preserving all content\n   */\n  private preprocessExtractedText(extractedText: string): string {\n    // If text is reasonably sized, return as-is",
     "metadata": {
@@ -1779,16 +1968,16 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
         "lib",
         "code"
       ],
       "chunk_index": 9
     }
   },
-  "86": {
+  "94": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c10_9d68672d1f41",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n  private preprocessExtractedText(extractedText: string): string {\n    // If text is reasonably sized, return as-is\n    if (extractedText.length <= 50000) {\n      // ~50k chars = ~12-15k tokens\n      return extractedText;\n    }\n\n    console.log(\n      `⚠️ [Gemini Extraction] Large text detected (${extractedText.length} chars), applying smart preprocessing...`\n    );\n\n    // For very long text (mobile multi-page uploads), we need to be smart\n    // Split by sections and ensure we capture all parts\n    const sections = this.splitTextIntoSections(extractedText);\n\n    // If we have multiple sections (likely from multiple pages),\n    // process them strategically to ensure nothing is missed\n    if (sections.length > 1) {\n      console.log(",
     "metadata": {
@@ -1800,17 +1989,17 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
+        "gemini",
         "lib",
-        "code",
-        "gemini"
+        "code"
       ],
       "chunk_index": 10
     }
   },
-  "87": {
+  "95": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c11_5fa9e9745e8e",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n    if (sections.length > 1) {\n      console.log(\n        `📄 [Gemini Extraction] Found ${sections.length} text sections, ensuring comprehensive processing...`\n      );\n\n      // Combine sections with clear markers to help AI understand page boundaries\n      return sections\n        .map(\n          (section, index) => `=== PAGE/SECTION ${index + 1} ===\\n${section}`\n        )\n        .join('\\n\\n');\n    }\n\n    // For single long section, truncate smartly (keep beginning and end)\n    const maxLength = 45000; // Leave room for questions and prompt\n    if (extractedText.length > maxLength) {\n      const halfLength = Math.floor(maxLength / 2);\n      const beginning = extractedText.substring(0, halfLength);\n      const ending = extractedText.substring(extractedText.length - halfLength);\n",
     "metadata": {
@@ -1822,17 +2011,17 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
+        "gemini",
         "lib",
-        "code",
-        "gemini"
+        "code"
       ],
       "chunk_index": 11
     }
   },
-  "88": {
+  "96": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c12_c3246f2abcc3",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n      const ending = extractedText.substring(extractedText.length - halfLength);\n\n      console.log(\n        `✂️ [Gemini Extraction] Text too long, keeping first ${halfLength} and last ${halfLength} characters`\n      );\n\n      return `${beginning}\\n\\n[... MIDDLE CONTENT TRUNCATED FOR PROCESSING ...]\\n\\n${ending}`;\n    }\n\n    return extractedText;\n  }\n\n  /**\n   * Split text into logical sections (likely from different pages/images)\n   */\n  private splitTextIntoSections(text: string): string[] {\n    // Look for section markers that were added during OCR combination\n    const sectionMarkers = text.split(/=== Additional File \\d+.*?===/g);\n\n    if (sectionMarkers.length > 1) {\n      // We have explicit section markers from multi-file OCR",
     "metadata": {
@@ -1844,17 +2033,17 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
+        "gemini",
         "lib",
-        "code",
-        "gemini"
+        "code"
       ],
       "chunk_index": 12
     }
   },
-  "89": {
+  "97": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c13_5bb35b10aee9",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n    if (sectionMarkers.length > 1) {\n      // We have explicit section markers from multi-file OCR\n      return sectionMarkers.filter((section) => section.trim().length > 0);\n    }\n\n    // No explicit markers, try to split by natural boundaries\n    // Look for patterns that suggest page/section breaks\n    const naturalSections = text.split(/\\n\\s*\\n\\s*\\n/); // Multiple blank lines\n\n    if (naturalSections.length > 2) {\n      return naturalSections.filter((section) => section.trim().length > 100); // Ignore very small sections\n    }\n\n    // If no clear sections, return as single section\n    return [text];\n  }\n\n  private cleanAnswerText(text: string): string {\n    if (!text || typeof text !== 'string') {\n      return text;\n    }\n\n    return (\n      text",
     "metadata": {
@@ -1866,16 +2055,16 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
         "lib",
         "code"
       ],
       "chunk_index": 13
     }
   },
-  "90": {
+  "98": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c14_a56550e34fbb",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n    return (\n      text\n        // Remove excessive whitespace (multiple spaces/tabs)\n        .replace(/\\s+/g, ' ')\n        // Remove unnecessary line breaks that break sentence flow\n        .replace(/\\n+/g, ' ')\n        // Fix spacing around punctuation\n        .replace(/\\s+([,.!?;:])/g, '$1')\n        .replace(/([,.!?;:])\\s+/g, '$1 ')\n        // Remove leading/trailing whitespace\n        .trim()\n        // Fix double spaces that might remain\n        .replace(/\\s{2,}/g, ' ')\n        // Clean up common OCR artifacts\n        .replace(/\\s+\\./g, '.')\n        .replace(/\\s+,/g, ',')\n        // Ensure proper sentence spacing\n        .replace(/\\.([A-Z])/g, '. $1')\n        .replace(/,([A-Z])/g, ', $1')\n    );\n  }\n\n  private parseExtractionResponse(\n    content: string,\n    provider: string",
     "metadata": {
@@ -1887,16 +2076,16 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
         "lib",
         "code"
       ],
       "chunk_index": 14
     }
   },
-  "91": {
+  "99": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c15_939ad5b0e2d3",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n    content: string,\n    provider: string\n  ): ExtractedAnswer[] {\n    // Extract JSON from response\n    const jsonMatch = content.match(/\\[[\\s\\S]*\\]/);\n    if (!jsonMatch) {\n      console.error(\n        `❌ [${provider.toUpperCase()}] No valid JSON array found in response:`,\n        content.substring(0, 500)\n      );\n      throw new Error(`No valid JSON array found in ${provider} response`);\n    }\n\n    let cleanedJson = jsonMatch[0];\n\n    // Clean up JSON string\n    cleanedJson = cleanedJson\n      .replace(/[\\u0000-\\u001F\\u007F-\\u009F]/g, '') // Remove control characters\n      .replace(/[^\\x20-\\x7E]/g, ' ') // Replace non-ASCII with spaces\n      .replace(/\\s+/g, ' ') // Normalize whitespace\n      .replace(/,\\s*}/g, '}') // Remove trailing commas\n      .replace(/,\\s*]/g, ']');\n\n    try {",
     "metadata": {
@@ -1908,16 +2097,16 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
         "lib",
         "code"
       ],
       "chunk_index": 15
     }
   },
-  "92": {
+  "100": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c16_23ff381b2494",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n\n    try {\n      const extractedAnswers = JSON.parse(cleanedJson);\n\n      if (!Array.isArray(extractedAnswers)) {\n        throw new Error(`${provider} response is not an array`);\n      }\n\n      // Validate and filter answers with text cleaning\n      const validAnswers = extractedAnswers\n        .filter((answer: any) => {\n          return (\n            typeof answer.questionNumber === 'number' &&\n            typeof answer.answerText === 'string' &&\n            typeof answer.confidence === 'number' &&\n            answer.confidence >= 0 &&\n            answer.confidence <= 1 &&\n            answer.answerText.trim().length > 0\n          );\n        })\n        .map((answer: any) => ({\n          ...answer,\n          answerText: this.cleanAnswerText(answer.answerText)\n        }));\n",
     "metadata": {
@@ -1929,16 +2118,16 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
         "lib",
         "code"
       ],
       "chunk_index": 16
     }
   },
-  "93": {
+  "101": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c17_d57406e16758",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n        }));\n\n      if (validAnswers.length === 0) {\n        throw new Error(`No valid answers found in ${provider} response`);\n      }\n\n      return validAnswers;\n    } catch (parseError) {\n      console.error(\n        `❌ [${provider.toUpperCase()}] JSON parse error:`,\n        parseError\n      );\n      console.error(\n        `❌ [${provider.toUpperCase()}] Cleaned JSON:`,\n        cleanedJson.substring(0, 500)\n      );\n      throw new Error(`Failed to parse ${provider} response JSON`);\n    }\n  }\n}\n\n/**\n * Anthropic Claude Answer Extraction Provider\n */",
     "metadata": {
@@ -1950,16 +2139,16 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
         "lib",
         "code"
       ],
       "chunk_index": 17
     }
   },
-  "94": {
+  "102": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c18_fb00a02770a1",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\nclass ClaudeExtractionProvider implements AnswerExtractionProviderInterface {\n  private client: Anthropic;\n\n  constructor() {\n    if (!process.env.ANTHROPIC_API_KEY) {\n      throw new Error('Anthropic API key not configured');\n    }\n    this.client = new Anthropic({\n      apiKey: process.env.ANTHROPIC_API_KEY\n    });\n  }\n\n  async extractAnswers(\n    request: AnswerExtractionRequest\n  ): Promise<ExtractedAnswer[]> {\n    const prompt = this.buildClaudePrompt(request);\n\n    const response = await this.client.messages.create({\n      model: 'claude-haiku-4-5-20251001',\n      max_tokens: 4000,\n      temperature: 0,\n      messages: [{ role: 'user', content: prompt }]\n    });\n\n    const content = response.content[0];\n    if (content.type !== 'text') {",
     "metadata": {
@@ -1971,17 +2160,17 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
-        "api",
         "processing",
         "grado_next",
+        "typescript",
         "lib",
-        "code"
+        "code",
+        "api"
       ],
       "chunk_index": 18
     }
   },
-  "95": {
+  "103": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c19_260970d75971",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n    const content = response.content[0];\n    if (content.type !== 'text') {\n      throw new Error('Unexpected response type from Claude API');\n    }\n\n    if (!content.text) {\n      throw new Error('No content received from Claude API');\n    }\n\n    return this.parseExtractionResponse(content.text, 'claude');\n  }\n\n  private buildClaudePrompt(request: AnswerExtractionRequest): string {\n    const { extractedText, questions } = request;\n\n    const questionsList = questions\n      .map((q) => {\n        const truncatedText =\n          q.questionText.length > 500\n            ? q.questionText.substring(0, 500)\n            : q.questionText;\n        return `Q${q.questionNumber}: ${truncatedText} (${q.marks} marks)`;\n      })\n      .join('\\n\\n');\n",
     "metadata": {
@@ -1993,17 +2182,17 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
-        "api",
         "processing",
         "grado_next",
+        "typescript",
         "lib",
-        "code"
+        "code",
+        "api"
       ],
       "chunk_index": 19
     }
   },
-  "96": {
+  "104": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c20_8dcb5c9cde57",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n      .join('\\n\\n');\n\n    // Use the same preprocessing as Gemini to handle long text\n    const processedText = this.preprocessExtractedText(extractedText);\n\n    return `You are an AI assistant helping extract student answers from a scanned exam paper. \nAnalyze the student's submission text and extract their answers to each question.\n\n# Questions in the exam:\n${questionsList}\n\n# Student submission text:\n${processedText}\n\n# Instructions\n1. Identify sections of text that are answers to specific questions\n2. Match answers to question numbers\n3. If you can't find an answer for a question, don't make one up\n4. Format your response as a JSON array of answer objects\n5. Return ONLY valid JSON without any additional text\n\n# Output format\n[\n  {\n    \"questionNumber\": 1,",
     "metadata": {
@@ -2015,17 +2204,17 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
+        "gemini",
         "lib",
-        "code",
-        "gemini"
+        "code"
       ],
       "chunk_index": 20
     }
   },
-  "97": {
+  "105": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c21_0eab17857eff",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n  {\n    \"questionNumber\": 1,\n    \"answerText\": \"The complete extracted answer for question 1\",\n    \"confidence\": 0.95\n  },\n  {\n    \"questionNumber\": 2,\n    \"answerText\": \"The complete extracted answer for question 2\",\n    \"confidence\": 0.85\n  }\n]\n\nFor each answer:\n- questionNumber: The question number (integer)\n- answerText: The complete student's answer text\n- confidence: Your confidence in this extraction (0.0-1.0)\n\nFor confidence scores:\n- High confidence (0.8-1.0): Clear answer that directly addresses the question\n- Medium confidence (0.6-0.8): Answer that seems to address the question but might be incomplete\n- Low confidence (<0.6): Unclear if this text is the answer to this question\n\nReturn ONLY the JSON array with no additional text.`;\n  }\n\n  /**",
     "metadata": {
@@ -2037,16 +2226,16 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
         "lib",
         "code"
       ],
       "chunk_index": 21
     }
   },
-  "98": {
+  "106": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c22_af2912b57c58",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n\n  /**\n   * Preprocess extracted text to handle very long content from multi-page submissions\n   * This ensures we don't exceed token limits while preserving all content\n   */\n  private preprocessExtractedText(extractedText: string): string {\n    // Claude has a 200k token limit, so we're more conservative\n    if (extractedText.length <= 40000) {\n      // ~40k chars = ~10-12k tokens\n      return extractedText;\n    }\n\n    console.log(\n      `⚠️ [Claude Extraction] Large text detected (${extractedText.length} chars), applying smart preprocessing...`\n    );\n\n    // For very long text (mobile multi-page uploads), we need to be smart\n    // Split by sections and ensure we capture all parts\n    const sections = this.splitTextIntoSections(extractedText);\n",
     "metadata": {
@@ -2058,16 +2247,16 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
         "lib",
         "code"
       ],
       "chunk_index": 22
     }
   },
-  "99": {
+  "107": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c23_b31e8a265ada",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n    const sections = this.splitTextIntoSections(extractedText);\n\n    // If we have multiple sections (likely from multiple pages),\n    // process them strategically to ensure nothing is missed\n    if (sections.length > 1) {\n      console.log(\n        `📄 [Claude Extraction] Found ${sections.length} text sections, ensuring comprehensive processing...`\n      );\n\n      // Combine sections with clear markers to help AI understand page boundaries\n      return sections\n        .map(\n          (section, index) => `=== PAGE/SECTION ${index + 1} ===\\n${section}`\n        )\n        .join('\\n\\n');\n    }\n\n    // For single long section, truncate smartly (keep beginning and end)\n    const maxLength = 35000; // Leave room for questions and prompt\n    if (extractedText.length > maxLength) {",
     "metadata": {
@@ -2079,16 +2268,16 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
         "lib",
         "code"
       ],
       "chunk_index": 23
     }
   },
-  "100": {
+  "108": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c24_64a9552fbe33",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n    const maxLength = 35000; // Leave room for questions and prompt\n    if (extractedText.length > maxLength) {\n      const halfLength = Math.floor(maxLength / 2);\n      const beginning = extractedText.substring(0, halfLength);\n      const ending = extractedText.substring(extractedText.length - halfLength);\n\n      console.log(\n        `✂️ [Claude Extraction] Text too long, keeping first ${halfLength} and last ${halfLength} characters`\n      );\n\n      return `${beginning}\\n\\n[... MIDDLE CONTENT TRUNCATED FOR PROCESSING ...]\\n\\n${ending}`;\n    }\n\n    return extractedText;\n  }\n\n  /**\n   * Split text into logical sections (likely from different pages/images)\n   */\n  private splitTextIntoSections(text: string): string[] {\n    // Look for section markers that were added during OCR combination",
     "metadata": {
@@ -2100,16 +2289,16 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
         "lib",
         "code"
       ],
       "chunk_index": 24
     }
   },
-  "101": {
+  "109": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c25_2a9e9d67e9e3",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n  private splitTextIntoSections(text: string): string[] {\n    // Look for section markers that were added during OCR combination\n    const sectionMarkers = text.split(/=== Additional File \\d+.*?===/g);\n\n    if (sectionMarkers.length > 1) {\n      // We have explicit section markers from multi-file OCR\n      return sectionMarkers.filter((section) => section.trim().length > 0);\n    }\n\n    // No explicit markers, try to split by natural boundaries\n    // Look for patterns that suggest page/section breaks\n    const naturalSections = text.split(/\\n\\s*\\n\\s*\\n/); // Multiple blank lines\n\n    if (naturalSections.length > 2) {\n      return naturalSections.filter((section) => section.trim().length > 100); // Ignore very small sections\n    }\n\n    // If no clear sections, return as single section",
     "metadata": {
@@ -2121,16 +2310,16 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
         "lib",
         "code"
       ],
       "chunk_index": 25
     }
   },
-  "102": {
+  "110": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c26_4eceee597791",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n\n    // If no clear sections, return as single section\n    return [text];\n  }\n\n  private cleanAnswerText(text: string): string {\n    if (!text || typeof text !== 'string') {\n      return text;\n    }\n\n    return (\n      text\n        // Remove excessive whitespace (multiple spaces/tabs)\n        .replace(/\\s+/g, ' ')\n        // Remove unnecessary line breaks that break sentence flow\n        .replace(/\\n+/g, ' ')\n        // Fix spacing around punctuation\n        .replace(/\\s+([,.!?;:])/g, '$1')\n        .replace(/([,.!?;:])\\s+/g, '$1 ')\n        // Remove leading/trailing whitespace\n        .trim()\n        // Fix double spaces that might remain\n        .replace(/\\s{2,}/g, ' ')\n        // Clean up common OCR artifacts\n        .replace(/\\s+\\./g, '.')\n        .replace(/\\s+,/g, ',')",
     "metadata": {
@@ -2142,16 +2331,16 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
         "lib",
         "code"
       ],
       "chunk_index": 26
     }
   },
-  "103": {
+  "111": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c27_5ab86a4fbdbd",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n        .replace(/\\s+\\./g, '.')\n        .replace(/\\s+,/g, ',')\n        // Ensure proper sentence spacing\n        .replace(/\\.([A-Z])/g, '. $1')\n        .replace(/,([A-Z])/g, ', $1')\n    );\n  }\n\n  private parseExtractionResponse(\n    content: string,\n    provider: string\n  ): ExtractedAnswer[] {\n    // Same parsing logic as Gemini\n    const jsonMatch = content.match(/\\[[\\s\\S]*\\]/);\n    if (!jsonMatch) {\n      console.error(\n        `❌ [${provider.toUpperCase()}] No valid JSON array found in response:`,\n        content.substring(0, 500)\n      );\n      throw new Error(`No valid JSON array found in ${provider} response`);\n    }\n\n    let cleanedJson = jsonMatch[0];\n    cleanedJson = cleanedJson\n      .replace(/[\\u0000-\\u001F\\u007F-\\u009F]/g, '')\n      .replace(/[^\\x20-\\x7E]/g, ' ')",
     "metadata": {
@@ -2163,17 +2352,17 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
+        "gemini",
         "lib",
-        "code",
-        "gemini"
+        "code"
       ],
       "chunk_index": 27
     }
   },
-  "104": {
+  "112": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c28_0c95a4315fce",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n      .replace(/[\\u0000-\\u001F\\u007F-\\u009F]/g, '')\n      .replace(/[^\\x20-\\x7E]/g, ' ')\n      .replace(/\\s+/g, ' ')\n      .replace(/,\\s*}/g, '}')\n      .replace(/,\\s*]/g, ']');\n\n    try {\n      const extractedAnswers = JSON.parse(cleanedJson);\n\n      if (!Array.isArray(extractedAnswers)) {\n        throw new Error(`${provider} response is not an array`);\n      }\n\n      const validAnswers = extractedAnswers\n        .filter((answer: any) => {\n          return (\n            typeof answer.questionNumber === 'number' &&\n            typeof answer.answerText === 'string' &&\n            typeof answer.confidence === 'number' &&\n            answer.confidence >= 0 &&\n            answer.confidence <= 1 &&\n            answer.answerText.trim().length > 0\n          );\n        })",
     "metadata": {
@@ -2185,16 +2374,16 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
         "lib",
         "code"
       ],
       "chunk_index": 28
     }
   },
-  "105": {
+  "113": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c29_9ce9326b2019",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n          );\n        })\n        .map((answer: any) => ({\n          ...answer,\n          answerText: this.cleanAnswerText(answer.answerText)\n        }));\n\n      if (validAnswers.length === 0) {\n        throw new Error(`No valid answers found in ${provider} response`);\n      }\n\n      return validAnswers;\n    } catch (parseError) {\n      console.error(\n        `❌ [${provider.toUpperCase()}] JSON parse error:`,\n        parseError\n      );\n      throw new Error(`Failed to parse ${provider} response JSON`);\n    }\n  }\n}\n\n/**\n * OpenAI Answer Extraction Provider\n */",
     "metadata": {
@@ -2206,17 +2395,17 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
-        "lib",
+        "typescript",
         "openai",
+        "lib",
         "code"
       ],
       "chunk_index": 29
     }
   },
-  "106": {
+  "114": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c30_f6ce108518c0",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\nclass OpenAIExtractionProvider implements AnswerExtractionProviderInterface {\n  private client: OpenAI;\n\n  constructor() {\n    if (!process.env.OPENAI_API_KEY) {\n      throw new Error('OpenAI API key not configured');\n    }\n    this.client = new OpenAI({\n      apiKey: process.env.OPENAI_API_KEY\n    });\n  }\n\n  async extractAnswers(\n    request: AnswerExtractionRequest\n  ): Promise<ExtractedAnswer[]> {\n    const prompt = this.buildOpenAIPrompt(request);\n\n    const response = await this.client.chat.completions.create({\n      model: 'gpt-4o-mini',\n      messages: [{ role: 'user', content: prompt }],\n      max_tokens: 4000,\n      temperature: 0\n    });\n\n    const content = response.choices[0]?.message?.content;\n    if (!content) {\n      throw new Error('No content received from OpenAI API');",
     "metadata": {
@@ -2228,18 +2417,18 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
-        "api",
         "processing",
         "grado_next",
-        "lib",
+        "typescript",
         "openai",
-        "code"
+        "lib",
+        "code",
+        "api"
       ],
       "chunk_index": 30
     }
   },
-  "107": {
+  "115": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c31_4e299ed882d7",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n    if (!content) {\n      throw new Error('No content received from OpenAI API');\n    }\n\n    return this.parseExtractionResponse(content, 'openai');\n  }\n\n  private buildOpenAIPrompt(request: AnswerExtractionRequest): string {\n    const { extractedText, questions } = request;\n\n    const questionsList = questions\n      .map((q) => {\n        const truncatedText =\n          q.questionText.length > 500\n            ? q.questionText.substring(0, 500)\n            : q.questionText;\n        return `Q${q.questionNumber}: ${truncatedText} (${q.marks} marks)`;\n      })\n      .join('\\n\\n');\n\n    // Use the same preprocessing to handle long text\n    const processedText = this.preprocessExtractedText(extractedText);\n",
     "metadata": {
@@ -2251,18 +2440,18 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
-        "api",
         "processing",
         "grado_next",
-        "lib",
+        "typescript",
         "openai",
-        "code"
+        "lib",
+        "code",
+        "api"
       ],
       "chunk_index": 31
     }
   },
-  "108": {
+  "116": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c32_82458db72ce0",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n    const processedText = this.preprocessExtractedText(extractedText);\n\n    return `Extract student answers from an exam submission. Analyze the text and identify answers to specific questions.\n\n# Exam Questions:\n${questionsList}\n\n# Student Submission:\n${processedText}\n\n# Task:\n1. Match text sections to specific questions\n2. Extract complete answers\n3. Assess confidence in each match\n4. Return only high-confidence extractions\n\n# Output Format (JSON only):\n[\n  {\n    \"questionNumber\": 1,\n    \"answerText\": \"Complete answer text\",\n    \"confidence\": 0.95\n  }\n]\n\nRules:\n- Return ONLY valid JSON array\n- Include only confident matches (>= 0.4)\n- Use exact question numbers\n- Preserve original answer text\n- Confidence: 0.0-1.0 scale\n\nExtract the answers now:`;\n  }\n\n  /**",
     "metadata": {
@@ -2274,16 +2463,16 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
         "lib",
         "code"
       ],
       "chunk_index": 32
     }
   },
-  "109": {
+  "117": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c33_17ddb0823092",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n\n  /**\n   * Preprocess extracted text to handle very long content from multi-page submissions\n   * This ensures we don't exceed token limits while preserving all content\n   */\n  private preprocessExtractedText(extractedText: string): string {\n    // OpenAI has ~128k tokens, so we can be a bit more generous but still conservative\n    if (extractedText.length <= 45000) {\n      // ~45k chars = ~11-13k tokens\n      return extractedText;\n    }\n\n    console.log(\n      `⚠️ [OpenAI Extraction] Large text detected (${extractedText.length} chars), applying smart preprocessing...`\n    );\n\n    // For very long text (mobile multi-page uploads), we need to be smart\n    // Split by sections and ensure we capture all parts\n    const sections = this.splitTextIntoSections(extractedText);\n",
     "metadata": {
@@ -2295,17 +2484,17 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
-        "lib",
+        "typescript",
         "openai",
+        "lib",
         "code"
       ],
       "chunk_index": 33
     }
   },
-  "110": {
+  "118": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c34_003530d5d4a0",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n    const sections = this.splitTextIntoSections(extractedText);\n\n    // If we have multiple sections (likely from multiple pages),\n    // process them strategically to ensure nothing is missed\n    if (sections.length > 1) {\n      console.log(\n        `📄 [OpenAI Extraction] Found ${sections.length} text sections, ensuring comprehensive processing...`\n      );\n\n      // Combine sections with clear markers to help AI understand page boundaries\n      return sections\n        .map(\n          (section, index) => `=== PAGE/SECTION ${index + 1} ===\\n${section}`\n        )\n        .join('\\n\\n');\n    }\n\n    // For single long section, truncate smartly (keep beginning and end)\n    const maxLength = 40000; // Leave room for questions and prompt\n    if (extractedText.length > maxLength) {",
     "metadata": {
@@ -2317,17 +2506,17 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
-        "lib",
+        "typescript",
         "openai",
+        "lib",
         "code"
       ],
       "chunk_index": 34
     }
   },
-  "111": {
+  "119": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c35_209a3f99d81f",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n    const maxLength = 40000; // Leave room for questions and prompt\n    if (extractedText.length > maxLength) {\n      const halfLength = Math.floor(maxLength / 2);\n      const beginning = extractedText.substring(0, halfLength);\n      const ending = extractedText.substring(extractedText.length - halfLength);\n\n      console.log(\n        `✂️ [OpenAI Extraction] Text too long, keeping first ${halfLength} and last ${halfLength} characters`\n      );\n\n      return `${beginning}\\n\\n[... MIDDLE CONTENT TRUNCATED FOR PROCESSING ...]\\n\\n${ending}`;\n    }\n\n    return extractedText;\n  }\n\n  /**\n   * Split text into logical sections (likely from different pages/images)\n   */\n  private splitTextIntoSections(text: string): string[] {\n    // Look for section markers that were added during OCR combination",
     "metadata": {
@@ -2339,17 +2528,17 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
-        "lib",
+        "typescript",
         "openai",
+        "lib",
         "code"
       ],
       "chunk_index": 35
     }
   },
-  "112": {
+  "120": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c36_2a9e9d67e9e3",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n  private splitTextIntoSections(text: string): string[] {\n    // Look for section markers that were added during OCR combination\n    const sectionMarkers = text.split(/=== Additional File \\d+.*?===/g);\n\n    if (sectionMarkers.length > 1) {\n      // We have explicit section markers from multi-file OCR\n      return sectionMarkers.filter((section) => section.trim().length > 0);\n    }\n\n    // No explicit markers, try to split by natural boundaries\n    // Look for patterns that suggest page/section breaks\n    const naturalSections = text.split(/\\n\\s*\\n\\s*\\n/); // Multiple blank lines\n\n    if (naturalSections.length > 2) {\n      return naturalSections.filter((section) => section.trim().length > 100); // Ignore very small sections\n    }\n\n    // If no clear sections, return as single section",
     "metadata": {
@@ -2361,16 +2550,16 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
         "lib",
         "code"
       ],
       "chunk_index": 36
     }
   },
-  "113": {
+  "121": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c37_4eceee597791",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n\n    // If no clear sections, return as single section\n    return [text];\n  }\n\n  private cleanAnswerText(text: string): string {\n    if (!text || typeof text !== 'string') {\n      return text;\n    }\n\n    return (\n      text\n        // Remove excessive whitespace (multiple spaces/tabs)\n        .replace(/\\s+/g, ' ')\n        // Remove unnecessary line breaks that break sentence flow\n        .replace(/\\n+/g, ' ')\n        // Fix spacing around punctuation\n        .replace(/\\s+([,.!?;:])/g, '$1')\n        .replace(/([,.!?;:])\\s+/g, '$1 ')\n        // Remove leading/trailing whitespace\n        .trim()\n        // Fix double spaces that might remain\n        .replace(/\\s{2,}/g, ' ')\n        // Clean up common OCR artifacts\n        .replace(/\\s+\\./g, '.')\n        .replace(/\\s+,/g, ',')",
     "metadata": {
@@ -2382,16 +2571,16 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
         "lib",
         "code"
       ],
       "chunk_index": 37
     }
   },
-  "114": {
+  "122": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c38_52af30d18de8",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n        .replace(/\\s+\\./g, '.')\n        .replace(/\\s+,/g, ',')\n        // Ensure proper sentence spacing\n        .replace(/\\.([A-Z])/g, '. $1')\n        .replace(/,([A-Z])/g, ', $1')\n    );\n  }\n\n  private parseExtractionResponse(\n    content: string,\n    provider: string\n  ): ExtractedAnswer[] {\n    // Same parsing logic as other providers\n    const jsonMatch = content.match(/\\[[\\s\\S]*\\]/);\n    if (!jsonMatch) {\n      console.error(\n        `❌ [${provider.toUpperCase()}] No valid JSON array found in response:`,\n        content.substring(0, 500)\n      );\n      throw new Error(`No valid JSON array found in ${provider} response`);\n    }\n\n    let cleanedJson = jsonMatch[0];\n    cleanedJson = cleanedJson\n      .replace(/[\\u0000-\\u001F\\u007F-\\u009F]/g, '')\n      .replace(/[^\\x20-\\x7E]/g, ' ')",
     "metadata": {
@@ -2403,16 +2592,16 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
         "lib",
         "code"
       ],
       "chunk_index": 38
     }
   },
-  "115": {
+  "123": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c39_0c95a4315fce",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n      .replace(/[\\u0000-\\u001F\\u007F-\\u009F]/g, '')\n      .replace(/[^\\x20-\\x7E]/g, ' ')\n      .replace(/\\s+/g, ' ')\n      .replace(/,\\s*}/g, '}')\n      .replace(/,\\s*]/g, ']');\n\n    try {\n      const extractedAnswers = JSON.parse(cleanedJson);\n\n      if (!Array.isArray(extractedAnswers)) {\n        throw new Error(`${provider} response is not an array`);\n      }\n\n      const validAnswers = extractedAnswers\n        .filter((answer: any) => {\n          return (\n            typeof answer.questionNumber === 'number' &&\n            typeof answer.answerText === 'string' &&\n            typeof answer.confidence === 'number' &&\n            answer.confidence >= 0 &&\n            answer.confidence <= 1 &&\n            answer.answerText.trim().length > 0\n          );\n        })",
     "metadata": {
@@ -2424,16 +2613,16 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
         "lib",
         "code"
       ],
       "chunk_index": 39
     }
   },
-  "116": {
+  "124": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c40_219f0cd84c4f",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n          );\n        })\n        .map((answer: any) => ({\n          ...answer,\n          answerText: this.cleanAnswerText(answer.answerText)\n        }));\n\n      if (validAnswers.length === 0) {\n        throw new Error(`No valid answers found in ${provider} response`);\n      }\n\n      return validAnswers;\n    } catch (parseError) {\n      console.error(\n        `❌ [${provider.toUpperCase()}] JSON parse error:`,\n        parseError\n      );\n      throw new Error(`Failed to parse ${provider} response JSON`);\n    }\n  }\n}\n\n/**\n * Multi-Provider Student Answer Extraction Service\n */",
     "metadata": {
@@ -2445,16 +2634,16 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
         "lib",
         "code"
       ],
       "chunk_index": 40
     }
   },
-  "117": {
+  "125": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c41_522579e0646e",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\nexport class StudentAnswerExtractionService {\n  private static readonly PROVIDERS: ExtractionProvider[] = [\n    'gemini',\n    'claude',\n    'openai'\n  ];\n\n  private static getProvider(\n    providerName: ExtractionProvider\n  ): AnswerExtractionProviderInterface {\n    switch (providerName) {\n      case 'gemini':\n        return new GeminiExtractionProvider();\n      case 'claude':\n        return new ClaudeExtractionProvider();\n      case 'openai':\n        return new OpenAIExtractionProvider();\n      default:\n        throw new Error(`Unknown provider: ${providerName}`);\n    }\n  }\n\n  /**\n   * Extract student answers with automatic provider fallback\n   * Enhanced to handle very long text from multi-page mobile uploads\n   */\n  static async extractAnswers(\n    request: AnswerExtractionRequest",
     "metadata": {
@@ -2466,18 +2655,18 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
-        "lib",
+        "typescript",
+        "gemini",
         "openai",
-        "code",
-        "gemini"
+        "lib",
+        "code"
       ],
       "chunk_index": 41
     }
   },
-  "118": {
+  "126": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c42_ca57885c7afe",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n  static async extractAnswers(\n    request: AnswerExtractionRequest\n  ): Promise<AnswerExtractionResponse> {\n    console.log('🤖 [Multi-Provider Extraction] Starting answer extraction...');\n    console.log(\n      `📄 [Multi-Provider Extraction] Text length: ${request.extractedText.length} characters`\n    );\n\n    // For extremely long text (>100k chars), consider multi-pass processing\n    if (request.extractedText.length > 100000) {\n      console.log(\n        '⚠️ [Multi-Provider Extraction] Very long text detected, attempting multi-pass extraction...'\n      );\n      return this.extractAnswersMultiPass(request);\n    }\n\n    const errors: ProviderError[] = [];\n    const startTime = Date.now();\n\n    // Try each provider in order: Gemini -> Claude -> OpenAI",
     "metadata": {
@@ -2489,18 +2678,18 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
-        "lib",
+        "typescript",
+        "gemini",
         "openai",
-        "code",
-        "gemini"
+        "lib",
+        "code"
       ],
       "chunk_index": 42
     }
   },
-  "119": {
+  "127": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c43_edb6991e1cdf",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n\n    // Try each provider in order: Gemini -> Claude -> OpenAI\n    for (const providerName of this.PROVIDERS) {\n      console.log(\n        `🔄 [${providerName.toUpperCase()}] Attempting answer extraction...`\n      );\n\n      try {\n        const provider = this.getProvider(providerName);\n        const answers = await provider.extractAnswers(request);\n\n        if (!answers || answers.length === 0) {\n          console.warn(\n            `⚠️ [${providerName.toUpperCase()}] Provider returned no answers`\n          );\n          throw new Error(`${providerName} returned no answers`);\n        }\n\n        const processingTime = Date.now() - startTime;\n        console.log(\n          `✅ [${providerName.toUpperCase()}] Extracted ${answers.length} answers successfully`\n        );\n        console.log(",
     "metadata": {
@@ -2512,18 +2701,18 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
-        "lib",
+        "typescript",
+        "gemini",
         "openai",
-        "code",
-        "gemini"
+        "lib",
+        "code"
       ],
       "chunk_index": 43
     }
   },
-  "120": {
+  "128": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c44_b9ab8e7255ca",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n        );\n        console.log(\n          `⏱️ [${providerName.toUpperCase()}] Processing time: ${processingTime}ms`\n        );\n\n        return {\n          answers,\n          provider: providerName,\n          processingTime\n        };\n      } catch (error) {\n        const errorMessage =\n          error instanceof Error ? error.message : 'Unknown error';\n        console.error(\n          `❌ [${providerName.toUpperCase()}] Answer extraction failed:`,\n          errorMessage\n        );\n\n        errors.push({\n          provider: providerName,\n          error: errorMessage,\n          timestamp: new Date()\n        });\n\n        // Continue to next provider\n        continue;\n      }\n    }\n\n    // If all providers failed, log all errors and throw",
     "metadata": {
@@ -2535,16 +2724,16 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
         "lib",
         "code"
       ],
       "chunk_index": 44
     }
   },
-  "121": {
+  "129": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c45_30886b789b2e",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n\n    // If all providers failed, log all errors and throw\n    console.error('❌ [Multi-Provider Extraction] All providers failed:');\n    errors.forEach(({ provider, error, timestamp }) => {\n      console.error(`  ${provider}: ${error} (${timestamp.toISOString()})`);\n    });\n\n    const allErrors = errors.map((e) => `${e.provider}: ${e.error}`).join('; ');\n    throw new Error(`All answer extraction providers failed: ${allErrors}`);\n  }\n\n  /**\n   * Test provider availability\n   */\n  static async testProviders(): Promise<Record<ExtractionProvider, boolean>> {\n    const availability: Record<ExtractionProvider, boolean> = {\n      gemini: false,\n      claude: false,\n      openai: false\n    };\n\n    for (const providerName of this.PROVIDERS) {\n      try {\n        this.getProvider(providerName);",
     "metadata": {
@@ -2556,18 +2745,18 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
-        "lib",
+        "typescript",
+        "gemini",
         "openai",
-        "code",
-        "gemini"
+        "lib",
+        "code"
       ],
       "chunk_index": 45
     }
   },
-  "122": {
+  "130": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c46_06077479433d",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n      try {\n        this.getProvider(providerName);\n        availability[providerName] = true;\n      } catch (error) {\n        console.warn(\n          `⚠️ [${providerName.toUpperCase()}] Provider not available:`,\n          error instanceof Error ? error.message : 'Unknown error'\n        );\n        availability[providerName] = false;\n      }\n    }\n\n    return availability;\n  }\n\n  /**\n   * Multi-pass extraction for extremely long text (mobile multi-page uploads)\n   * Splits text and processes in multiple passes to ensure no answers are missed\n   */\n  private static async extractAnswersMultiPass(\n    request: AnswerExtractionRequest\n  ): Promise<AnswerExtractionResponse> {\n    console.log(\n      '🔄 [Multi-Pass Extraction] Starting multi-pass processing for long text...'\n    );\n",
     "metadata": {
@@ -2579,16 +2768,16 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
         "lib",
         "code"
       ],
       "chunk_index": 46
     }
   },
-  "123": {
+  "131": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c47_ade6f1a08093",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n    );\n\n    const { extractedText, questions } = request;\n\n    // Split text into sections based on markers from combined OCR\n    const sections = this.splitTextIntoManagedSections(extractedText);\n    console.log(\n      `📄 [Multi-Pass Extraction] Split text into ${sections.length} sections`\n    );\n\n    const allExtractedAnswers: ExtractedAnswer[] = [];\n    const errors: ProviderError[] = [];\n    let usedProvider = 'unknown';\n    let totalProcessingTime = 0;\n\n    // Process each section separately\n    for (let i = 0; i < sections.length; i++) {\n      console.log(\n        `🔍 [Multi-Pass Extraction] Processing section ${i + 1}/${sections.length} (${sections[i].length} chars)`\n      );\n\n      const sectionRequest: AnswerExtractionRequest = {\n        extractedText: sections[i],",
     "metadata": {
@@ -2600,16 +2789,16 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
         "lib",
         "code"
       ],
       "chunk_index": 47
     }
   },
-  "124": {
+  "132": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c48_2d334b2e9df8",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n      const sectionRequest: AnswerExtractionRequest = {\n        extractedText: sections[i],\n        questions: questions\n      };\n\n      try {\n        const sectionResult = await this.extractAnswers(sectionRequest);\n        allExtractedAnswers.push(...sectionResult.answers);\n        usedProvider = sectionResult.provider;\n        totalProcessingTime += sectionResult.processingTime;\n\n        console.log(\n          `✅ [Multi-Pass Extraction] Section ${i + 1} completed: ${sectionResult.answers.length} answers found`\n        );\n      } catch (error) {\n        console.error(\n          `❌ [Multi-Pass Extraction] Section ${i + 1} failed:`,\n          error\n        );\n        errors.push({\n          provider: 'multi-pass' as ExtractionProvider,",
     "metadata": {
@@ -2621,16 +2810,16 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
         "lib",
         "code"
       ],
       "chunk_index": 48
     }
   },
-  "125": {
+  "133": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c49_66c8d9ea120a",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n        errors.push({\n          provider: 'multi-pass' as ExtractionProvider,\n          error: error instanceof Error ? error.message : 'Unknown error',\n          timestamp: new Date()\n        });\n      }\n    }\n\n    // Remove duplicates - prefer higher confidence answers\n    const deduplicatedAnswers = this.deduplicateAnswers(allExtractedAnswers);\n\n    console.log(\n      `🎯 [Multi-Pass Extraction] Completed: ${deduplicatedAnswers.length} unique answers from ${sections.length} sections`\n    );\n\n    if (deduplicatedAnswers.length === 0) {\n      throw new Error(\n        `Multi-pass extraction failed: No answers found across all sections. Errors: ${errors.map((e) => e.error).join('; ')}`\n      );\n    }\n\n    return {\n      answers: deduplicatedAnswers,",
     "metadata": {
@@ -2642,16 +2831,16 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
         "lib",
         "code"
       ],
       "chunk_index": 49
     }
   },
-  "126": {
+  "134": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c50_6943251b428e",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n    return {\n      answers: deduplicatedAnswers,\n      provider: `${usedProvider}-multipass`,\n      processingTime: totalProcessingTime\n    };\n  }\n\n  /**\n   * Split very long text into manageable sections for processing\n   */\n  private static splitTextIntoManagedSections(text: string): string[] {\n    // First try to split by the markers added during OCR combination\n    const markerSections = text.split(/=== Additional File \\d+.*?===/g);\n\n    if (markerSections.length > 1) {\n      console.log(\n        '📄 [Multi-Pass Extraction] Found OCR section markers, using them for splitting'\n      );\n      return markerSections.filter((section) => section.trim().length > 0);\n    }\n\n    // No markers found, split by natural boundaries\n    console.log(",
     "metadata": {
@@ -2663,16 +2852,16 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
         "lib",
         "code"
       ],
       "chunk_index": 50
     }
   },
-  "127": {
+  "135": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c51_d978d42a3eba",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n    // No markers found, split by natural boundaries\n    console.log(\n      '📄 [Multi-Pass Extraction] No section markers found, using natural boundaries'\n    );\n\n    const maxSectionLength = 30000; // ~30k chars per section\n    const sections: string[] = [];\n\n    if (text.length <= maxSectionLength) {\n      return [text];\n    }\n\n    // Split by double newlines first to respect natural boundaries\n    const paragraphs = text.split(/\\n\\s*\\n/);\n    let currentSection = '';\n\n    for (const paragraph of paragraphs) {\n      if (\n        currentSection.length + paragraph.length > maxSectionLength &&\n        currentSection.length > 0\n      ) {\n        sections.push(currentSection.trim());\n        currentSection = paragraph;\n      } else {",
     "metadata": {
@@ -2684,16 +2873,16 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
         "lib",
         "code"
       ],
       "chunk_index": 51
     }
   },
-  "128": {
+  "136": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c52_66cc0eb0a5c4",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n        currentSection = paragraph;\n      } else {\n        currentSection += (currentSection ? '\\n\\n' : '') + paragraph;\n      }\n    }\n\n    if (currentSection.trim().length > 0) {\n      sections.push(currentSection.trim());\n    }\n\n    return sections.filter((section) => section.length > 100); // Remove very small sections\n  }\n\n  /**\n   * Remove duplicate answers, preferring higher confidence scores\n   */\n  private static deduplicateAnswers(\n    answers: ExtractedAnswer[]\n  ): ExtractedAnswer[] {\n    const answerMap = new Map<number, ExtractedAnswer>();\n\n    for (const answer of answers) {\n      const existing = answerMap.get(answer.questionNumber);\n\n      if (!existing || answer.confidence > existing.confidence) {\n        answerMap.set(answer.questionNumber, answer);\n      }\n    }\n",
     "metadata": {
@@ -2705,16 +2894,16 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
         "lib",
         "code"
       ],
       "chunk_index": 52
     }
   },
-  "129": {
+  "137": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c53_7834270fb564",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n    }\n\n    return Array.from(answerMap.values()).sort(\n      (a, b) => a.questionNumber - b.questionNumber\n    );\n  }\n\n  /**\n   * Validate that extracted answers are relevant to the exam questions\n   * This prevents grading of random/unrelated images\n   */\n  static async validateAnswerRelevance(\n    answers: ExtractedAnswer[],\n    questions: Array<{\n      questionNumber: number;\n      questionText: string;\n      marks: number;\n    }>\n  ): Promise<{\n    isValid: boolean;\n    validAnswers: ExtractedAnswer[];\n    reason?: string;\n  }> {\n    console.log(`\\n🔍 [VALIDATION] Checking answer relevance...`);\n    \n    // If no answers were extracted, this is suspicious\n    if (answers.length === 0) {\n      console.log(`⚠️ [VALIDATION] No answers extracted - possible invalid submission`);",
     "metadata": {
@@ -2726,16 +2915,16 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
         "lib",
         "code"
       ],
       "chunk_index": 53
     }
   },
-  "130": {
+  "138": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c54_922d8d0de128",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n    if (answers.length === 0) {\n      console.log(`⚠️ [VALIDATION] No answers extracted - possible invalid submission`);\n      return {\n        isValid: false,\n        validAnswers: [],\n        reason: 'No answers could be extracted from the submission. Please ensure you uploaded the correct answer sheet.'\n      };\n    }\n\n    // Check if answers are suspiciously short or generic\n    const averageLength = answers.reduce((sum, a) => sum + a.answerText.length, 0) / answers.length;\n    \n    if (averageLength < 20) {\n      console.log(`⚠️ [VALIDATION] Answers are too short (avg: ${averageLength} chars) - possible invalid content`);\n      return {\n        isValid: false,\n        validAnswers: [],",
     "metadata": {
@@ -2747,16 +2936,16 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
         "lib",
         "code"
       ],
       "chunk_index": 54
     }
   },
-  "131": {
+  "139": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c55_07fd7e5d8f41",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n        isValid: false,\n        validAnswers: [],\n        reason: 'The uploaded image does not appear to contain valid exam answers. Please upload a clear image of your answer sheet.'\n      };\n    }\n\n    // Check if the average confidence is too low\n    const averageConfidence = answers.reduce((sum, a) => sum + a.confidence, 0) / answers.length;\n    \n    if (averageConfidence < 0.4) {\n      console.log(`⚠️ [VALIDATION] Low confidence (avg: ${averageConfidence.toFixed(2)}) - possible irrelevant content`);\n      return {\n        isValid: false,\n        validAnswers: [],\n        reason: 'Unable to extract clear answers from the uploaded image. Please ensure the image shows your written answers clearly.'\n      };\n    }\n",
     "metadata": {
@@ -2768,16 +2957,16 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
         "lib",
         "code"
       ],
       "chunk_index": 55
     }
   },
-  "132": {
+  "140": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c56_a2670c470056",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n    }\n\n    // Check if we found answers for an unreasonably small portion of questions\n    const answerCoverage = answers.length / questions.length;\n    \n    if (answerCoverage < 0.2 && questions.length > 2) {\n      console.log(`⚠️ [VALIDATION] Low coverage (${(answerCoverage * 100).toFixed(0)}%) - possible wrong document`);\n      return {\n        isValid: false,\n        validAnswers: [],\n        reason: `Only ${answers.length} of ${questions.length} answers detected. Please ensure you uploaded the complete answer sheet.`\n      };\n    }\n\n    // Use AI to validate content relevance\n    try {\n      const genAI = new GoogleGenerativeAI(process.env.GOOGLE_AI_API_KEY || '');\n      const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });\n      ",
     "metadata": {
@@ -2789,17 +2978,17 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
+        "gemini",
         "lib",
-        "code",
-        "gemini"
+        "code"
       ],
       "chunk_index": 56
     }
   },
-  "133": {
+  "141": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c57_e40a9e9b7581",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n      const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });\n      \n      const validationPrompt = `You are validating if student answers are relevant to exam questions.\n\n# EXAM QUESTIONS:\n${questions.map(q => `Q${q.questionNumber}: ${q.questionText.substring(0, 200)}...`).join('\\n\\n')}\n\n# EXTRACTED ANSWERS:\n${answers.map(a => `Q${a.questionNumber}: ${a.answerText.substring(0, 300)}...`).join('\\n\\n')}\n\n# VALIDATION TASK:\nDetermine if the extracted answers are actually attempting to answer the exam questions, or if they are completely unrelated/random content.\n\nConsider these as INVALID (unrelated content):\n- Random text from books, articles, or websites unrelated to questions\n- Product descriptions, advertisements, or marketing content",
     "metadata": {
@@ -2811,17 +3000,17 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
+        "gemini",
         "lib",
-        "code",
-        "gemini"
+        "code"
       ],
       "chunk_index": 57
     }
   },
-  "134": {
+  "142": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c58_1bce75f76914",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n- Random text from books, articles, or websites unrelated to questions\n- Product descriptions, advertisements, or marketing content\n- Social media posts, chat messages, or emails\n- Code snippets or technical documentation unrelated to questions\n- Images of random objects, scenery, or people without written answers\n\nConsider these as VALID (relevant exam content):\n- Student's handwritten or typed answers addressing the questions\n- Answers that relate to the subject matter of the questions\n- Partial or incomplete answers that show attempt to answer\n- Poorly written but relevant attempts at answering\n\nReturn ONLY a JSON object:\n{\n  \"isRelevant\": true/false,\n  \"confidence\": 0.0-1.0,\n  \"reason\": \"Brief explanation\"\n}`;\n\n      const result = await model.generateContent(validationPrompt);",
     "metadata": {
@@ -2833,16 +3022,16 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
         "lib",
         "code"
       ],
       "chunk_index": 58
     }
   },
-  "135": {
+  "143": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c59_7902952d7d6a",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n\n      const result = await model.generateContent(validationPrompt);\n      const response = await result.response;\n      const content = response.text();\n      \n      // Parse the validation response\n      const jsonMatch = content.match(/\\{[\\s\\S]*\\}/);\n      if (jsonMatch) {\n        const validation = JSON.parse(jsonMatch[0]);\n        \n        console.log(`📊 [VALIDATION] AI validation result:`, validation);\n        \n        if (!validation.isRelevant || validation.confidence < 0.6) {\n          return {\n            isValid: false,\n            validAnswers: [],\n            reason: validation.reason || 'The uploaded content does not appear to be relevant to the exam questions. Please upload the correct answer sheet.'\n          };\n        }\n      }\n    } catch (aiError) {",
     "metadata": {
@@ -2854,16 +3043,16 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
         "lib",
         "code"
       ],
       "chunk_index": 59
     }
   },
-  "136": {
+  "144": {
     "chunk_id": "gh_code_grado_next_760cc9361520_c60_fadfbca8cec8",
     "text": "[Repository: grado_next]\n[Source: CODE | File: src/lib/processing/student-answer-extraction-service.ts]\n\n      }\n    } catch (aiError) {\n      console.warn(`⚠️ [VALIDATION] AI validation failed, using heuristics only:`, aiError);\n      // Continue with heuristic validation if AI fails\n    }\n\n    console.log(`✅ [VALIDATION] Answers appear valid`);\n    \n    return {\n      isValid: true,\n      validAnswers: answers\n    };\n  }\n}",
     "metadata": {
@@ -2875,38 +3064,133 @@
       "branch": "main",
       "language": "TypeScript",
       "retrieval_tags": [
-        "typescript",
         "processing",
         "grado_next",
+        "typescript",
         "lib",
         "code"
       ],
       "chunk_index": 60
     }
   },
-  "137": {
-    "chunk_id": "gh_commit_grado_next_b8f9a2e3d4c5_c0_5088c0bbf199",
-    "text": "[Repository: grado_next]\n[Source: Commit | SHA: b8f9a2e3]\n\nRepository: grado_next\nCommit: b8f9a2e3\nAuthor: Siddhant Prasad\nDate: 2026-06-09T18:53:49.658088\nMessage: Hardened production features and optimization pipelines for grado_next\nFiles Changed:\n- src/lib/processing/student-answer-extraction-service.ts",
+  "145": {
+    "chunk_id": "gh_commit_grado_next_afb4af278a9b_c0_8cbf06fa8d19",
+    "text": "[Repository: grado_next]\n[Source: Commit | SHA: afb4af27]\n\nRepository: grado_next\nCommit: afb4af27\nAuthor: aatmk-panse\nDate: Sun Dec 21 21:48:19 2025 +0530\nMessage: refactor: Remove student answer relevance validation during extraction.\nFiles Changed:\n- src/app/api/queue/worker/route.ts",
     "metadata": {
       "source_type": "github_commit",
-      "source_url": "https://github.com/Sid13SST/grado_next/commit/b8f9a2e3d4c5",
+      "source_url": "https://github.com/Sid13SST/grado_next/commit/afb4af278a9bb890ceebe7ad501fcba5dab2083c",
       "repo_name": "grado_next",
       "owner": "Sid13SST",
-      "commit_sha": "b8f9a2e3d4c5",
-      "author": "Siddhant Prasad",
-      "commit_date": "2026-06-09T18:53:49.658088",
+      "commit_sha": "afb4af278a9bb890ceebe7ad501fcba5dab2083c",
+      "author": "aatmk-panse",
+      "commit_date": "Sun Dec 21 21:48:19 2025 +0530",
       "changed_files": [
-        "src/lib/processing/student-answer-extraction-service.ts"
+        "src/app/api/queue/worker/route.ts"
       ],
       "retrieval_tags": [
-        "grado_next",
+        "api",
         "commit",
+        "grado_next",
         "git"
       ],
       "chunk_index": 0
     }
   },
-  "138": {
+  "146": {
+    "chunk_id": "gh_commit_grado_next_f9c8ed4b666f_c0_116e2fca4634",
+    "text": "[Repository: grado_next]\n[Source: Commit | SHA: f9c8ed4b]\n\nRepository: grado_next\nCommit: f9c8ed4b\nAuthor: Arjun Kshirsagar\nDate: Sun Dec 21 01:37:12 2025 +0530\nMessage: Merge pull request #36 from arjun-kshirsagar/main\nFiles Changed:\nNone",
+    "metadata": {
+      "source_type": "github_commit",
+      "source_url": "https://github.com/Sid13SST/grado_next/commit/f9c8ed4b666fe55ab125d9f734600009fd9fa643",
+      "repo_name": "grado_next",
+      "owner": "Sid13SST",
+      "commit_sha": "f9c8ed4b666fe55ab125d9f734600009fd9fa643",
+      "author": "Arjun Kshirsagar",
+      "commit_date": "Sun Dec 21 01:37:12 2025 +0530",
+      "changed_files": [],
+      "retrieval_tags": [
+        "commit",
+        "grado_next",
+        "git"
+      ],
+      "chunk_index": 0
+    }
+  },
+  "147": {
+    "chunk_id": "gh_commit_grado_next_19168ed630d6_c0_8614aad98a9a",
+    "text": "[Repository: grado_next]\n[Source: Commit | SHA: 19168ed6]\n\nRepository: grado_next\nCommit: 19168ed6\nAuthor: arjun-kshirsagar\nDate: Sun Dec 21 01:34:52 2025 +0530\nMessage: fix: teacher auth and code refactor\nFiles Changed:\n- src/app/api/exams/[id]/metadata/route.ts\n- src/lib/processing/question-paper-metadata-service.ts",
+    "metadata": {
+      "source_type": "github_commit",
+      "source_url": "https://github.com/Sid13SST/grado_next/commit/19168ed630d6262b0d941e2bbdd1499cd774163e",
+      "repo_name": "grado_next",
+      "owner": "Sid13SST",
+      "commit_sha": "19168ed630d6262b0d941e2bbdd1499cd774163e",
+      "author": "arjun-kshirsagar",
+      "commit_date": "Sun Dec 21 01:34:52 2025 +0530",
+      "changed_files": [
+        "src/app/api/exams/[id]/metadata/route.ts",
+        "src/lib/processing/question-paper-metadata-service.ts"
+      ],
+      "retrieval_tags": [
+        "grado_next",
+        "auth",
+        "commit",
+        "api",
+        "git"
+      ],
+      "chunk_index": 0
+    }
+  },
+  "148": {
+    "chunk_id": "gh_commit_grado_next_4cf55e95aa02_c0_4e48fe34a015",
+    "text": "[Repository: grado_next]\n[Source: Commit | SHA: 4cf55e95]\n\nRepository: grado_next\nCommit: 4cf55e95\nAuthor: arjun-kshirsagar\nDate: Sun Dec 21 01:01:09 2025 +0530\nMessage: feat: Add API for manual exam metadata updates and trigger auto-extraction post-upload\nFiles Changed:\n- src/app/api/exams/[id]/metadata/route.ts\n- src/app/api/uploads/complete/[uploadId]/route.ts",
+    "metadata": {
+      "source_type": "github_commit",
+      "source_url": "https://github.com/Sid13SST/grado_next/commit/4cf55e95aa02ae5a02e531d676c090c493e2d656",
+      "repo_name": "grado_next",
+      "owner": "Sid13SST",
+      "commit_sha": "4cf55e95aa02ae5a02e531d676c090c493e2d656",
+      "author": "arjun-kshirsagar",
+      "commit_date": "Sun Dec 21 01:01:09 2025 +0530",
+      "changed_files": [
+        "src/app/api/exams/[id]/metadata/route.ts",
+        "src/app/api/uploads/complete/[uploadId]/route.ts"
+      ],
+      "retrieval_tags": [
+        "api",
+        "commit",
+        "grado_next",
+        "git"
+      ],
+      "chunk_index": 0
+    }
+  },
+  "149": {
+    "chunk_id": "gh_commit_grado_next_a6882ea284e1_c0_00f98548828d",
+    "text": "[Repository: grado_next]\n[Source: Commit | SHA: a6882ea2]\n\nRepository: grado_next\nCommit: a6882ea2\nAuthor: arjun-kshirsagar\nDate: Sat Dec 20 22:54:28 2025 +0530\nMessage: feat: Implement question paper metadata extraction\nFiles Changed:\n- src/app/api/uploads/complete/[uploadId]/route.ts\n- src/lib/processing/question-paper-metadata-service.ts\n- src/models/index.ts",
+    "metadata": {
+      "source_type": "github_commit",
+      "source_url": "https://github.com/Sid13SST/grado_next/commit/a6882ea284e1c9cbc9927a2cf52191baa3f7041a",
+      "repo_name": "grado_next",
+      "owner": "Sid13SST",
+      "commit_sha": "a6882ea284e1c9cbc9927a2cf52191baa3f7041a",
+      "author": "arjun-kshirsagar",
+      "commit_date": "Sat Dec 20 22:54:28 2025 +0530",
+      "changed_files": [
+        "src/app/api/uploads/complete/[uploadId]/route.ts",
+        "src/lib/processing/question-paper-metadata-service.ts",
+        "src/models/index.ts"
+      ],
+      "retrieval_tags": [
+        "api",
+        "commit",
+        "grado_next",
+        "git"
+      ],
+      "chunk_index": 0
+    }
+  },
+  "150": {
     "chunk_id": "gh_repo_Sid13SST_AttendanceManagementSystem_416a0bbfa860_c0_68096d90fe96",
     "text": "[Repository: AttendanceManagementSystem]\n[Source: Repo Metadata]\n\nRepository: AttendanceManagementSystem\nDescription: RESTful Attendance Management System with role-based access for teachers and students.\nLanguage: Java\nStars: 5\nTopics: springboot, spring-data-jpa, postgresql, java, attendance-tracking",
     "metadata": {
@@ -2925,16 +3209,16 @@
         "attendance-tracking"
       ],
       "retrieval_tags": [
-        "attendance-tracking",
+        "spring-data-jpa",
         "springboot",
         "java",
-        "spring-data-jpa",
-        "postgresql"
+        "postgresql",
+        "attendance-tracking"
       ],
       "chunk_index": 0
     }
   },
-  "139": {
+  "151": {
     "chunk_id": "gh_readme_Sid13SST_AttendanceManagementSystem_0167205108b4_c0_692aa9bac1f5",
     "text": "[Repository: AttendanceManagementSystem]\n[Source: README]\n\nRESTful Attendance Management System using Spring Boot, JPA, and PostgreSQL.",
     "metadata": {
@@ -2945,15 +3229,15 @@
       "file_path": "README.md",
       "branch": "main",
       "retrieval_tags": [
+        "readme",
         "documentation",
-        "attendancemanagementsystem",
         "postgresql",
-        "readme"
+        "attendancemanagementsystem"
       ],
       "chunk_index": 0
     }
   },
-  "140": {
+  "152": {
     "chunk_id": "gh_code_AttendanceManagementSystem_54ba444bb694_c0_3a61a0c50230",
     "text": "[Repository: AttendanceManagementSystem]\n[Source: CODE | File: src/main/java/com/scaler/attendance/controller/AttendanceController.java]\n\n@RestController\n@RequestMapping(\"/api/attendance\")\npublic class AttendanceController { ... }",
     "metadata": {
@@ -2965,22 +3249,22 @@
       "branch": "main",
       "language": "Java",
       "retrieval_tags": [
-        "com",
-        "java",
         "controller",
-        "api",
         "attendancemanagementsystem",
+        "java",
+        "code",
         "main",
-        "scaler",
+        "com",
+        "api",
         "attendance",
-        "code"
+        "scaler"
       ],
       "chunk_index": 0
     }
   },
-  "141": {
-    "chunk_id": "gh_commit_AttendanceManagementSystem_b8f9a2e3d4c5_c0_0e2f53c91654",
-    "text": "[Repository: AttendanceManagementSystem]\n[Source: Commit | SHA: b8f9a2e3]\n\nRepository: AttendanceManagementSystem\nCommit: b8f9a2e3\nAuthor: Siddhant Prasad\nDate: 2026-06-09T18:53:49.658088\nMessage: Hardened production features and optimization pipelines for AttendanceManagementSystem\nFiles Changed:\n- src/main/java/com/scaler/attendance/controller/AttendanceController.java",
+  "153": {
+    "chunk_id": "gh_commit_AttendanceManagementSystem_b8f9a2e3d4c5_c0_6c90539e60ee",
+    "text": "[Repository: AttendanceManagementSystem]\n[Source: Commit | SHA: b8f9a2e3]\n\nRepository: AttendanceManagementSystem\nCommit: b8f9a2e3\nAuthor: Siddhant Prasad\nDate: 2026-06-09T19:01:33.273880\nMessage: Hardened production features and optimization pipelines for AttendanceManagementSystem\nFiles Changed:\n- src/main/java/com/scaler/attendance/controller/AttendanceController.java",
     "metadata": {
       "source_type": "github_commit",
       "source_url": "https://github.com/Sid13SST/AttendanceManagementSystem/commit/b8f9a2e3d4c5",
@@ -2988,7 +3272,7 @@
       "owner": "Sid13SST",
       "commit_sha": "b8f9a2e3d4c5",
       "author": "Siddhant Prasad",
-      "commit_date": "2026-06-09T18:53:49.658088",
+      "commit_date": "2026-06-09T19:01:33.273880",
       "changed_files": [
         "src/main/java/com/scaler/attendance/controller/AttendanceController.java"
       ],

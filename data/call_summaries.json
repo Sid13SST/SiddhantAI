@@ -135,5 +135,16 @@
     "booking_id": "evt_mock_cal_12345",
     "cancellation_completed": false,
     "timestamp": "2026-06-10T00:26:12.820924"
+  },
+  {
+    "call_id": "booking_call_voice_9999",
+    "call_duration": "3m 5s",
+    "topics_discussed": [
+      "Interview Availability"
+    ],
+    "booking_created": true,
+    "booking_id": "evt_mock_cal_12345",
+    "cancellation_completed": false,
+    "timestamp": "2026-06-10T00:33:43.974726"
   }
 ]

@@ -1,105 +1,111 @@
 {
-  "name": "Siddhant",
+  "name": "Siddhant Prasad",
   "education": [
-    "Bachelor in Science - Computer Science and Engineering (Scaler School of Technology, 2024 - Present)",
-    "Class XII (Senior Secondary) - CBSE (Amity International School Vasundhara Sector 6, 2024)",
-    "Class X (Secondary) - CBSE (Amity International School Vasundhara Sector 6, 2024)"
+    "Bachelor in Science, Birla Institute of Technology Pilani (Computer Science and Engineering)",
+    "Scaler School of Technology (Aug 2024 - Present)"
   ],
   "core_skills": [
-    "Full-stack Development",
-    "AI Integration",
-    "RAG (Retrieval-Augmented Generation)",
-    "RESTful API Design",
-    "Database Normalization"
+    "Anthropic-sdk",
+    "Attendance-tracking",
+    "Claude-ai",
+    "Clerk",
+    "FAISS",
+    "FastAPI",
+    "Gemini-api",
+    "Git",
+    "Hono",
+    "Java",
+    "JavaScript",
+    "Mongodb",
+    "Next.js",
+    "Nextjs",
+    "Ocr",
+    "Pgvector",
+    "Postgresql",
+    "Prisma",
+    "Python",
+    "Rag",
+    "React",
+    "Redis",
+    "Spring-data-jpa",
+    "Springboot",
+    "Turborepo",
+    "TypeScript",
+    "Ux-testing"
   ],
   "top_projects": [
     {
       "name": "ClariBot",
-      "description": "An embeddable AI support widget using RAG for hallucination-free answers. Implemented a smart RAG engine with pgvector for similarity searching and an insights engine to cluster user intent and detect user frustration.",
+      "description": "An AI-powered, RAG-driven Support Widget with Actionable Analytics and query clustering.",
       "technologies": [
-        "Node.js",
-        "Hono",
-        "PostgreSQL",
-        "pgvector",
-        "Gemini API",
-        "TypeScript",
-        "React"
+        "TypeScript"
       ],
-      "repo_url": "https://github.com/Sidd-hant13"
-    },
-    {
-      "name": "Gradonix (GradoAI)",
-      "description": "A full-stack AI-powered educational platform for automated subjective hand-written evaluation. Features automated OCR answer extraction, grading, and role-based authentication for test creation and result publishing.",
-      "technologies": [
-        "Next.js",
-        "TypeScript",
-        "MongoDB",
-        "Anthropic SDK",
-        "Claude AI",
-        "Clerk",
-        "Tailwind CSS"
-      ],
-      "repo_url": "https://github.com/Sid13SST"
+      "repo_url": "https://github.com/Sid13SST/ClariBot"
     },
     {
       "name": "FrictaAI",
-      "description": "An AI-native autonomous UX intelligence platform that emulates user personas to detect cognitive fatigue, design flaws, and layout defects on target websites using a monorepo architecture.",
+      "description": "AI-Native Autonomous UX Intelligence Platform emulating user personas to detect cognitive fatigue and design flaws.",
       "technologies": [
-        "TypeScript",
-        "Hono",
-        "Turborepo",
-        "React",
-        "Prisma",
-        "PostgreSQL"
+        "TypeScript"
       ],
-      "repo_url": "https://github.com/Sidd-hant13"
+      "repo_url": "https://github.com/Sid13SST/FrictaAI"
     },
     {
-      "name": "Attendance Management System",
-      "description": "A RESTful system for tracking attendance with role-based access for teachers and students, featuring an optimized normalized database schema.",
+      "name": "grado_next",
+      "description": "Gradonix - AI-Powered Subjective Hand-written Evaluation Platform that automates OCR answer extraction and grading.",
       "technologies": [
-        "Java",
-        "Spring Boot",
-        "Spring Data JPA",
-        "PostgreSQL"
+        "TypeScript"
       ],
-      "repo_url": "https://github.com/Sidd-hant13"
+      "repo_url": "https://github.com/Sid13SST/grado_next"
+    },
+    {
+      "name": "AttendanceManagementSystem",
+      "description": "RESTful Attendance Management System with role-based access for teachers and students.",
+      "technologies": [
+        "Java"
+      ],
+      "repo_url": "https://github.com/Sid13SST/AttendanceManagementSystem"
     }
   ],
   "technologies": [
-    "Python",
-    "Java",
-    "Javascript",
-    "C++",
-    "Go",
-    "TypeScript",
-    "React.js",
-    "Next.js",
-    "Node.js",
-    "Express.js",
-    "SpringBoot",
-    "Hono",
-    "PostgreSQL",
-    "MongoDB",
-    "pgvector",
-    "Tailwind CSS",
+    "Anthropic-sdk",
+    "Attendance-tracking",
+    "Claude-ai",
+    "Clerk",
+    "FAISS",
+    "FastAPI",
+    "Gemini-api",
     "Git",
-    "GitHub",
-    "Postman",
-    "Vercel",
-    "Render"
+    "Hono",
+    "Java",
+    "JavaScript",
+    "Mongodb",
+    "Next.js",
+    "Nextjs",
+    "Ocr",
+    "Pgvector",
+    "Postgresql",
+    "Prisma",
+    "Python",
+    "Rag",
+    "React",
+    "Redis",
+    "Spring-data-jpa",
+    "Springboot",
+    "Turborepo",
+    "TypeScript",
+    "Ux-testing"
   ],
   "strengths": [
-    "AI/ML Workflow Planning",
-    "Monorepo Architecture Management",
-    "Full-stack Application Development",
-    "UX Intelligence & Automation",
-    "Open Source Contribution"
+    "Full-Stack AI/Web Engineering",
+    "Advanced Vector Search and RAG Architectures",
+    "Clean Code and Scalable Software Architecture",
+    "System Automation and API Integrations"
   ],
   "repository_summary": {
-    "ClariBot": "RAG-driven support widget with query clustering and frustration detection.",
-    "FrictaAI": "Autonomous UX testing platform simulating user personas to detect usability friction.",
-    "grado_next": "AI-powered educational management system for automated OCR grading.",
-    "AttendanceManagementSystem": "Java-based RESTful API for student attendance tracking."
+    "ClariBot": "An AI-powered, RAG-driven Support Widget with Actionable Analytics and query clustering.",
+    "FrictaAI": "AI-Native Autonomous UX Intelligence Platform emulating user personas to detect cognitive fatigue and design flaws.",
+    "grado_next": "Gradonix - AI-Powered Subjective Hand-written Evaluation Platform that automates OCR answer extraction and grading.",
+    "AttendanceManagementSystem": "RESTful Attendance Management System with role-based access for teachers and students."
   }
 }

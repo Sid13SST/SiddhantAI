@@ -217,17 +217,60 @@ async def run_population():
         )
         documents.append(code_doc)
 
-        # Commit Document (Mocking a real commits representing features)
-        commit_doc = DocumentFactory.create_github_commit_document(
-            repo_name=p["name"],
-            owner=p["owner"],
-            commit_sha="b8f9a2e3d4c5",
-            message=f"Hardened production features and optimization pipelines for {p['name']}",
-            author="Siddhant Prasad",
-            commit_date=datetime.utcnow().isoformat(),
-            changed_files=[p["code_file_name"]]
-        )
-        documents.append(commit_doc)
+        # Commit Documents (Load actual commits from git log)
+        local_commits_added = False
+        if p["readme_path"] and p["readme_path"].exists():
+            repo_dir = p["readme_path"].parent
+            if (repo_dir / ".git").exists() or (repo_dir.parent / ".git").exists():
+                import subprocess
+                try:
+                    actual_repo_path = repo_dir
+                    if not (actual_repo_path / ".git").exists() and (actual_repo_path.parent / ".git").exists():
+                        actual_repo_path = actual_repo_path.parent
+                        
+                    cmd = ["git", "-C", str(actual_repo_path), "log", "-n", "5", "--pretty=format:%H|%an|%ad|%s"]
+                    result = subprocess.run(cmd, capture_output=True, text=True, check=True, encoding="utf-8", errors="ignore")
+                    lines = result.stdout.strip().split("\n")
+                    
+                    for line in lines:
+                        if not line.strip() or "|" not in line:
+                            continue
+                        parts = line.split("|", 3)
+                        if len(parts) < 4:
+                            continue
+                        sha, author, date_str, message = parts
+                        
+                        # Fetch changed files
+                        files_cmd = ["git", "-C", str(actual_repo_path), "show", "--name-only", "--pretty=format:", sha]
+                        files_result = subprocess.run(files_cmd, capture_output=True, text=True, check=True, encoding="utf-8", errors="ignore")
+                        changed_files = [f.strip() for f in files_result.stdout.strip().split("\n") if f.strip()]
+                        
+                        commit_doc = DocumentFactory.create_github_commit_document(
+                            repo_name=p["name"],
+                            owner=p["owner"],
+                            commit_sha=sha,
+                            message=message,
+                            author=author,
+                            commit_date=date_str,
+                            changed_files=changed_files
+                        )
+                        documents.append(commit_doc)
+                    logger.info(f"Loaded {len(lines)} real commits for {p['name']}")
+                    local_commits_added = True
+                except Exception as e:
+                    logger.warning(f"Failed to load real commits for {p['name']}: {e}")
+                    
+        if not local_commits_added:
+            commit_doc = DocumentFactory.create_github_commit_document(
+                repo_name=p["name"],
+                owner=p["owner"],
+                commit_sha="b8f9a2e3d4c5",
+                message=f"Hardened production features and optimization pipelines for {p['name']}",
+                author="Siddhant Prasad",
+                commit_date=datetime.utcnow().isoformat(),
+                changed_files=[p["code_file_name"]]
+            )
+            documents.append(commit_doc)
 
     # 3. Chunking & Tagging
     all_chunks = []

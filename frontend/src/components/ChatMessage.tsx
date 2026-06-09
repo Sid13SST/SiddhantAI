@@ -24,12 +24,16 @@ export default function ChatMessage({ message, onCitationClick }: ChatMessagePro
         const citationContent = part.slice(1, -1).trim();
         
         // Find matching citation by checking index, source name, or text token
-        const citation = citations?.find(
-          (c) =>
+        const cleanContent = citationContent.toLowerCase().replace(/[^a-z0-9]/g, '');
+        const citation = citations?.find((c) => {
+          const cleanSource = c.source.toLowerCase().replace(/[^a-z0-9]/g, '');
+          return (
             c.index.toString() === citationContent ||
-            c.source.toLowerCase().includes(citationContent.toLowerCase()) ||
+            cleanSource.includes(cleanContent) ||
+            cleanContent.includes(cleanSource) ||
             c.text.toLowerCase() === part.toLowerCase()
-        );
+          );
+        });
 
         if (citation) {
           return (

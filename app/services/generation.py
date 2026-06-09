@@ -287,7 +287,7 @@ class AnswerGenerator:
             elif source_type == "github_code":
                 source_name = f"{repo_name} - {file_path}"
             elif source_type == "github_commit":
-                source_name = f"Commit {commit_sha[:8]}"
+                source_name = f"Commit: {commit_sha[:8]}"
             else:
                 source_name = f"{repo_name} Repository"
                 
