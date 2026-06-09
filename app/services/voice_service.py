@@ -171,7 +171,8 @@ class VoiceQueryRouter:
         qa_response = await cls.qa_engine.answer_question(
             question=query_for_qa,
             session_id=call_id,
-            booking_context=session
+            booking_context=session,
+            is_voice=True
         )
         
         # 4. Sync booking state updates

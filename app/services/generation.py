@@ -197,7 +197,7 @@ class AnswerGenerator:
             return True # Fallback to true to avoid blocking on API failures
 
     @classmethod
-    async def generate_grounded_answer(cls, question: str, context: str, intent: str) -> str:
+    async def generate_grounded_answer(cls, question: str, context: str, intent: str, is_voice: bool = False) -> str:
         """Generates a grounded answer from context with strict persona behavior, verification checks, and regeneration."""
         if not settings.OPENROUTER_API_KEY:
             return cls._fallback_generate(question, context)
@@ -225,6 +225,10 @@ class AnswerGenerator:
             # 2. Check Refusal
             if cls.REFUSAL_MESSAGE.lower() in draft_answer.lower():
                 return cls.REFUSAL_MESSAGE
+
+            if is_voice:
+                logger.info("Voice call: bypassing answer verification check for low latency.")
+                return draft_answer
 
             # 3. Answer Verification Layer
             is_valid = await cls.verify_answer(draft_answer, context)

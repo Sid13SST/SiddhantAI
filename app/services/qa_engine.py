@@ -22,7 +22,8 @@ class QAEngine:
         question: str,
         filter_tags: Optional[List[str]] = None,
         session_id: Optional[str] = None,
-        booking_context: Optional[Dict[str, Any]] = None
+        booking_context: Optional[Dict[str, Any]] = None,
+        is_voice: bool = False
     ) -> QAResponse:
         """Main orchestrator coordinating intent routing (booking vs QA), safety, retrieval, validation, generation, and observability."""
         start_time = time.time()
@@ -165,8 +166,12 @@ class QAEngine:
                         
         else:
             # Standard semantic search path
-            # Rewrite query
-            rewritten_query = await QueryProcessor.rewrite_query(question, intent)
+            if is_voice:
+                logger.info("Voice call detected. Bypassing LLM query rewriter for latency.")
+                rewritten_query = question
+            else:
+                # Rewrite query
+                rewritten_query = await QueryProcessor.rewrite_query(question, intent)
             
             # Fetch relevant diverse chunks
             retrieval_results = self.retrieval_service.retrieve_grounded_chunks(
@@ -209,7 +214,7 @@ class QAEngine:
 
         # 5. Answer Generation (with verification & regeneration)
         generation_start = time.time()
-        answer = await AnswerGenerator.generate_grounded_answer(question, context, intent)
+        answer = await AnswerGenerator.generate_grounded_answer(question, context, intent, is_voice=is_voice)
         generation_latency = (time.time() - generation_start) * 1000
 
         # 6. Citation & Evidence Panel Builder
